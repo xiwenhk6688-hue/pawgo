@@ -4,6 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PawGo — 香港首個動態寵物拼車社群 | 種子會員招募中</title>
+    <!-- SEO Meta -->
+    <meta name="description" content="PawGo 是香港首個寵物友善拼車社群平台，讓主人和毛孩一起輕鬆出行。AI 動態拼車、寵物友善小巴、實時追蹤，現正招募種子會員！">
+    <meta name="keywords" content="PawGo,寵物拼車,香港寵物,寵物友善,拼車,毛孩出行,寵物小巴,寵物社群">
+    <meta name="author" content="PawGo">
+    <link rel="canonical" href="https://xiwenhk6688-hue.github.io/pawgo/">
+    <!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xiwenhk6688-hue.github.io/pawgo/">
+    <meta property="og:title" content="PawGo — 香港首個動態寵物拼車社群 | 種子會員招募中">
+    <meta property="og:description" content="AI 動態拼車 × 寵物友善小巴。讓毛孩從此輕鬆出行，不再為搭車煩惱。現正招募種子會員！">
+    <meta property="og:image" content="https://xiwenhk6688-hue.github.io/pawgo/images/optimized/pawgo-og-banner.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="zh_HK">
+    <meta property="og:site_name" content="PawGo">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PawGo — 香港首個動態寵物拼車社群">
+    <meta name="twitter:description" content="AI 動態拼車 × 寵物友善小巴。毛孩從此輕鬆出行！">
+    <meta name="twitter:image" content="https://xiwenhk6688-hue.github.io/pawgo/images/optimized/pawgo-og-banner.jpg">
+    <!-- PWA / Mobile -->
+    <meta name="theme-color" content="#FF5C3C">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+HK:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -757,6 +781,57 @@
         }
         .payment-notice strong { color: var(--primary); }
 
+        /* ===== SIGNUP FORM ===== */
+        .signup-form-wrap {
+            background: var(--white); border-radius: var(--radius-xl);
+            padding: 44px 40px; box-shadow: var(--shadow);
+            border: 2px solid var(--primary); max-width: 640px;
+            margin: 0 auto 48px;
+        }
+        .signup-form-wrap .sf-title {
+            font-family: var(--font-display); font-size: 24px; font-weight: 900;
+            color: var(--text-primary); text-align: center; margin-bottom: 8px;
+        }
+        .signup-form-wrap .sf-subtitle {
+            text-align: center; color: var(--text-secondary);
+            font-size: 15px; margin-bottom: 28px;
+        }
+        .signup-form { display: flex; flex-direction: column; gap: 16px; }
+        .signup-form label {
+            font-size: 14px; font-weight: 600; color: var(--text-primary);
+            display: flex; flex-direction: column; gap: 4px;
+        }
+        .signup-form input,
+        .signup-form select,
+        .signup-form textarea {
+            margin-top: 4px; padding: 14px 16px;
+            border: 2px solid var(--border); border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: 15px;
+            color: var(--text-primary); background: var(--bg-soft);
+            transition: var(--transition); outline: none;
+        }
+        .signup-form input:focus,
+        .signup-form select:focus,
+        .signup-form textarea:focus {
+            border-color: var(--primary); background: var(--white);
+            box-shadow: 0 0 0 3px rgba(255,92,60,0.12);
+        }
+        .signup-form textarea { resize: vertical; min-height: 80px; }
+        .signup-form .sf-submit {
+            margin-top: 4px; padding: 16px 32px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white; border: none; border-radius: var(--radius);
+            font-family: var(--font-display); font-size: 17px; font-weight: 700;
+            cursor: pointer; transition: var(--transition);
+        }
+        .signup-form .sf-submit:hover {
+            transform: translateY(-2px); box-shadow: var(--shadow-lg);
+        }
+        .signup-form .sf-note {
+            font-size: 12px; color: var(--text-light); text-align: center;
+            margin-top: 4px;
+        }
+
         /* ===== SOCIAL IMPACT ===== */
         .social-impact { background: var(--bg-cream); }
         .charity-banner {
@@ -1027,6 +1102,8 @@
             .floating-btn { width: 44px; height: 44px; font-size: 18px; }
             .floating-tooltip { display: none; }
             .pain-row-img { height: 200px; }
+            .signup-form-wrap { padding: 28px 20px; margin: 0 auto 36px; }
+            .signup-form-wrap .sf-title { font-size: 20px; }
         }
 
         /* ===== FLOATING CONTACT BUTTONS ===== */
@@ -1092,6 +1169,14 @@
             100% { transform: scale(1.15); opacity: 0; }
         }
     </style>
+    <!-- Google Analytics (GA4) — 替換 G-XXXXXXXXXX 為你的 Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body>
     <!-- FLOATING CONTACT BUTTONS -->
@@ -1420,6 +1505,44 @@
             <p class="section-lead">
                 選擇你的會員方案，完成付款後將截圖發給我們的客服確認，即可立即解鎖所有創始權益。
             </p>
+
+            <!-- 快速登記表單 -->
+            <div class="signup-form-wrap">
+                <div class="sf-title">📝 快速登記，獲取會員詳情</div>
+                <p class="sf-subtitle">填寫以下資料，我們會透過 WhatsApp / Email 發送詳細會員資訊給你</p>
+                <form class="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <label>
+                        你的名稱 *
+                        <input type="text" name="name" placeholder="例如：陳小明" required>
+                    </label>
+                    <label>
+                        電郵地址 *
+                        <input type="email" name="email" placeholder="example@gmail.com" required>
+                    </label>
+                    <label>
+                        WhatsApp 號碼
+                        <input type="tel" name="phone" placeholder="852 1234 5678">
+                    </label>
+                    <label>
+                        感興趣的會員方案
+                        <select name="membership">
+                            <option value="">請選擇方案</option>
+                            <option value="explorer">⭐ 探索會員 HK$500</option>
+                            <option value="founder">🌟 創始會員 HK$5,000</option>
+                            <option value="lifetime">💎 終身創始會員 HK$20,000</option>
+                            <option value="undecided">🤔 未決定，想了解更多</option>
+                        </select>
+                    </label>
+                    <label>
+                        留言（選填）
+                        <textarea name="message" placeholder="有什麼想問的？例如：可以帶幾隻寵物？"></textarea>
+                    </label>
+                    <input type="hidden" name="_subject" value="PawGo 種子會員登記">
+                    <input type="hidden" name="_language" value="zh-HK">
+                    <button type="submit" class="sf-submit">🚀 立即登記</button>
+                    <p class="sf-note">我們不會濫發郵件，你的資料僅供 PawGo 會員服務使用</p>
+                </form>
+            </div>
 
             <!-- Steps -->
             <div class="enrollment-steps">
