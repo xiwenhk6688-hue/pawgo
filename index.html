@@ -1057,6 +1057,16 @@
             align-items: center; font-size: 13px;
         }
         .footer-bottom a { color: var(--text-muted); text-decoration: none; }
+        .footer-socials {
+            display: flex; align-items: center; gap: 16px; font-size: 18px;
+        }
+        .footer-socials a, .footer-socials span {
+            color: rgba(255,255,255,0.55); text-decoration: none;
+            transition: var(--transition); cursor: pointer;
+        }
+        .footer-socials a:hover, .footer-socials span:hover {
+            color: var(--primary-light); transform: translateY(-1px);
+        }
         .footer-glow { position: relative; }
         .footer-glow::before {
             content: ''; position: absolute; top: 0; left: 50%;
@@ -1204,17 +1214,17 @@
             <span style="line-height:1;">💬</span>
             <span class="floating-pulse"></span>
         </button>
-        <a href="https://wa.me/852?text=我想查詢PawGo種子會員計劃" target="_blank" rel="noopener" class="floating-btn floating-btn-wa" aria-label="WhatsApp">
+        <a href="https://wa.me/85251336009?text=我想查詢PawGo種子會員計劃" target="_blank" rel="noopener" class="floating-btn floating-btn-wa" aria-label="WhatsApp">
             <span>💬</span>
             <span class="floating-tooltip">WhatsApp</span>
         </a>
-        <a href="https://m.me/pawgohk" target="_blank" rel="noopener" class="floating-btn floating-btn-fb" aria-label="Facebook Messenger">
+        <a href="https://m.me/PawGoHK" target="_blank" rel="noopener" class="floating-btn floating-btn-fb" aria-label="Facebook Messenger">
             <span>📘</span>
             <span class="floating-tooltip">Messenger</span>
         </a>
-        <a href="https://instagram.com/pawgo.hk" target="_blank" rel="noopener" class="floating-btn floating-btn-ig" aria-label="Instagram">
-            <span>📷</span>
-            <span class="floating-tooltip">Instagram</span>
+        <a href="https://www.facebook.com/PawGoHK/" target="_blank" rel="noopener" class="floating-btn floating-btn-fb" aria-label="Facebook 主頁">
+            <span>👍</span>
+            <span class="floating-tooltip">Facebook</span>
         </a>
     </div>
 
@@ -1595,25 +1605,39 @@
                     <div class="cp-title">📱 聯絡客服確認</div>
                     <p class="cp-subtitle">付款後請透過以下任一方式發送截圖，我們會盡快確認</p>
                     <div class="contact-list">
-                        <a href="https://wa.me/852?text=我想成為PawGo種子會員，已付款請確認" target="_blank" rel="noopener" class="contact-item">
+                        <a href="https://wa.me/85251336009?text=我想成為PawGo種子會員，已付款請確認" target="_blank" rel="noopener" class="contact-item">
                             <div class="contact-icon">💬</div>
                             <div class="contact-info">
                                 <h5>WhatsApp</h5>
-                                <span>點擊即時聯絡客服</span>
+                                <span>+852 5133 6009</span>
                             </div>
                         </a>
-                        <a href="https://m.me/pawgohk" target="_blank" rel="noopener" class="contact-item">
+                        <a href="https://m.me/PawGoHK" target="_blank" rel="noopener" class="contact-item">
                             <div class="contact-icon">📘</div>
                             <div class="contact-info">
                                 <h5>Facebook Messenger</h5>
-                                <span>@pawgohk</span>
+                                <span>fb.com/PawGoHK</span>
                             </div>
                         </a>
-                        <a href="https://instagram.com/pawgo.hk" target="_blank" rel="noopener" class="contact-item">
-                            <div class="contact-icon">📷</div>
+                        <div class="contact-item" onclick="navigator.clipboard.writeText('PawGo888');alert('WeChat ID 已複製：PawGo888')" style="cursor:pointer;">
+                            <div class="contact-icon">💚</div>
                             <div class="contact-info">
-                                <h5>Instagram</h5>
-                                <span>@pawgo.hk · DM 即可</span>
+                                <h5>WeChat 微信</h5>
+                                <span>ID: PawGo888</span>
+                            </div>
+                        </div>
+                        <div class="contact-item" onclick="navigator.clipboard.writeText('+85251336009');alert('Line ID 已複製：+852 5133 6009')" style="cursor:pointer;">
+                            <div class="contact-icon">🟢</div>
+                            <div class="contact-info">
+                                <h5>LINE</h5>
+                                <span>ID: +852 5133 6009</span>
+                            </div>
+                        </div>
+                        <a href="https://x.com/PawGoHK" target="_blank" rel="noopener" class="contact-item">
+                            <div class="contact-icon">🐦</div>
+                            <div class="contact-info">
+                                <h5>Twitter / X</h5>
+                                <span>@PawGoHK</span>
                             </div>
                         </a>
                         <a href="mailto:hello@pawgo.hk?subject=種子會員確認%20-%20付款截圖" class="contact-item">
@@ -2206,6 +2230,13 @@
         </div>
         <div class="footer-inner footer-bottom">
             <span>© 2026 PawGo. All rights reserved. 香港有限公司</span>
+            <div class="footer-socials">
+                <a href="https://wa.me/85251336009" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp: +852 5133 6009">💬</a>
+                <a href="https://www.facebook.com/PawGoHK/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook: PawGoHK">📘</a>
+                <a href="https://x.com/PawGoHK" target="_blank" rel="noopener" aria-label="Twitter / X" title="Twitter: @PawGoHK">🐦</a>
+                <span onclick="navigator.clipboard.writeText('PawGo888');alert('WeChat ID 已複製：PawGo888')" style="cursor:pointer;" title="WeChat: PawGo888">💚</span>
+                <span onclick="navigator.clipboard.writeText('+85251336009');alert('Line ID 已複製：+852 5133 6009')" style="cursor:pointer;" title="LINE: +852 5133 6009">🟢</span>
+            </div>
             <span>🐾 讓每隻毛孩，都能出發探索世界</span>
         </div>
     </footer>
