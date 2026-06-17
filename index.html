@@ -1277,6 +1277,11 @@
                 <a href="#faq" data-i18n="nav.faq">常見問題</a>
                 <a href="#roadmap" data-i18n="nav.roadmap">發展藍圖</a>
             </nav>
+            <div class="lang-switcher" role="group" aria-label="Language switcher">
+                <button class="lang-option active" data-lang="zh" onclick="switchLang('zh')" aria-label="繁體中文">繁</button>
+                <button class="lang-option" data-lang="en" onclick="switchLang('en')" aria-label="English">EN</button>
+                <button class="lang-option" data-lang="ja" onclick="switchLang('ja')" aria-label="日本語">日</button>
+            </div>
             <a href="#seed-member" class="header-cta" data-i18n="header.cta">成為種子會員 →</a>
         </div>
     </header>
@@ -1571,20 +1576,20 @@
                 <div class="sf-title" data-i18n="enroll.form.title">📝 快速登記，獲取會員詳情</div>
                 <p class="sf-subtitle" data-i18n="enroll.form.subtitle">填寫以下資料，我們會透過 WhatsApp / Email 發送詳細會員資訊給你</p>
                 <form class="signup-form" action="https://formspree.io/f/xvznbbbp" method="POST">
-                    <label data-i18n="enroll.form.name">
-                        你的名稱 *
+                    <label>
+                        <span data-i18n="enroll.form.name">你的名稱 *</span>
                         <input type="text" name="name" placeholder="例如：陳小明" data-i18n="enroll.form.name.ph" required>
                     </label>
-                    <label data-i18n="enroll.form.email">
-                        電郵地址 *
+                    <label>
+                        <span data-i18n="enroll.form.email">電郵地址 *</span>
                         <input type="email" name="email" placeholder="example@gmail.com" data-i18n="enroll.form.email.ph" required>
                     </label>
-                    <label data-i18n="enroll.form.phone">
-                        WhatsApp 號碼
+                    <label>
+                        <span data-i18n="enroll.form.phone">WhatsApp 號碼</span>
                         <input type="tel" name="phone" placeholder="852 1234 5678" data-i18n="enroll.form.phone.ph">
                     </label>
-                    <label data-i18n="enroll.form.plan">
-                        感興趣的會員方案
+                    <label>
+                        <span data-i18n="enroll.form.plan">感興趣的會員方案</span>
                         <select name="membership">
                             <option value="" data-i18n="enroll.form.plan.opt0">請選擇方案</option>
                             <option value="explorer" data-i18n="enroll.form.plan.opt1">⭐ 探索會員 HK$888/年</option>
@@ -1593,8 +1598,8 @@
                             <option value="undecided" data-i18n="enroll.form.plan.opt4">🤔 未決定，想了解更多</option>
                         </select>
                     </label>
-                    <label data-i18n="enroll.form.msg">
-                        留言（選填）
+                    <label>
+                        <span data-i18n="enroll.form.msg">留言（選填）</span>
                         <textarea name="message" placeholder="有什麼想問的？例如：可以帶幾隻寵物？" data-i18n="enroll.form.msg.ph"></textarea>
                     </label>
                     <input type="hidden" name="_subject" value="PawGo 種子會員登記" data-i18n="form.subject">
