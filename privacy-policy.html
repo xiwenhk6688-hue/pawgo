@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隱私政策 - PawGo</title>
+    <meta name="description" content="PawGo 隱私政策 — 我們如何收集、使用、儲存、共享及保護您的個人資料">
+    <meta name="theme-color" content="#FF5C3C">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+HK:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF5C3C;
+            --primary-dark: #E04A2A;
+            --primary-light: #FF8C6B;
+            --accent-gold: #F4A83D;
+            --bg-cream: #FFFAF5;
+            --bg-warm-white: #FFF8F3;
+            --bg-peach: #FFF0E8;
+            --text-primary: #2D1B14;
+            --text-secondary: #6B4C3F;
+            --text-light: #9B7B6E;
+            --text-muted: #BF9F8E;
+            --white: #FFFFFF;
+            --border: #F0E0D6;
+            --shadow-sm: 0 2px 8px rgba(255, 92, 60, 0.08);
+            --shadow: 0 4px 24px rgba(255, 92, 60, 0.10);
+            --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.06);
+            --radius-sm: 8px;
+            --radius: 16px;
+            --radius-lg: 24px;
+            --font-display: 'Noto Sans HK', 'Inter', -apple-system, sans-serif;
+            --font-body: 'Noto Sans HK', 'Inter', -apple-system, sans-serif;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-primary);
+            background: var(--bg-cream);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(255, 250, 245, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(240, 224, 214, 0.6);
+            transition: var(--transition);
+        }
+        .header.scrolled { box-shadow: var(--shadow-sm); }
+        .header-inner {
+            max-width: 1280px; margin: 0 auto; padding: 0 32px;
+            display: flex; align-items: center; justify-content: space-between; height: 72px;
+        }
+        .logo {
+            display: flex; align-items: center; gap: 10px;
+            text-decoration: none; font-family: var(--font-display);
+            font-weight: 900; font-size: 28px; color: var(--primary); letter-spacing: -0.5px;
+        }
+        .logo-icon {
+            width: 42px; height: 42px;
+            background: linear-gradient(135deg, var(--primary), var(--accent-gold));
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px; color: white;
+            box-shadow: 0 4px 12px rgba(255, 92, 60, 0.3);
+        }
+        .nav { display: flex; align-items: center; gap: 36px; }
+        .nav a {
+            text-decoration: none; font-size: 15px; font-weight: 500;
+            color: var(--text-secondary); transition: var(--transition); position: relative;
+        }
+        .nav a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--primary); border-radius: 1px; transition: var(--transition);
+        }
+        .nav a:hover { color: var(--primary); }
+        .nav a:hover::after { width: 100%; }
+        .header-cta {
+            padding: 10px 24px;
+            background: var(--primary); color: var(--white);
+            border: none; border-radius: 50px;
+            font-family: var(--font-body); font-size: 14px; font-weight: 600;
+            cursor: pointer; transition: var(--transition); text-decoration: none;
+        }
+        .header-cta:hover {
+            background: var(--primary-dark); transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(255, 92, 60, 0.35);
+        }
+
+        /* ===== POLICY CONTENT ===== */
+        .policy-section {
+            padding: 140px 32px 80px;
+        }
+        .policy-container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .policy-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .policy-header .section-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--bg-peach); color: var(--primary);
+            font-size: 13px; font-weight: 700; padding: 6px 16px;
+            border-radius: 50px; margin-bottom: 20px;
+            letter-spacing: 0.5px; text-transform: uppercase;
+        }
+        .policy-header .badge-dot {
+            width: 6px; height: 6px; border-radius: 50%;
+            background: var(--primary); animation: pulse-dot 2s ease-in-out infinite;
+        }
+        @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .policy-header h1 {
+            font-family: var(--font-display);
+            font-size: 42px; font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 12px; letter-spacing: -1px;
+        }
+        .policy-header .meta {
+            color: var(--text-light); font-size: 14px;
+        }
+        .policy-header .meta .badge-date {
+            display: inline-block;
+            background: var(--primary); color: var(--white);
+            padding: 3px 12px; border-radius: 20px;
+            font-size: 12px; font-weight: 600;
+            margin-right: 8px;
+        }
+
+        .policy-intro {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 36px 40px;
+            box-shadow: var(--shadow-card);
+            margin-bottom: 32px;
+            border: 1px solid var(--border);
+            font-size: 16px; color: var(--text-secondary);
+            line-height: 1.9;
+        }
+
+        .policy-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+
+        .policy-card h2 {
+            font-family: var(--font-display);
+            font-size: 24px; font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--bg-peach);
+            letter-spacing: -0.5px;
+        }
+        .policy-card h3 {
+            font-family: var(--font-display);
+            font-size: 18px; font-weight: 700;
+            color: var(--text-primary);
+            margin: 24px 0 12px;
+        }
+        .policy-card p {
+            font-size: 15px; color: var(--text-secondary);
+            line-height: 1.85;
+            margin-bottom: 12px;
+        }
+        .policy-card ul, .policy-card ol {
+            margin-left: 24px; margin-bottom: 16px;
+        }
+        .policy-card li {
+            font-size: 15px; color: var(--text-secondary);
+            margin-bottom: 8px; line-height: 1.8;
+        }
+
+        /* Tables */
+        .policy-table {
+            width: 100%; border-collapse: collapse;
+            margin: 16px 0 20px;
+            font-size: 14px;
+        }
+        .policy-table th {
+            text-align: left; padding: 12px 16px;
+            background: var(--bg-peach);
+            color: var(--text-primary);
+            font-weight: 700;
+            font-family: var(--font-display);
+        }
+        .policy-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+        .policy-table th:last-child { border-radius: 0 var(--radius-sm) 0 0; }
+        .policy-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+        .policy-table tr:hover td {
+            background: var(--bg-warm-white);
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background: var(--bg-peach);
+            border-left: 4px solid var(--primary);
+            padding: 20px 24px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 20px 0;
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.9;
+        }
+        .highlight-box strong {
+            color: var(--primary-dark);
+        }
+
+        .policy-footer {
+            text-align: center;
+            padding: 40px 0 0;
+            color: var(--text-light);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--text-primary); color: var(--text-muted);
+            padding: 80px 32px 32px;
+            position: relative;
+        }
+        .footer::before {
+            content: ''; position: absolute; top: 0; left: 50%;
+            transform: translateX(-50%); width: 300px; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+        .footer-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px;
+        }
+        .footer-brand .logo { color: var(--white); margin-bottom: 16px; display: flex; }
+        .footer-brand p { font-size: 15px; line-height: 1.7; color: var(--text-muted); }
+        .footer-col h4 {
+            font-family: var(--font-display); font-size: 16px;
+            font-weight: 700; color: var(--white); margin-bottom: 20px;
+        }
+        .footer-col a {
+            display: block; color: var(--text-muted);
+            text-decoration: none; font-size: 14px;
+            padding: 6px 0; transition: var(--transition);
+        }
+        .footer-col a:hover { color: var(--primary-light); }
+        .footer-bottom {
+            max-width: 1200px; margin: 48px auto 0; padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 13px; flex-wrap: wrap; gap: 16px;
+        }
+        .footer-socials {
+            display: flex; align-items: center; gap: 16px; font-size: 18px;
+        }
+        .footer-socials a, .footer-socials span {
+            color: rgba(255,255,255,0.55); text-decoration: none;
+            transition: var(--transition); cursor: pointer;
+        }
+        .footer-socials a:hover, .footer-socials span:hover {
+            color: var(--primary-light); transform: translateY(-1px);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 640px) {
+            .policy-section { padding: 120px 16px 60px; }
+            .policy-header h1 { font-size: 30px; }
+            .policy-card { padding: 24px 18px; }
+            .policy-intro { padding: 24px 18px; }
+            .policy-card h2 { font-size: 20px; }
+            .nav { display: none; }
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+            .header-inner { padding: 0 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🐾</span>
+                PawGo
+            </a>
+            <nav class="nav">
+                <a href="index.html#solution">解決方案</a>
+                <a href="index.html#seed">種子會員</a>
+                <a href="index.html#team">團隊</a>
+                <a href="index.html#contact">聯絡我們</a>
+            </nav>
+            <a href="index.html#enroll" class="header-cta">立即加入</a>
+        </div>
+    </header>
+
+    <!-- PRIVACY POLICY CONTENT -->
+    <section class="policy-section">
+        <div class="policy-container">
+
+            <!-- Header -->
+            <div class="policy-header">
+                <div class="section-badge">
+                    <span class="badge-dot"></span> 法律文件
+                </div>
+                <h1>🐾 PawGo 隱私政策</h1>
+                <p class="meta">
+                    <span class="badge-date">最後更新</span>
+                    2026 年 6 月 17 日 &nbsp;|&nbsp; 繁體中文版
+                </p>
+            </div>
+
+            <!-- Intro -->
+            <div class="policy-intro">
+                <p>PawGo（「我們」/「本公司」）尊重您的私隱權。本隱私政策說明我們如何收集、使用、儲存、共享及保護您的個人資料。請仔細閱讀本政策，使用我們的服務即表示您同意本政策之內容。</p>
+            </div>
+
+            <!-- 1. 我們是誰 -->
+            <div class="policy-card">
+                <h2>1. 我們是誰</h2>
+                <table class="policy-table">
+                    <tr><th>公司名稱</th><td>香港鈺晴寵物科技有限公司 (PawGo Pet Tech Limited)</td></tr>
+                    <tr><th>註冊地</th><td>香港</td></tr>
+                    <tr><th>聯絡電郵</th><td>customerservice@pawgo.com</td></tr>
+                    <tr><th>WhatsApp</th><td>+852 5133 6009</td></tr>
+                    <tr><th>網站</th><td>https://www.pawgohk.com</td></tr>
+                </table>
+            </div>
+
+            <!-- 2. 我們收集哪些資料 -->
+            <div class="policy-card">
+                <h2>2. 我們收集哪些資料</h2>
+
+                <h3>2.1 您主動提供的資料</h3>
+                <ul>
+                    <li><strong>會員資料</strong>：姓名、暱稱、性別、年齡</li>
+                    <li><strong>聯絡資料</strong>：電話號碼 (WhatsApp)、電郵地址、通訊地址</li>
+                    <li><strong>居住資料</strong>：居住區域（例如：將軍澳／啟德）及屋苑名稱</li>
+                    <li><strong>付款資料</strong>：付款方式（FPS／PayMe／銀行過數等）</li>
+                    <li><strong>寵物資料</strong>：寵物名稱、品種、年齡、體重、照片、特殊醫療需求</li>
+                </ul>
+
+                <h3>2.2 自動收集的資料</h3>
+                <ul>
+                    <li><strong>裝置資訊</strong>：作業系統、瀏覽器類型、IP 位址</li>
+                    <li><strong>使用紀錄</strong>：您瀏覽的頁面、停留時間、點擊行為</li>
+                    <li><strong>對話紀錄</strong>：您與 PawGo WhatsApp 客服的對話內容（用於改善服務品質）</li>
+                </ul>
+            </div>
+
+            <!-- 3. 我們如何使用您的資料 -->
+            <div class="policy-card">
+                <h2>3. 我們如何使用您的資料</h2>
+                <table class="policy-table">
+                    <tr><th>用途</th><th>說明</th><th>法律依據</th></tr>
+                    <tr><td>提供會員服務</td><td>預約拼車、發送行程通知</td><td>履行合約</td></tr>
+                    <tr><td>客服支援</td><td>回應您的查詢、處理投訴</td><td>履行合約</td></tr>
+                    <tr><td>付款處理</td><td>處理會費、單次車資</td><td>履行合約</td></tr>
+                    <tr><td>行程匹配</td><td>為您配對同方向其他寵物主人</td><td>履行合約</td></tr>
+                    <tr><td>安全通訊</td><td>緊急事故聯絡、健康通知</td><td>切身利益</td></tr>
+                    <tr><td>服務改善</td><td>統計分析、AI 路線優化</td><td>正當利益</td></tr>
+                    <tr><td>推廣訊息</td><td>促銷、優惠、新服務通知（可選）</td><td>您的同意</td></tr>
+                </table>
+            </div>
+
+            <!-- 4. 我們如何共享您的資料 -->
+            <div class="policy-card">
+                <h2>4. 我們如何共享您的資料</h2>
+                <p>我們<strong>絕不會出售</strong>您的個人資料。我們僅在以下情況共享：</p>
+                <ul>
+                    <li><strong>司機／助理</strong>：您的姓名、寵物名稱、上落車點（行程必要資訊）</li>
+                    <li><strong>同車乘客</strong>：您的暱稱及 WhatsApp 號碼（行程群組內）</li>
+                    <li><strong>付款服務商</strong>：FPS／Alipay／WeChat Pay 等（處理付款必要）</li>
+                    <li><strong>執法機關</strong>：法院命令或法律要求時</li>
+                    <li><strong>業務轉讓</strong>：併購或資產出售時（會事先通知您）</li>
+                </ul>
+            </div>
+
+            <!-- 5. 資料保留期限 -->
+            <div class="policy-card">
+                <h2>5. 資料保留期限</h2>
+                <table class="policy-table">
+                    <tr><th>資料類型</th><th>保留期</th></tr>
+                    <tr><td>會員基本資料</td><td>會籍有效期間 + 7 年（法律要求）</td></tr>
+                    <tr><td>對話紀錄</td><td>2 年</td></tr>
+                    <tr><td>付款紀錄</td><td>7 年（稅務及審計要求）</td></tr>
+                    <tr><td>行程紀錄</td><td>3 年</td></tr>
+                    <tr><td>行銷訂閱</td><td>直至您取消訂閱</td></tr>
+                </table>
+            </div>
+
+            <!-- 6. 您的權利 -->
+            <div class="policy-card">
+                <h2>6. 您的權利</h2>
+                <p>根據《個人資料（私隱）條例》（香港法例第 486 章），您有權：</p>
+                <ul>
+                    <li>✅ <strong>查閱</strong>您的個人資料</li>
+                    <li>✅ <strong>更正</strong>不準確的資料</li>
+                    <li>✅ <strong>要求刪除</strong>您的資料（在法律允許範圍內）</li>
+                    <li>✅ <strong>撤回同意</strong>（例如取消行銷訂閱）</li>
+                    <li>✅ <strong>資料可攜性</strong>（JSON 格式）</li>
+                    <li>✅ <strong>投訴</strong>至個人資料私隱專員公署</li>
+                </ul>
+                <div class="highlight-box">
+                    <strong>聯絡我們行使以上權利</strong><br>
+                    📱 WhatsApp: +852 5133 6009<br>
+                    📧 Email: customerservice@pawgo.com<br>
+                    我們會在 <strong>7 個工作天</strong> 內回覆。
+                </div>
+            </div>
+
+            <!-- 7. 資料安全 -->
+            <div class="policy-card">
+                <h2>7. 資料安全</h2>
+                <p>我們採取以下措施保護您的資料：</p>
+                <ul>
+                    <li>🔒 SSL／TLS 加密傳輸</li>
+                    <li>🔒 資料庫加密儲存</li>
+                    <li>🔒 定期安全審計</li>
+                    <li>🔒 員工保密協議</li>
+                    <li>🔒 雙因素認證登入</li>
+                </ul>
+            </div>
+
+            <!-- 8. Cookie 使用 -->
+            <div class="policy-card">
+                <h2>8. Cookie 使用</h2>
+                <p>我們的網站使用 Cookie 及類似技術：</p>
+                <ul>
+                    <li><strong>必要 Cookie</strong>：維持登入狀態</li>
+                    <li><strong>分析 Cookie</strong>：Google Analytics（已去識別化）</li>
+                    <li><strong>行銷 Cookie</strong>：Facebook Pixel（可透過瀏覽器設定關閉）</li>
+                </ul>
+            </div>
+
+            <!-- 9. 未成年人保護 -->
+            <div class="policy-card">
+                <h2>9. 未成年人保護</h2>
+                <p>PawGo 服務對象為 18 歲以上人士。我們不會主動收集 18 歲以下人士的資料。</p>
+            </div>
+
+            <!-- 10. 政策變更 -->
+            <div class="policy-card">
+                <h2>10. 政策變更</h2>
+                <p>我們可能會更新本政策。重大變更會：</p>
+                <ul>
+                    <li>在網站首頁公告</li>
+                    <li>透過 WhatsApp 通知您</li>
+                    <li>在生效前至少 <strong>14 天</strong> 通知</li>
+                </ul>
+            </div>
+
+            <!-- 11. 聯絡我們 -->
+            <div class="policy-card">
+                <h2>11. 聯絡我們</h2>
+                <p>如有私隱相關問題：</p>
+                <div class="highlight-box">
+                    <strong>香港鈺晴寵物科技有限公司</strong><br>
+                    📧 Email: customerservice@pawgo.com<br>
+                    📱 WhatsApp: +852 5133 6009<br>
+                    🏢 辦公時間：週一至五 9:00–18:00
+                </div>
+            </div>
+
+            <!-- 12. 適用法律 -->
+            <div class="policy-card">
+                <h2>12. 適用法律</h2>
+                <p>本政策受香港特別行政區法律管轄。</p>
+            </div>
+
+            <!-- Footer -->
+            <div class="policy-footer">
+                <p>🐾 PawGo 重視您的信任，我們承諾以最高標準保護您的私隱。</p>
+                <p style="margin-top: 8px;">© 2026 香港鈺晴寵物科技有限公司 版權所有</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SITE FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="logo" style="margin-bottom:16px;display:flex;">
+                    <span class="logo-icon">🐾</span>
+                    PawGo
+                </a>
+                <p>
+                    香港首個動態寵物拼車社群平台。<br>
+                    不只是交通——是毛孩的社交圈，<br>
+                    是寵物主人的第二個家。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>產品</h4>
+                <a href="index.html#solution">動態拼車</a>
+                <a href="index.html#solution">寵物地圖</a>
+                <a href="index.html#solution">寵物圈社群</a>
+                <a href="index.html#solution">寵物助理服務</a>
+            </div>
+            <div class="footer-col">
+                <h4>公司</h4>
+                <a href="index.html#team">團隊</a>
+                <a href="index.html#social-impact">社會價值</a>
+                <a href="index.html#roadmap">發展藍圖</a>
+                <a href="index.html#contact">聯絡我們</a>
+            </div>
+            <div class="footer-col">
+                <h4>法律</h4>
+                <a href="privacy-policy.html" style="color: var(--primary-light);">隱私政策</a>
+                <a href="#">服務條款</a>
+                <a href="#">A01 牌照資訊</a>
+            </div>
+        </div>
+        <div class="footer-inner footer-bottom">
+            <span>© 2026 PawGo. All rights reserved. 香港有限公司</span>
+            <div class="footer-socials">
+                <a href="https://wa.me/85251336009" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp: +852 5133 6009">💬</a>
+                <a href="https://www.facebook.com/PawGoHK/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook: PawGoHK">📘</a>
+                <a href="https://x.com/PawGoHK" target="_blank" rel="noopener" aria-label="Twitter / X" title="Twitter: @PawGoHK">🐦</a>
+                <span onclick="navigator.clipboard.writeText('PawGo888');alert('WeChat ID 已複製：PawGo888')" style="cursor:pointer;" title="WeChat: PawGo888">💚</span>
+                <span onclick="navigator.clipboard.writeText('+85251336009');alert('Line ID 已複製：+852 5133 6009')" style="cursor:pointer;" title="LINE: +852 5133 6009">🟢</span>
+            </div>
+            <span>🐾 讓每隻毛孩，都能出發探索世界</span>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+    </script>
+
+</body>
+</html>
