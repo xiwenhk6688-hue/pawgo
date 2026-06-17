@@ -178,9 +178,9 @@
         .hero-bg-2 { display: none; }
         .hero-bg-3 { display: none; }
         .hero-inner {
-            max-width: 1200px; margin: 0 auto;
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 80px; align-items: center; position: relative; z-index: 1;
+            max-width: 900px; margin: 0 auto;
+            text-align: center;
+            position: relative; z-index: 1;
         }
         .hero-tag {
             display: inline-flex; align-items: center; gap: 8px;
@@ -201,10 +201,10 @@
         }
         .hero-desc {
             font-size: 19px; color: rgba(255,255,255,0.90);
-            line-height: 1.8; margin-bottom: 36px; max-width: 520px;
+            line-height: 1.8; margin: 0 auto 36px; max-width: 680px;
             text-shadow: 0 1px 6px rgba(0,0,0,0.3);
         }
-        .hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+        .hero-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
         .btn-primary {
             padding: 16px 36px;
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
@@ -225,7 +225,7 @@
         }
         .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.25); }
         .hero-stats {
-            display: flex; gap: 36px; margin-top: 40px;
+            display: flex; justify-content: center; gap: 48px; margin-top: 40px;
             padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.25);
         }
         .hero-stat h4 {
@@ -234,38 +234,41 @@
             text-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
         .hero-stat p { font-size: 13px; color: rgba(255,255,255,0.80); }
-        .hero-visual { position: relative; }
-        .hero-card {
-            background: var(--white); border-radius: var(--radius-xl);
-            padding: 40px; box-shadow: var(--shadow-lg);
+
+        /* ===== VISION BAND (Hero → Pain Points transition) ===== */
+        .vision-band {
+            background: linear-gradient(180deg, var(--primary) 0%, #C4452A 100%);
             position: relative; overflow: hidden;
         }
-        .hero-card::before {
-            content: ''; position: absolute;
-            top: 0; left: 0; right: 0; height: 6px;
-            background: linear-gradient(90deg, var(--primary), var(--accent-gold), var(--primary-light));
+        .vision-band::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: url('images/hero-banner.jpg') center center / cover no-repeat;
+            opacity: 0.06; filter: saturate(0);
         }
-        .hero-card-icon {
-            width: 72px; height: 72px;
-            background: var(--bg-peach); border-radius: var(--radius);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 36px; margin-bottom: 24px;
+        .vision-band-inner {
+            position: relative; z-index: 1;
+            max-width: 800px; margin: 0 auto;
+            text-align: center; padding: 72px 32px;
         }
-        .hero-card h3 {
-            font-family: var(--font-display); font-size: 24px;
-            font-weight: 800; margin-bottom: 12px; color: var(--text-primary);
+        .vision-band-icon { font-size: 56px; margin-bottom: 24px; display: block; }
+        .vision-band h2 {
+            font-family: var(--font-display); font-size: 36px; font-weight: 900;
+            color: #fff; margin-bottom: 20px;
         }
-        .hero-card p { color: var(--text-secondary); font-size: 15px; line-height: 1.6; margin-bottom: 20px; }
-        .hero-card-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-        .hero-card-tag {
-            padding: 6px 14px; background: var(--bg-soft);
-            color: var(--primary); font-size: 13px; font-weight: 600; border-radius: 50px;
+        .vision-band p {
+            font-size: 18px; line-height: 2; color: rgba(255,255,255,0.92);
+            max-width: 680px; margin: 0 auto 32px;
         }
-        .hero-float {
-            position: absolute; bottom: -24px; right: -24px;
-            width: 120px; height: 120px;
-            background: linear-gradient(135deg, var(--accent-gold), var(--primary-light));
-            border-radius: 50%; opacity: 0.3; filter: blur(40px);
+        .vision-band-tags {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+        }
+        .vision-band-tag {
+            padding: 8px 18px;
+            background: rgba(255,255,255,0.18);
+            color: #fff; font-size: 14px; font-weight: 700;
+            border-radius: 50px; backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.25);
         }
 
         /* ===== PAIN POINTS ===== */
@@ -1063,9 +1066,8 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
-            .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+            .hero-inner { padding: 0 16px; }
             .hero h1 { font-size: 44px; }
-            .hero-visual { order: -1; }
             .pain-row { flex-direction: column !important; min-height: auto; }
             .pain-row-img { flex: none; height: 240px; min-height: auto; }
             .solution-grid { grid-template-columns: 1fr; }
@@ -1096,7 +1098,10 @@
             .section { padding: 60px 20px; }
             .hero { padding: 120px 20px 60px; background-position: 70% center; }
             .hero h1 { font-size: 34px; }
-            .hero-stats { gap: 20px; }
+            .hero-stats { gap: 20px; flex-wrap: wrap; justify-content: center; }
+            .vision-band-inner { padding: 56px 24px; }
+            .vision-band h2 { font-size: 28px; }
+            .vision-band p { font-size: 16px; line-height: 1.8; }
             .section-title { font-size: 32px; }
             .solution-card { flex-direction: column; gap: 16px; }
             .impact-numbers { grid-template-columns: 1fr; }
@@ -1276,20 +1281,21 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="hero-card">
-                    <div class="hero-card-icon">🚌</div>
-                    <h3>想像一下這個週末</h3>
-                    <p>App 一鍵預約，樓下步行 5 分鐘上車。毛孩在寬敞的豪華座椅上安坐，身邊還有隨車寵物助理照顧。到達寵物友善商場後，WhatsApp 群組裡已經約好了下次的狗公園聚會。</p>
-                    <div class="hero-card-tags">
-                        <span class="hero-card-tag">一人兩座</span>
-                        <span class="hero-card-tag">AI 動態配對</span>
-                        <span class="hero-card-tag">寵物助理隨車</span>
-                        <span class="hero-card-tag">WhatsApp 社群</span>
-                        <span class="hero-card-tag">100% 保證上車</span>
-                    </div>
-                    <div class="hero-float"></div>
-                </div>
+        </div>
+    </section>
+
+    <!-- VISION BAND -->
+    <section class="section vision-band">
+        <div class="vision-band-inner">
+            <span class="vision-band-icon">✨</span>
+            <h2>想像一下這個週末</h2>
+            <p>App 一鍵預約，樓下步行 5 分鐘上車。毛孩在寬敞的豪華座椅上安坐，身邊還有隨車寵物助理照顧。到達寵物友善商場後，WhatsApp 群組裡已經約好了下次的狗公園聚會。</p>
+            <div class="vision-band-tags">
+                <span class="vision-band-tag">一人兩座</span>
+                <span class="vision-band-tag">AI 動態配對</span>
+                <span class="vision-band-tag">寵物助理隨車</span>
+                <span class="vision-band-tag">WhatsApp 社群</span>
+                <span class="vision-band-tag">100% 保證上車</span>
             </div>
         </div>
     </section>
