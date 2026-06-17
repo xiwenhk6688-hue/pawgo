@@ -631,7 +631,13 @@
       } else if (el.tagName === 'OPTION') {
         el.textContent = translated;
       } else {
-        el.innerHTML = translated;
+        // Leaf element (no child elements): use textContent — safer, no HTML injection
+        // Element with children: use innerHTML — translation MUST include needed HTML tags
+        if (el.children.length === 0) {
+          el.textContent = translated;
+        } else {
+          el.innerHTML = translated;
+        }
       }
     }
 
@@ -657,9 +663,7 @@
     // Update floating button WhatsApp link
     var floatingWa = document.querySelector('.floating-btn-wa');
     if (floatingWa) {
-      var waMsg = currentLang === 'en' ? 'I\'d like to learn about the PawGo Founding Member plan' :
-                   currentLang === 'ja' ? 'PawGo創設会員プランについて問い合わせたいです' :
-                   '我想查詢PawGo種子會員計劃';
+      var waMsg = t('floating.wa.link');
       floatingWa.href = 'https://wa.me/85251336009?text=' + encodeURIComponent(waMsg);
     }
 
@@ -713,6 +717,7 @@
   }
 
   // Expose
+  window.t = t;
   window.switchLang = switchLang;
   window.getCurrentLang = function() { return currentLang; };
 })();
