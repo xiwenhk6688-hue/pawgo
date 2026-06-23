@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="meta.title">PawGo — 香港首個動態寵物拼車社群 | 種子會員招募中</title>
+    <title data-i18n="meta.title">PawGo — 香港寵物友善出行平台 | 巴士拼車 · Van 仔接送</title>
     <!-- SEO Meta -->
-    <meta name="description" content="PawGo 是香港首個寵物友善拼車社群平台，讓主人和毛孩一起輕鬆出行。AI 動態拼車、寵物友善小巴、實時追蹤，現正招募種子會員！" data-i18n="meta.desc">
+    <meta name="description" content="PawGo 香港寵物友善出行平台，提供巴士拼車及 Van 仔接送兩種選擇。持牌車隊、寵物助理隨車、屋苑門口接送，讓毛孩從此輕鬆出行。" data-i18n="meta.desc">
     <meta name="keywords" content="PawGo,寵物拼車,香港寵物,寵物友善,拼車,毛孩出行,寵物小巴,寵物社群">
     <meta name="author" content="PawGo">
     <link rel="canonical" href="https://www.pawgohk.com/">
-    <!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.pawgohk.com/">
-    <meta property="og:title" content="PawGo — 香港首個動態寵物拼車社群 | 種子會員招募中" data-i18n="meta.og.title">
-    <meta property="og:description" content="AI 動態拼車 × 寵物友善小巴。讓毛孩從此輕鬆出行，不再為搭車煩惱。現正招募種子會員！" data-i18n="meta.og.desc">
+    <meta property="og:title" content="PawGo — 香港寵物友善出行平台 | 巴士拼車 · Van 仔接送" data-i18n="meta.og.title">
+    <meta property="og:description" content="寵物友善小巴拼車 + Van 仔靈活接送，兩種出行方式任你選擇。持牌車隊、專業寵物助理、屋苑門口上車。" data-i18n="meta.og.desc">
     <meta property="og:image" content="https://www.pawgohk.com/images/optimized/pawgo-og-banner.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -21,14 +21,12 @@
     <meta property="og:site_name" content="PawGo">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PawGo — 香港首個動態寵物拼車社群" data-i18n="meta.twitter.title">
-    <meta name="twitter:description" content="AI 動態拼車 × 寵物友善小巴。毛孩從此輕鬆出行！" data-i18n="meta.twitter.desc">
+    <meta name="twitter:title" content="PawGo — 香港寵物友善出行平台 | 巴士拼車 · Van 仔接送" data-i18n="meta.twitter.title">
+    <meta name="twitter:description" content="寵物友善小巴拼車 + Van 仔靈活接送，兩種出行方式任你選擇。屋苑門口上車，毛孩從此輕鬆出行！" data-i18n="meta.twitter.desc">
     <meta name="twitter:image" content="https://www.pawgohk.com/images/optimized/pawgo-og-banner.jpg">
-    <!-- PWA / Mobile -->
     <meta name="theme-color" content="#FF5C3C">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -66,26 +64,20 @@
             --font-body: 'Noto Sans HK', 'Inter', -apple-system, sans-serif;
             --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-
+        html { scroll-behavior: smooth; }
         body {
-            font-family: var(--font-body);
-            color: var(--text-primary);
-            background: var(--bg-cream);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
+            font-family: var(--font-body); color: var(--text-primary);
+            background: var(--bg-cream); line-height: 1.7;
+            -webkit-font-smoothing: antialiased; overflow-x: hidden;
+            min-height: 100vh; display: flex; flex-direction: column;
         }
 
         /* ===== HEADER ===== */
         .header {
             position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
             background: rgba(255, 250, 245, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(240, 224, 214, 0.6);
             transition: var(--transition);
         }
@@ -102,8 +94,7 @@
         .logo-icon {
             width: 42px; height: 42px;
             background: linear-gradient(135deg, var(--primary), var(--accent-gold));
-            border-radius: 12px;
-            display: flex; align-items: center; justify-content: center;
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
             font-size: 24px; color: white;
             box-shadow: 0 4px 12px rgba(255, 92, 60, 0.3);
         }
@@ -119,131 +110,163 @@
         }
         .nav a:hover { color: var(--primary); }
         .nav a:hover::after { width: 100%; }
-        .header-cta {
-            padding: 10px 24px;
+
+        /* Language Switcher */
+        .lang-switcher {
+            display: flex; align-items: center; gap: 4px;
+            margin-left: 12px; padding: 3px;
+            background: rgba(255, 92, 60, 0.08); border-radius: 50px;
+        }
+        .lang-option {
+            padding: 6px 12px; border: none; background: transparent;
+            font-family: var(--font-body); font-size: 13px; font-weight: 600;
+            color: var(--text-secondary); border-radius: 50px;
+            cursor: pointer; transition: var(--transition); white-space: nowrap;
+        }
+        .lang-option:hover { color: var(--primary); background: rgba(255, 92, 60, 0.08); }
+        .lang-option.active {
             background: var(--primary); color: var(--white);
-            border: none; border-radius: 50px;
-            font-family: var(--font-body); font-size: 14px; font-weight: 600;
-            cursor: pointer; transition: var(--transition); text-decoration: none;
-        }
-        .header-cta:hover {
-            background: var(--primary-dark); transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(255, 92, 60, 0.35);
+            box-shadow: 0 2px 8px rgba(255, 92, 60, 0.3);
         }
 
-        /* ===== SECTION BASE ===== */
-        .section { padding: 100px 32px; }
-        .section-inner { max-width: 1200px; margin: 0 auto; }
-        .section-badge {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: var(--bg-peach); color: var(--primary);
-            font-size: 13px; font-weight: 700; padding: 6px 16px;
-            border-radius: 50px; margin-bottom: 20px;
-            letter-spacing: 0.5px; text-transform: uppercase;
-        }
-        .section-badge .badge-dot {
-            width: 6px; height: 6px; border-radius: 50%;
-            background: var(--primary); animation: pulse-dot 2s ease-in-out infinite;
-        }
-        @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-        .section-title {
-            font-family: var(--font-display); font-size: 44px; font-weight: 900;
-            line-height: 1.2; color: var(--text-primary);
-            margin-bottom: 16px; letter-spacing: -1px;
-        }
-        .section-lead {
-            font-size: 18px; color: var(--text-secondary);
-            max-width: 640px; line-height: 1.7; margin-bottom: 60px;
-        }
-
-        /* ===== HERO ===== */
-        .hero {
-            padding: 160px 32px 120px;
+        /* ===== SPLIT HERO ===== */
+        .split-hero {
+            flex: 1; display: flex; align-items: center; justify-content: center;
+            padding: 120px 32px 64px;
             position: relative; overflow: hidden;
             background: url('images/hero-banner.jpg') center center / cover no-repeat;
-            min-height: 600px;
+            min-height: 100vh;
         }
-        /* Dark overlay for readability */
-        .hero::before {
-            content: '';
-            position: absolute; inset: 0;
-            background: linear-gradient(
-                105deg,
-                rgba(20, 10, 5, 0.72) 0%,
+        .split-hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(105deg,
+                rgba(20, 10, 5, 0.78) 0%,
                 rgba(20, 10, 5, 0.55) 50%,
-                rgba(20, 10, 5, 0.30) 100%
+                rgba(20, 10, 5, 0.65) 100%
             );
             z-index: 0;
         }
-        .hero-bg { display: none; }
-        .hero-bg-2 { display: none; }
-        .hero-bg-3 { display: none; }
-        .hero-inner {
-            max-width: 900px; margin: 0 auto;
-            text-align: center;
+        .split-hero-inner {
             position: relative; z-index: 1;
+            max-width: 960px; width: 100%;
+            text-align: center;
         }
-        .hero-tag {
+        .split-hero-tag {
             display: inline-flex; align-items: center; gap: 8px;
             background: rgba(255, 92, 60, 0.85); color: #fff;
             font-size: 14px; font-weight: 700; padding: 8px 20px;
-            border-radius: 50px; margin-bottom: 28px;
+            border-radius: 50px; margin-bottom: 20px;
             backdrop-filter: blur(4px);
         }
-        .hero h1 {
-            font-family: var(--font-display); font-size: 60px; font-weight: 900;
-            line-height: 1.15; color: #fff;
-            margin-bottom: 24px; letter-spacing: -1.5px;
+        .split-hero h1 {
+            font-family: var(--font-display); font-size: 48px; font-weight: 900;
+            line-height: 1.2; color: #fff;
+            margin-bottom: 12px; letter-spacing: -1.5px;
             text-shadow: 0 2px 12px rgba(0,0,0,0.3);
         }
-        .hero h1 .highlight {
+        .split-hero h1 .highlight {
             background: linear-gradient(135deg, #FFD166, #FF8C6B);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
-        .hero-desc {
-            font-size: 19px; color: rgba(255,255,255,0.90);
-            line-height: 1.8; margin: 0 auto 36px; max-width: 680px;
+        .split-hero-subtitle {
+            font-size: 16px; color: rgba(255,255,255,0.80);
+            line-height: 1.6; margin-bottom: 44px;
             text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+            max-width: 560px; margin-left: auto; margin-right: auto;
         }
-        .hero-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
-        .btn-primary {
-            padding: 16px 36px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            color: var(--white); border: none; border-radius: 50px;
-            font-family: var(--font-body); font-size: 16px; font-weight: 700;
-            cursor: pointer; transition: var(--transition); text-decoration: none;
-            display: inline-flex; align-items: center; gap: 8px;
-            box-shadow: 0 8px 24px rgba(255, 92, 60, 0.4);
-        }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255, 92, 60, 0.5); }
-        .btn-secondary {
-            padding: 16px 36px;
-            background: rgba(255,255,255,0.15); color: #fff;
-            border: 2px solid rgba(255,255,255,0.6); border-radius: 50px;
-            font-family: var(--font-body); font-size: 16px; font-weight: 600;
-            cursor: pointer; transition: var(--transition); text-decoration: none;
-            backdrop-filter: blur(4px);
-        }
-        .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.25); }
-        .hero-stats {
-            display: flex; justify-content: center; gap: 48px; margin-top: 40px;
-            padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.25);
-        }
-        .hero-stat h4 {
-            font-family: var(--font-display); font-size: 28px; font-weight: 900;
-            color: #FFD166; line-height: 1; margin-bottom: 4px;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        }
-        .hero-stat p { font-size: 13px; color: rgba(255,255,255,0.80); }
 
-        /* ===== VISION BAND (Hero → Pain Points transition) ===== */
+        /* Two Big Service Cards — SOLID WHITE for maximum prominence */
+        .split-cards {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+            max-width: 960px; margin: 0 auto;
+        }
+        .split-card {
+            background: #fff;
+            border: none;
+            border-radius: 24px; padding: 52px 40px 44px;
+            text-align: center; transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer; text-decoration: none;
+            position: relative; overflow: hidden;
+            display: flex; flex-direction: column; align-items: center;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.18), 0 1px 4px rgba(0,0,0,0.08);
+        }
+        .split-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 6px; border-radius: 0;
+        }
+        .split-card.card-bus::before { background: linear-gradient(90deg, var(--primary), var(--primary-light)); }
+        .split-card.card-van::before { background: linear-gradient(90deg, var(--accent-gold), #FFD166); }
+        .split-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.22), 0 2px 8px rgba(0,0,0,0.10);
+        }
+
+        .split-card-icon {
+            font-size: 68px; margin-bottom: 16px; display: block;
+            line-height: 1; transition: transform 0.35s ease;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08));
+        }
+        .split-card:hover .split-card-icon { transform: scale(1.08) translateY(-4px); }
+
+        .split-card-badge {
+            display: inline-block; padding: 5px 16px; border-radius: 20px;
+            font-size: 13px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 12px;
+        }
+        .card-bus .split-card-badge { background: #FFF0EC; color: #E04A2A; }
+        .card-van .split-card-badge { background: #FFF8ED; color: #C87A1A; }
+
+        .split-card h2 {
+            font-family: var(--font-display); font-size: 26px; font-weight: 900;
+            margin-bottom: 8px; letter-spacing: -0.5px; color: var(--text-primary);
+        }
+        .split-card .card-desc {
+            font-size: 14px; color: var(--text-secondary);
+            line-height: 1.7; margin-bottom: 20px; flex: 1;
+        }
+        .split-card .card-features {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+            margin-bottom: 24px;
+        }
+        .split-card .card-feat {
+            padding: 6px 14px; border-radius: 20px; font-size: 13px;
+            font-weight: 600;
+        }
+        .card-bus .card-feat { background: #FFF0EC; color: #E04A2A; border: 1px solid rgba(224,74,42,0.18); }
+        .card-van .card-feat { background: #FFF8ED; color: #C87A1A; border: 1px solid rgba(200,122,26,0.18); }
+
+        .split-card .card-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 16px 40px; border-radius: 50px;
+            font-family: var(--font-display); font-size: 17px; font-weight: 700;
+            transition: all 0.3s ease; text-decoration: none; border: none;
+            letter-spacing: 0.3px;
+        }
+        .card-bus .card-btn {
+            background: linear-gradient(135deg, var(--primary), #E04A2A);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(255, 92, 60, 0.35);
+        }
+        .card-van .card-btn {
+            background: linear-gradient(135deg, var(--accent-gold), #D4902E);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(244, 168, 61, 0.35);
+        }
+        .card-bus .card-btn:hover {
+            box-shadow: 0 8px 28px rgba(255, 92, 60, 0.50);
+            transform: translateY(-2px);
+        }
+        .card-van .card-btn:hover {
+            box-shadow: 0 8px 28px rgba(244, 168, 61, 0.50);
+            transform: translateY(-2px);
+        }
+
+        /* ===== VISION BAND ===== */
         .vision-band {
             background: linear-gradient(180deg, var(--primary) 0%, #C4452A 100%);
             position: relative; overflow: hidden;
         }
         .vision-band::before {
-            content: '';
-            position: absolute; inset: 0;
+            content: ''; position: absolute; inset: 0;
             background: url('images/hero-banner.jpg') center center / cover no-repeat;
             opacity: 0.06; filter: saturate(0);
         }
@@ -254,336 +277,25 @@
         }
         .vision-band-icon { font-size: 56px; margin-bottom: 24px; display: block; }
         .vision-band h2 {
-            font-family: var(--font-display); font-size: 36px; font-weight: 900;
+            font-family: var(--font-display); font-size: 32px; font-weight: 900;
             color: #fff; margin-bottom: 20px;
         }
         .vision-band p {
-            font-size: 18px; line-height: 2; color: rgba(255,255,255,0.92);
+            font-size: 17px; line-height: 1.8; color: rgba(255,255,255,0.92);
             max-width: 680px; margin: 0 auto 32px;
         }
         .vision-band-tags {
             display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
         }
         .vision-band-tag {
-            padding: 8px 18px;
-            background: rgba(255,255,255,0.18);
+            padding: 8px 18px; background: rgba(255,255,255,0.18);
             color: #fff; font-size: 14px; font-weight: 700;
             border-radius: 50px; backdrop-filter: blur(8px);
             border: 1px solid rgba(255,255,255,0.25);
         }
 
-        /* ===== PAIN POINTS ===== */
-        .pain-points { background: var(--white); }
-        .pain-rows {
-            display: flex; flex-direction: column; gap: 32px;
-        }
-        .pain-row {
-            display: flex; align-items: stretch; gap: 0;
-            background: var(--bg-warm-white);
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            overflow: hidden;
-            transition: var(--transition);
-            min-height: 340px;
-        }
-        .pain-row:hover {
-            box-shadow: var(--shadow); border-color: transparent;
-            transform: translateY(-2px);
-        }
-        .pain-row.reverse { flex-direction: row-reverse; }
-        .pain-row-img {
-            flex: 0 0 48%; position: relative; overflow: hidden;
-            min-height: 340px;
-        }
-        .pain-row-img img {
-            position: absolute; top: 0; left: 0;
-            width: 100%; height: 100%;
-            object-fit: cover; display: block;
-        }
-        .pain-row-body {
-            flex: 1; padding: 44px 48px;
-            position: relative;
-            display: flex; flex-direction: column; justify-content: center;
-        }
-        .pain-row-body .pain-number {
-            font-family: var(--font-display); font-size: 72px; font-weight: 900;
-            color: var(--bg-peach); line-height: 1;
-            position: absolute; top: 24px; right: 32px;
-            pointer-events: none; z-index: 0;
-        }
-        .pain-row-body .pain-icon {
-            width: 56px; height: 56px; background: var(--white);
-            border-radius: var(--radius-sm); display: flex;
-            align-items: center; justify-content: center;
-            font-size: 28px; margin-bottom: 16px;
-            box-shadow: var(--shadow-sm);
-            position: relative; z-index: 1;
-        }
-        .pain-row-body h3 {
-            font-family: var(--font-display); font-size: 22px;
-            font-weight: 800; margin-bottom: 10px;
-            position: relative; z-index: 1;
-        }
-        .pain-row-body .pain-stat {
-            display: inline-block; padding: 4px 12px;
-            background: var(--bg-peach); color: var(--primary);
-            font-size: 13px; font-weight: 700; border-radius: 50px;
-            margin-bottom: 12px;
-            position: relative; z-index: 1;
-        }
-        .pain-row-body p {
-            color: var(--text-secondary); font-size: 15px; line-height: 1.7;
-            position: relative; z-index: 1;
-        }
-
-        /* ===== SECTION IMAGE BANNER ===== */
-        .section-banner-img {
-            width: 100%; max-height: 360px; object-fit: cover;
-            border-radius: var(--radius); margin-bottom: 32px;
-            box-shadow: var(--shadow);
-        }
-
-        /* ===== SOLUTION ===== */
-        .solution { background: var(--bg-cream); }
-        .solution-grid {
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
-        }
-        .solution-card {
-            background: var(--white); border-radius: var(--radius);
-            padding: 36px; box-shadow: var(--shadow-card);
-            transition: var(--transition);
-            display: flex; gap: 24px; align-items: flex-start;
-        }
-        .solution-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-        .solution-card-icon {
-            width: 64px; height: 64px; flex-shrink: 0;
-            border-radius: var(--radius-sm);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 30px;
-        }
-        .solution-card:nth-child(1) .solution-card-icon { background: var(--bg-peach); }
-        .solution-card:nth-child(2) .solution-card-icon { background: #FFF3E0; }
-        .solution-card:nth-child(3) .solution-card-icon { background: #FFECEC; }
-        .solution-card:nth-child(4) .solution-card-icon { background: #FFF0E8; }
-        .solution-card h3 {
-            font-family: var(--font-display); font-size: 20px;
-            font-weight: 800; margin-bottom: 8px;
-        }
-        .solution-card p { color: var(--text-secondary); font-size: 15px; line-height: 1.6; }
-
-        /* ===== VISUAL SHOWCASE ===== */
-        .showcase { background: var(--white); }
-        .showcase-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
-        }
-        .showcase-item {
-            position: relative; border-radius: var(--radius-lg); overflow: hidden;
-            cursor: pointer; aspect-ratio: 4/3;
-            box-shadow: var(--shadow-card); transition: var(--transition);
-        }
-        .showcase-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-        .showcase-item img {
-            width: 100%; height: 100%; object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .showcase-item:hover img { transform: scale(1.05); }
-        .showcase-overlay {
-            position: absolute; bottom: 0; left: 0; right: 0;
-            padding: 24px 20px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            color: white;
-        }
-        .showcase-overlay h4 {
-            font-family: var(--font-display); font-size: 16px; font-weight: 700; margin-bottom: 4px;
-        }
-        .showcase-overlay p { font-size: 13px; opacity: 0.85; line-height: 1.4; }
-
-        /* ===== LIGHTBOX ===== */
-        .lightbox {
-            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.9); z-index: 9999;
-            align-items: center; justify-content: center; cursor: pointer;
-        }
-        .lightbox.active { display: flex; }
-        .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 12px; }
-        .lightbox-close {
-            position: absolute; top: 24px; right: 32px;
-            color: white; font-size: 36px; cursor: pointer;
-            width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
-            background: rgba(255,255,255,0.1); border-radius: 50%; transition: var(--transition);
-        }
-        .lightbox-close:hover { background: rgba(255,255,255,0.2); }
-        .lightbox-caption {
-            position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
-            color: white; font-size: 15px; text-align: center; max-width: 600px;
-        }
-
-        /* ===== SOCIAL PROOF ===== */
-        .social-proof { background: var(--bg-cream); }
-        .proof-banner {
-            background: linear-gradient(135deg, var(--text-primary), #4A3028);
-            border-radius: var(--radius-xl); padding: 48px;
-            color: white; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
-            align-items: center; box-shadow: var(--shadow-lg);
-        }
-        .proof-stat {
-            text-align: center; padding: 24px;
-            border-right: 1px solid rgba(255,255,255,0.15);
-        }
-        .proof-stat:last-child { border-right: none; }
-        .proof-stat .counter {
-            font-family: var(--font-display); font-size: 48px; font-weight: 900;
-            background: linear-gradient(135deg, var(--primary-light), var(--accent-gold));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-            line-height: 1.1; margin-bottom: 8px;
-        }
-        .proof-stat p { font-size: 15px; opacity: 0.8; }
-        .testimonial-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
-        .testimonial-card {
-            background: var(--white); border-radius: var(--radius);
-            padding: 32px; box-shadow: var(--shadow-card); position: relative;
-        }
-        .testimonial-card::before {
-            content: '"';
-            position: absolute; top: 16px; left: 20px;
-            font-family: Georgia, serif; font-size: 72px; color: var(--bg-peach);
-            line-height: 1; pointer-events: none;
-        }
-        .testimonial-card p {
-            font-size: 16px; line-height: 1.7; color: var(--text-secondary);
-            margin-bottom: 16px; padding-left: 20px; font-style: italic;
-        }
-        .testimonial-author {
-            display: flex; align-items: center; gap: 12px;
-            padding-left: 20px; border-top: 1px solid var(--border); padding-top: 16px;
-        }
-        .testimonial-author .author-avatar {
-            width: 44px; height: 44px; border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--accent-gold));
-            display: flex; align-items: center; justify-content: center;
-            font-size: 20px; color: white; font-weight: 700;
-        }
-        .testimonial-author strong { font-size: 14px; color: var(--text-primary); display: block; }
-        .testimonial-author span { font-size: 12px; color: var(--text-light); }
-
-        /* ===== FUND SECURITY ===== */
-        .fund-security { background: var(--white); }
-        .fund-security-hero {
-            background: linear-gradient(135deg, #1B5E20, #2E7D32);
-            border-radius: var(--radius-xl); padding: 48px 40px;
-            color: white; box-shadow: var(--shadow-lg);
-            margin-bottom: 40px;
-        }
-        .fund-security-hero h3 {
-            font-family: var(--font-display); font-size: 24px; font-weight: 800;
-            margin-bottom: 16px; display: flex; align-items: center; gap: 12px;
-        }
-        .fund-security-hero > p {
-            font-size: 16px; line-height: 1.8; opacity: 0.9; margin-bottom: 0;
-        }
-        .fund-flow {
-            display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0;
-            align-items: center; margin-top: 40px;
-            padding: 32px 24px; background: rgba(255,255,255,0.1);
-            border-radius: var(--radius); text-align: center;
-        }
-        .fund-flow-step {
-            display: flex; flex-direction: column; align-items: center; gap: 10px;
-        }
-        .fund-flow-icon {
-            width: 64px; height: 64px; border-radius: 50%;
-            background: rgba(255,255,255,0.2);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 32px;
-        }
-        .fund-flow-step h5 { font-size: 14px; font-weight: 700; }
-        .fund-flow-step p { font-size: 12px; opacity: 0.75; max-width: 140px; line-height: 1.5; }
-        .fund-flow-arrow { font-size: 28px; opacity: 0.5; }
-        .fund-security-cards {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-        }
-        .fund-security-card {
-            background: var(--bg-cream); border-radius: var(--radius);
-            padding: 32px 24px; box-shadow: var(--shadow-card);
-            transition: var(--transition); border-top: 4px solid var(--primary);
-        }
-        .fund-security-card:nth-child(2) { border-top-color: var(--accent-gold); }
-        .fund-security-card:nth-child(3) { border-top-color: #2E7D32; }
-        .fund-security-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-        .fs-card-icon { font-size: 36px; margin-bottom: 16px; }
-        .fund-security-card h4 {
-            font-family: var(--font-display); font-size: 17px; font-weight: 700;
-            color: var(--text-primary); margin-bottom: 12px;
-        }
-        .fund-security-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
-
-        /* ===== REFUND POLICY ===== */
-        .refund-policy {
-            background: var(--bg-cream); border-radius: var(--radius-lg);
-            padding: 36px; margin-top: 32px;
-            border: 1px solid var(--border);
-        }
-        .refund-policy h4 {
-            font-family: var(--font-display); font-size: 18px; font-weight: 700;
-            color: var(--text-primary); margin-bottom: 20px;
-            display: flex; align-items: center; gap: 8px;
-        }
-        .refund-list { list-style: none; padding: 0; }
-        .refund-list li {
-            padding: 16px 0; border-bottom: 1px solid var(--border);
-            display: flex; gap: 14px; align-items: flex-start;
-            font-size: 15px; color: var(--text-secondary); line-height: 1.6;
-        }
-        .refund-list li:last-child { border-bottom: none; }
-        .refund-list .rf-icon {
-            width: 32px; height: 32px; border-radius: 50%;
-            background: #E8F5E9; color: #2E7D32;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 16px; flex-shrink: 0; margin-top: 2px;
-        }
-        .refund-footer {
-            margin-top: 20px; padding: 16px 20px;
-            background: var(--bg-peach); border-radius: var(--radius-sm);
-            font-size: 14px; color: var(--text-secondary); line-height: 1.6;
-            display: flex; align-items: flex-start; gap: 10px;
-        }
-
-        /* ===== FAQ ===== */
-        .faq { background: var(--white); }
-        .faq-list { max-width: 800px; margin: 0 auto; }
-        .faq-item {
-            border-bottom: 1px solid var(--border); padding: 24px 0;
-            cursor: pointer; transition: var(--transition);
-        }
-        .faq-item:first-child { border-top: 1px solid var(--border); }
-        .faq-question {
-            display: flex; justify-content: space-between; align-items: center;
-            gap: 16px;
-        }
-        .faq-question h3 {
-            font-family: var(--font-display); font-size: 18px; font-weight: 700;
-            color: var(--text-primary); flex: 1;
-        }
-        .faq-icon {
-            width: 32px; height: 32px; flex-shrink: 0;
-            display: flex; align-items: center; justify-content: center;
-            border-radius: 50%; background: var(--bg-peach);
-            color: var(--primary); font-size: 18px; font-weight: 700;
-            transition: transform 0.3s ease;
-        }
-        .faq-item.active .faq-icon { transform: rotate(45deg); background: var(--primary); color: white; }
-        .faq-answer {
-            max-height: 0; overflow: hidden;
-            transition: max-height 0.4s ease, padding-top 0.4s ease;
-        }
-        .faq-answer-inner {
-            color: var(--text-secondary); font-size: 15px; line-height: 1.7;
-            padding-top: 0;
-        }
-        .faq-item.active .faq-answer { max-height: 500px; }
-
         /* ===== TRUST BADGES ===== */
-        .trust-badges { background: var(--bg-cream); padding: 60px 32px; }
+        .trust-badges { background: var(--bg-cream); padding: 72px 32px; }
         .trust-badges-inner {
             max-width: 1200px; margin: 0 auto;
             display: flex; align-items: center; justify-content: center; gap: 60px;
@@ -611,425 +323,6 @@
         }
         .trust-badge-info p { font-size: 13px; color: var(--text-light); }
 
-        /* ===== SEED MEMBER BENEFITS ===== */
-        .seed-member { background: var(--white); }
-        .seed-hero-card {
-            background: linear-gradient(135deg, var(--primary), #E04A2A, var(--primary-light));
-            border-radius: var(--radius-lg); padding: 56px 48px;
-            color: var(--white); margin-bottom: 48px;
-            position: relative; overflow: hidden;
-        }
-        .seed-hero-card::before {
-            content: ''; position: absolute;
-            top: -80px; right: -80px; width: 300px; height: 300px;
-            background: rgba(255,255,255,0.06); border-radius: 50%;
-        }
-        .seed-hero-card::after {
-            content: ''; position: absolute;
-            bottom: -60px; left: -60px; width: 200px; height: 200px;
-            background: rgba(244,168,61,0.15); border-radius: 50%;
-        }
-        .seed-hero-inner {
-            position: relative; z-index: 1;
-            display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
-        }
-        .seed-hero-inner h2 {
-            font-family: var(--font-display); font-size: 36px;
-            font-weight: 900; line-height: 1.2; margin-bottom: 12px;
-        }
-        .seed-hero-inner p { font-size: 17px; line-height: 1.7; opacity: 0.9; }
-        .seed-countdown {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: rgba(255,255,255,0.15);
-            padding: 12px 24px; border-radius: 50px;
-            font-size: 15px; font-weight: 700;
-            border: 1px solid rgba(255,255,255,0.25);
-        }
-        .seed-hero-amount {
-            font-family: var(--font-display); font-size: 48px; font-weight: 900;
-            display: flex; align-items: baseline; gap: 8px;
-            justify-content: center;
-        }
-        .seed-hero-amount small { font-size: 18px; font-weight: 600; opacity: 0.8; }
-        .seed-benefits-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-        }
-        .seed-benefit {
-            background: var(--bg-warm-white); border-radius: var(--radius);
-            padding: 36px 28px; text-align: center;
-            border: 1px solid var(--border); transition: var(--transition);
-            position: relative;
-        }
-        .seed-benefit:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
-        .seed-benefit.featured {
-            background: linear-gradient(135deg, var(--bg-peach), var(--bg-coral));
-            border: 2px solid var(--primary); border-color: transparent;
-        }
-        .seed-benefit.featured::before {
-            content: attr(data-badge); position: absolute;
-            top: -12px; left: 50%; transform: translateX(-50%);
-            background: var(--primary); color: var(--white);
-            font-size: 12px; font-weight: 700; padding: 4px 14px;
-            border-radius: 50px; white-space: nowrap;
-        }
-        .seed-benefit-icon {
-            width: 72px; height: 72px; margin: 0 auto 20px;
-            background: var(--white); border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 30px; box-shadow: var(--shadow-sm);
-        }
-        .seed-benefit h3 {
-            font-family: var(--font-display); font-size: 20px;
-            font-weight: 800; margin-bottom: 6px;
-        }
-        .seed-benefit .seed-price {
-            font-family: var(--font-display); font-size: 32px;
-            font-weight: 900; color: var(--primary); margin-bottom: 12px;
-        }
-        .seed-benefit .seed-price small { font-size: 14px; font-weight: 600; color: var(--text-light); }
-        .seed-benefit ul {
-            list-style: none; padding: 0; text-align: left;
-        }
-        .seed-benefit ul li {
-            padding: 8px 0; border-bottom: 1px solid var(--border);
-            font-size: 14px; color: var(--text-secondary);
-            display: flex; align-items: center; gap: 8px;
-        }
-        .seed-benefit ul li::before { content: '✓'; color: var(--primary); font-weight: 700; }
-        .seed-benefit ul li:last-child { border-bottom: none; }
-
-        /* ===== ENROLLMENT CTA ===== */
-        .enrollment { background: var(--bg-cream); }
-        .enrollment-steps {
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
-            margin-bottom: 48px;
-        }
-        .enroll-step {
-            background: var(--white); border-radius: var(--radius);
-            padding: 32px 24px; text-align: center;
-            box-shadow: var(--shadow-card); position: relative;
-            transition: var(--transition);
-        }
-        .enroll-step:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-        .enroll-step::after {
-            content: '→'; position: absolute;
-            right: -20px; top: 50%; transform: translateY(-50%);
-            font-size: 24px; color: var(--primary); font-weight: 700;
-            z-index: 1;
-        }
-        .enroll-step:last-child::after { display: none; }
-        .enroll-step-num {
-            width: 48px; height: 48px; border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            color: white; font-size: 22px; font-weight: 900;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 16px;
-            font-family: var(--font-display);
-        }
-        .enroll-step h4 {
-            font-family: var(--font-display); font-size: 17px; font-weight: 700;
-            color: var(--text-primary); margin-bottom: 8px;
-        }
-        .enroll-step p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
-
-        /* ===== CONTACT & PAYMENT ===== */
-        .contact-payment-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
-        }
-        .contact-payment-grid > div {
-            background: var(--white); border-radius: var(--radius-lg);
-            padding: 36px; box-shadow: var(--shadow-card);
-        }
-        .cp-title {
-            font-family: var(--font-display); font-size: 20px; font-weight: 700;
-            color: var(--text-primary); margin-bottom: 8px;
-            display: flex; align-items: center; gap: 10px;
-        }
-        .cp-subtitle { font-size: 14px; color: var(--text-light); margin-bottom: 24px; }
-
-        /* Contact List */
-        .contact-list { display: flex; flex-direction: column; gap: 16px; }
-        .contact-item {
-            display: flex; align-items: center; gap: 16px;
-            padding: 18px 20px; border-radius: var(--radius-sm);
-            background: var(--bg-soft); transition: var(--transition);
-            text-decoration: none; color: inherit; cursor: pointer;
-        }
-        .contact-item:hover { background: var(--bg-peach); transform: translateX(4px); }
-        .contact-icon {
-            width: 48px; height: 48px; border-radius: var(--radius-sm);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 24px; flex-shrink: 0;
-        }
-        .contact-item:nth-child(1) .contact-icon { background: #E8F5E9; }
-        .contact-item:nth-child(2) .contact-icon { background: #E3F2FD; }
-        .contact-item:nth-child(3) .contact-icon { background: #FCE4EC; }
-        .contact-item:nth-child(4) .contact-icon { background: #FFF3E0; }
-        .contact-info h5 {
-            font-family: var(--font-display); font-size: 15px; font-weight: 700; margin-bottom: 2px;
-        }
-        .contact-info span { font-size: 13px; color: var(--text-light); }
-
-        /* Payment Methods */
-        .payment-methods { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-        .payment-method {
-            padding: 20px; border-radius: var(--radius-sm);
-            background: var(--bg-soft); text-align: center;
-            border: 2px solid transparent; transition: var(--transition);
-        }
-        .payment-method:hover { border-color: var(--primary); background: var(--bg-peach); }
-        .payment-method .pm-icon {
-            font-size: 36px; margin-bottom: 8px;
-        }
-        .payment-method h5 {
-            font-family: var(--font-display); font-size: 14px; font-weight: 700;
-            color: var(--text-primary); margin-bottom: 4px;
-        }
-        .payment-method p { font-size: 12px; color: var(--text-light); }
-
-        .payment-notice {
-            margin-top: 20px; padding: 16px 20px;
-            background: #FFF3E0; border-radius: var(--radius-sm);
-            border-left: 4px solid var(--accent-gold);
-            font-size: 14px; color: #8D6E2F; line-height: 1.6;
-        }
-        .payment-notice strong { color: var(--primary); }
-
-        /* ===== SIGNUP FORM ===== */
-        .signup-form-wrap {
-            background: var(--white); border-radius: var(--radius-xl);
-            padding: 44px 40px; box-shadow: var(--shadow);
-            border: 2px solid var(--primary); max-width: 640px;
-            margin: 0 auto 48px;
-        }
-        .signup-form-wrap .sf-title {
-            font-family: var(--font-display); font-size: 24px; font-weight: 900;
-            color: var(--text-primary); text-align: center; margin-bottom: 8px;
-        }
-        .signup-form-wrap .sf-subtitle {
-            text-align: center; color: var(--text-secondary);
-            font-size: 15px; margin-bottom: 28px;
-        }
-        .signup-form { display: flex; flex-direction: column; gap: 16px; }
-        .signup-form label {
-            font-size: 14px; font-weight: 600; color: var(--text-primary);
-            display: flex; flex-direction: column; gap: 4px;
-        }
-        .signup-form input,
-        .signup-form select,
-        .signup-form textarea {
-            margin-top: 4px; padding: 14px 16px;
-            border: 2px solid var(--border); border-radius: var(--radius-sm);
-            font-family: var(--font-body); font-size: 15px;
-            color: var(--text-primary); background: var(--bg-soft);
-            transition: var(--transition); outline: none;
-        }
-        .signup-form input:focus,
-        .signup-form select:focus,
-        .signup-form textarea:focus {
-            border-color: var(--primary); background: var(--white);
-            box-shadow: 0 0 0 3px rgba(255,92,60,0.12);
-        }
-        .signup-form textarea { resize: vertical; min-height: 80px; }
-        .signup-form .sf-submit {
-            margin-top: 4px; padding: 16px 32px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white; border: none; border-radius: var(--radius);
-            font-family: var(--font-display); font-size: 17px; font-weight: 700;
-            cursor: pointer; transition: var(--transition);
-        }
-        .signup-form .sf-submit:hover {
-            transform: translateY(-2px); box-shadow: var(--shadow-lg);
-        }
-        .signup-form .sf-note {
-            font-size: 12px; color: var(--text-light); text-align: center;
-            margin-top: 4px;
-        }
-
-        /* ===== SOCIAL IMPACT ===== */
-        .social-impact { background: var(--bg-cream); }
-        .charity-banner {
-            background: linear-gradient(135deg, #1B5E20, #388E3C);
-            border-radius: var(--radius-xl); padding: 40px 36px;
-            color: white; box-shadow: var(--shadow-lg);
-            margin-bottom: 32px; text-align: center;
-        }
-        .charity-banner .charity-badge {
-            display: inline-block; padding: 6px 18px;
-            background: rgba(255,255,255,0.2); border-radius: 20px;
-            font-size: 14px; font-weight: 700; margin-bottom: 16px;
-            text-transform: uppercase; letter-spacing: 1px;
-        }
-        .charity-banner h3 {
-            font-family: var(--font-display); font-size: 26px; font-weight: 800;
-            margin-bottom: 12px; line-height: 1.4;
-        }
-        .charity-banner > p {
-            font-size: 16px; opacity: 0.9; line-height: 1.7; max-width: 700px;
-            margin: 0 auto 24px;
-        }
-        .charity-banner .charity-stat {
-            display: inline-flex; flex-direction: column; align-items: center;
-            padding: 0 28px; border-right: 1px solid rgba(255,255,255,0.2);
-        }
-        .charity-banner .charity-stat:last-child { border-right: none; }
-        .charity-banner .charity-stat .charity-num {
-            font-family: var(--font-display); font-size: 40px; font-weight: 900;
-            line-height: 1.1;
-        }
-        .charity-banner .charity-stat .charity-label {
-            font-size: 13px; opacity: 0.8; margin-top: 4px;
-        }
-        .charity-stats-row {
-            display: flex; justify-content: center; gap: 0;
-            flex-wrap: wrap; margin-top: 8px;
-        }
-        .charity-partners {
-            margin-top: 40px; text-align: center;
-        }
-        .charity-partners h4 {
-            font-family: var(--font-display); font-size: 16px; font-weight: 700;
-            color: var(--text-primary); margin-bottom: 12px;
-        }
-        .charity-disclaimer {
-            font-size: 13px; color: var(--text-muted); line-height: 1.7;
-            max-width: 560px; margin: 0 auto 20px; text-align: center;
-        }
-        .charity-partner-logos {
-            display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;
-        }
-        .charity-partner-tag {
-            padding: 14px 24px; background: var(--white);
-            border-radius: var(--radius); box-shadow: var(--shadow-card);
-            font-family: var(--font-display); font-size: 15px; font-weight: 700;
-            color: var(--text-primary); display: flex; align-items: center; gap: 8px;
-            transition: var(--transition);
-        }
-        .charity-partner-tag:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-        .charity-partner-tag .cp-icon { font-size: 24px; }
-        .impact-quote {
-            text-align: center;
-            font-family: var(--font-display); font-size: 24px;
-            font-weight: 700; color: var(--primary);
-            max-width: 800px; margin: 0 auto 60px;
-            line-height: 1.6; font-style: italic;
-        }
-        .impact-grid {
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
-        }
-        .impact-card {
-            background: var(--white); border-radius: var(--radius);
-            padding: 40px; box-shadow: var(--shadow-card);
-            transition: var(--transition); text-align: center;
-        }
-        .impact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-        .impact-icon {
-            font-size: 48px; margin-bottom: 16px; display: block;
-        }
-        .impact-card h3 {
-            font-family: var(--font-display); font-size: 22px;
-            font-weight: 800; margin-bottom: 10px;
-        }
-        .impact-card p {
-            color: var(--text-secondary); font-size: 15px; line-height: 1.7;
-        }
-        .impact-numbers {
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
-            margin-top: 48px;
-        }
-        .impact-number {
-            text-align: center; padding: 28px 16px;
-            background: var(--bg-peach); border-radius: var(--radius);
-        }
-        .impact-number h4 {
-            font-family: var(--font-display); font-size: 32px;
-            font-weight: 900; color: var(--primary); line-height: 1; margin-bottom: 6px;
-        }
-        .impact-number p { font-size: 14px; color: var(--text-secondary); font-weight: 500; }
-
-        /* ===== ROADMAP ===== */
-        .roadmap { background: var(--white); }
-        .roadmap-timeline {
-            position: relative; padding-left: 40px; margin-top: 24px;
-        }
-        .roadmap-timeline::before {
-            content: ''; position: absolute; left: 18px; top: 8px; bottom: 8px;
-            width: 3px;
-            background: linear-gradient(180deg, var(--primary), var(--accent-gold), var(--primary-light));
-            border-radius: 2px;
-        }
-        .roadmap-item {
-            position: relative; padding: 32px; padding-left: 36px;
-            margin-bottom: 24px; background: var(--bg-warm-white);
-            border-radius: var(--radius); border: 1px solid var(--border);
-            transition: var(--transition);
-        }
-        .roadmap-item:hover { box-shadow: var(--shadow); border-color: transparent; transform: translateX(4px); }
-        .roadmap-item::before {
-            content: ''; position: absolute; left: -30px; top: 40px;
-            width: 16px; height: 16px; background: var(--primary);
-            border-radius: 50%; border: 3px solid var(--bg-peach);
-            box-shadow: 0 0 0 6px rgba(255, 92, 60, 0.08);
-        }
-        .roadmap-item:nth-child(2)::before { background: var(--accent-gold); }
-        .roadmap-item:nth-child(3)::before { background: var(--primary-light); }
-        .roadmap-item:nth-child(4)::before { background: #E07B5A; }
-        .roadmap-period {
-            font-size: 14px; font-weight: 700; color: var(--primary);
-            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;
-        }
-        .roadmap-item h3 {
-            font-family: var(--font-display); font-size: 22px;
-            font-weight: 800; margin-bottom: 12px;
-        }
-        .roadmap-item ul { list-style: none; padding: 0; }
-        .roadmap-item ul li {
-            padding: 6px 0; color: var(--text-secondary);
-            font-size: 15px; padding-left: 20px; position: relative;
-        }
-        .roadmap-item ul li::before {
-            content: ''; position: absolute; left: 0; top: 13px;
-            width: 6px; height: 6px; background: var(--primary-light); border-radius: 50%;
-        }
-
-        /* ===== TEAM ===== */
-        .team { background: var(--bg-cream); }
-        .team-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-        }
-        .team-card {
-            background: var(--white); border-radius: var(--radius);
-            padding: 36px 28px; text-align: center;
-            box-shadow: var(--shadow-card); transition: var(--transition);
-        }
-        .team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-        .team-avatar {
-            width: 80px; height: 80px; border-radius: 50%;
-            margin: 0 auto 20px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 36px; font-weight: 900; color: var(--white);
-        }
-        .team-card:nth-child(1) .team-avatar { background: linear-gradient(135deg, var(--primary), var(--accent-gold)); }
-        .team-card:nth-child(2) .team-avatar { background: linear-gradient(135deg, var(--primary-light), var(--accent-gold)); }
-        .team-card:nth-child(3) .team-avatar { background: linear-gradient(135deg, var(--accent-gold), #E88B30); }
-        .team-card:nth-child(4) .team-avatar { background: linear-gradient(135deg, #E07B5A, var(--primary-light)); }
-        .team-card:nth-child(5) .team-avatar { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); }
-        .team-card:nth-child(6) .team-avatar { background: linear-gradient(135deg, #D4956B, var(--accent-gold)); }
-        .team-card h3 {
-            font-family: var(--font-display); font-size: 18px;
-            font-weight: 800; margin-bottom: 4px;
-        }
-        .team-role { font-size: 13px; color: var(--primary); font-weight: 600; margin-bottom: 8px; }
-        .team-type {
-            display: inline-block; padding: 2px 10px;
-            background: var(--bg-peach); color: var(--text-light);
-            font-size: 12px; border-radius: 50px; font-weight: 500;
-        }
-        .team-card p {
-            margin-top: 12px; font-size: 14px;
-            color: var(--text-secondary); line-height: 1.5;
-        }
-
         /* ===== FOOTER ===== */
         .footer {
             background: var(--text-primary); color: var(--text-muted);
@@ -1047,8 +340,7 @@
         }
         .footer-col a {
             display: block; color: var(--text-muted);
-            text-decoration: none; font-size: 14px;
-            padding: 6px 0; transition: var(--transition);
+            text-decoration: none; font-size: 14px; padding: 6px 0; transition: var(--transition);
         }
         .footer-col a:hover { color: var(--primary-light); }
         .footer-bottom {
@@ -1075,99 +367,7 @@
             background: linear-gradient(90deg, transparent, var(--primary), transparent);
         }
 
-
-        /* ===== LANGUAGE SWITCHER ===== */
-        .lang-switcher {
-            display: flex; align-items: center; gap: 4px;
-            margin-left: 12px; padding: 3px;
-            background: rgba(255, 92, 60, 0.08); border-radius: 50px;
-        }
-        .lang-option {
-            padding: 6px 12px; border: none; background: transparent;
-            font-family: var(--font-body); font-size: 13px; font-weight: 600;
-            color: var(--text-secondary); border-radius: 50px;
-            cursor: pointer; transition: var(--transition);
-            white-space: nowrap;
-        }
-        .lang-option:hover { color: var(--primary); background: rgba(255, 92, 60, 0.08); }
-        .lang-option.active {
-            background: var(--primary); color: var(--white);
-            box-shadow: 0 2px 8px rgba(255, 92, 60, 0.3);
-        }
-        @media (max-width: 640px) {
-            .lang-switcher { margin-left: 8px; gap: 2px; }
-            .lang-option { padding: 5px 10px; font-size: 12px; }
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 1024px) {
-            .header-inner { padding: 0 20px; }
-            .logo { font-size: 24px; }
-            .logo-icon { width: 36px; height: 36px; font-size: 20px; }
-            .nav { gap: 12px; }
-            .nav a { font-size: 12px; }
-            .header-cta { font-size: 12px; padding: 8px 16px; }
-            .lang-option { font-size: 11px; padding: 4px 8px; }
-            .hero-inner { padding: 0 16px; }
-            .hero h1 { font-size: 44px; }
-            .pain-row { flex-direction: column !important; min-height: auto; }
-            .pain-row-img { flex: none; height: 240px; min-height: auto; }
-            .solution-grid { grid-template-columns: 1fr; }
-            .seed-benefits-grid { grid-template-columns: 1fr; }
-            .seed-hero-inner { grid-template-columns: 1fr; }
-            .impact-grid { grid-template-columns: 1fr; }
-            .charity-stats-row { flex-direction: column; }
-            .charity-banner .charity-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.2); padding: 16px 0; }
-            .charity-banner .charity-stat:last-child { border-bottom: none; }
-            .charity-banner h3 { font-size: 22px; }
-            .impact-numbers { grid-template-columns: repeat(2, 1fr); }
-            .team-grid { grid-template-columns: repeat(2, 1fr); }
-            .showcase-grid { grid-template-columns: 1fr; }
-            .proof-banner { grid-template-columns: 1fr; }
-            .proof-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 20px 0; }
-            .proof-stat:last-child { border-bottom: none; }
-            .testimonial-cards { grid-template-columns: 1fr; }
-            .enrollment-steps { grid-template-columns: repeat(2, 1fr); }
-            .enroll-step::after { display: none; }
-            .contact-payment-grid { grid-template-columns: 1fr; }
-            .fund-flow { grid-template-columns: 1fr; gap: 16px; }
-            .fund-flow-arrow { transform: rotate(90deg); }
-            .fund-security-cards { grid-template-columns: 1fr; }
-            .fund-security-hero { padding: 32px 24px; }
-            .footer-inner { grid-template-columns: 1fr 1fr; }
-        }
-        @media (max-width: 640px) {
-            .section { padding: 60px 20px; }
-            .hero { padding: 100px 20px 50px; background-size: auto 100%; background-position: center center; min-height: 450px; }
-            .hero h1 { font-size: 34px; }
-            .hero-stats { gap: 20px; flex-wrap: wrap; justify-content: center; }
-            .vision-band-inner { padding: 56px 24px; }
-            .vision-band h2 { font-size: 28px; }
-            .vision-band p { font-size: 16px; line-height: 1.8; }
-            .section-title { font-size: 32px; }
-            .solution-card { flex-direction: column; gap: 16px; }
-            .impact-numbers { grid-template-columns: 1fr; }
-            .team-grid { grid-template-columns: 1fr; }
-            .nav { display: none; }
-            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
-            .footer-bottom { flex-direction: column; gap: 12px; }
-            .seed-countdown { font-size: 13px; padding: 8px 16px; }
-            .seed-hero-amount { font-size: 36px; }
-            .trust-badges-inner { gap: 16px; }
-            .trust-badge-item { padding: 16px 20px; width: 100%; }
-            .enrollment-steps { grid-template-columns: 1fr; }
-            .payment-methods { grid-template-columns: 1fr; }
-            .enroll-step { padding: 24px 16px; }
-            .floating-buttons { bottom: 20px; right: 16px; }
-            .floating-toggle { width: 52px; height: 52px; font-size: 22px; }
-            .floating-btn { width: 44px; height: 44px; font-size: 18px; }
-            .floating-tooltip { display: none; }
-            .pain-row-img { height: 200px; }
-            .signup-form-wrap { padding: 28px 20px; margin: 0 auto 36px; }
-            .signup-form-wrap .sf-title { font-size: 20px; }
-        }
-
-        /* ===== FLOATING CONTACT BUTTONS ===== */
+        /* ===== FLOATING BUTTONS ===== */
         .floating-buttons {
             position: fixed; bottom: 32px; right: 32px; z-index: 9998;
             display: flex; flex-direction: column-reverse; align-items: center; gap: 12px;
@@ -1181,13 +381,9 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             z-index: 2;
         }
-        .floating-toggle:hover {
-            transform: scale(1.08);
-            box-shadow: 0 6px 28px rgba(255,92,60,0.45);
-        }
+        .floating-toggle:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(255,92,60,0.45); }
         .floating-buttons.open .floating-toggle {
-            transform: rotate(135deg);
-            background: var(--text-primary);
+            transform: rotate(135deg); background: var(--text-primary);
             box-shadow: 0 4px 16px rgba(0,0,0,0.2);
         }
         .floating-btn {
@@ -1199,20 +395,16 @@
             opacity: 0; transform: scale(0.4); pointer-events: none;
             position: relative;
         }
-        .floating-buttons.open .floating-btn {
-            opacity: 1; transform: scale(1); pointer-events: auto;
-        }
+        .floating-buttons.open .floating-btn { opacity: 1; transform: scale(1); pointer-events: auto; }
         .floating-btn:hover { transform: scale(1.12); }
-        .floating-btn-wa { background: #25D366; box-shadow: 0 3px 14px rgba(37,211,102,0.35); }
-        .floating-btn-fb { background: #1877F2; box-shadow: 0 3px 14px rgba(24,119,242,0.35); }
-        .floating-btn-ig { background: linear-gradient(135deg, #F58529, #DD2A7B, #8134AF); box-shadow: 0 3px 14px rgba(221,42,123,0.35); }
+        .floating-btn-wa { background: #25D366; }
+        .floating-btn-fb { background: #1877F2; }
         .floating-tooltip {
             position: absolute; right: 62px; top: 50%; transform: translateY(-50%);
             background: var(--text-primary); color: white;
             padding: 6px 14px; border-radius: 6px; font-size: 13px;
             font-weight: 600; white-space: nowrap;
-            pointer-events: none; opacity: 0;
-            transition: opacity 0.2s ease;
+            pointer-events: none; opacity: 0; transition: opacity 0.2s ease;
         }
         .floating-tooltip::after {
             content: ''; position: absolute; left: 100%; top: 50%;
@@ -1229,6 +421,35 @@
             0% { transform: scale(0.95); opacity: 0.6; }
             100% { transform: scale(1.15); opacity: 0; }
         }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .split-cards { gap: 24px; padding: 0 16px; }
+            .split-card { padding: 40px 28px; }
+            .split-card h2 { font-size: 22px; }
+            .split-card-icon { font-size: 52px; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .split-hero { padding: 110px 20px 48px; min-height: auto; }
+            .split-hero h1 { font-size: 32px; }
+            .split-hero-subtitle { font-size: 14px; margin-bottom: 32px; }
+            .split-cards { grid-template-columns: 1fr; gap: 20px; max-width: 420px; }
+            .split-card { padding: 36px 28px; }
+            .split-card-icon { font-size: 56px; }
+            .split-card h2 { font-size: 24px; }
+            .card-desc { font-size: 13px; }
+            .card-btn { padding: 14px 32px; font-size: 15px; }
+            .nav { display: none; }
+            .trust-badges-inner { gap: 16px; }
+            .trust-badge-item { padding: 16px 20px; width: 100%; }
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; gap: 12px; }
+            .floating-buttons { bottom: 20px; right: 16px; }
+            .floating-toggle { width: 52px; height: 52px; font-size: 22px; }
+            .floating-btn { width: 44px; height: 44px; font-size: 18px; }
+            .floating-tooltip { display: none; }
+        }
     </style>
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L245R40M4Z"></script>
@@ -1238,9 +459,7 @@
         gtag('js', new Date());
         gtag('config', 'G-L245R40M4Z');
     </script>
-
     <script src="js/i18n.js"></script>
-
     <link rel="alternate" hreflang="zh-HK" href="https://www.pawgohk.com/">
     <link rel="alternate" hreflang="en" href="https://www.pawgohk.com/?lang=en">
     <link rel="alternate" hreflang="ja" href="https://www.pawgohk.com/?lang=ja">
@@ -1248,11 +467,11 @@
 <body>
     <!-- FLOATING CONTACT BUTTONS -->
     <div class="floating-buttons" id="floatingButtons">
-        <button class="floating-toggle" id="floatingToggle" data-i18n-aria="floating.toggle" aria-label="聯絡我們" onclick="toggleFloating()">
+        <button class="floating-toggle" id="floatingToggle" aria-label="聯絡我們" onclick="toggleFloating()">
             <span style="line-height:1;">💬</span>
             <span class="floating-pulse"></span>
         </button>
-        <a href="https://wa.me/85251336009?text=我想查詢PawGo種子會員計劃" target="_blank" rel="noopener" class="floating-btn floating-btn-wa" aria-label="WhatsApp">
+        <a href="https://wa.me/85251336009?text=我想了解PawGo寵物出行服務" target="_blank" rel="noopener" class="floating-btn floating-btn-wa" aria-label="WhatsApp">
             <span>💬</span>
             <span class="floating-tooltip" data-i18n="floating.wa.tooltip">WhatsApp</span>
         </a>
@@ -1269,971 +488,70 @@
     <!-- HEADER -->
     <header class="header" id="header">
         <div class="header-inner">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <span class="logo-icon">🐾</span>
                 PawGo
             </a>
             <nav class="nav">
-                <a href="#pain-points" data-i18n="nav.pain">痛點</a>
-                <a href="#solution" data-i18n="nav.solution">解決方案</a>
-                <a href="#showcase" data-i18n="nav.showcase">巴士預覽</a>
-                <a href="#seed-member" data-i18n="nav.seed">種子會員</a>
-                <a href="#enrollment" data-i18n="nav.join">如何加入</a>
-                <a href="#fund-security" data-i18n="nav.fund">資金安全</a>
-                <a href="#social-proof" data-i18n="nav.testimonial">用戶心聲</a>
-                <a href="#social-impact" data-i18n="nav.impact">社會價值</a>
-                <a href="#faq" data-i18n="nav.faq">常見問題</a>
-                <a href="#roadmap" data-i18n="nav.roadmap">發展藍圖</a>
+                <a href="bus.html" data-i18n="nav.bus">🚌 寵物巴士</a>
+                <a href="van.html" data-i18n="nav.van">🚐 Van 接送</a>
             </nav>
             <div class="lang-switcher" role="group" aria-label="Language switcher">
                 <button class="lang-option active" data-lang="zh" onclick="switchLang('zh')" aria-label="繁體中文">繁</button>
                 <button class="lang-option" data-lang="en" onclick="switchLang('en')" aria-label="English">EN</button>
                 <button class="lang-option" data-lang="ja" onclick="switchLang('ja')" aria-label="日本語">日</button>
             </div>
-            <a href="#seed-member" class="header-cta" data-i18n="header.cta">成為種子會員 →</a>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-bg-2"></div>
-        <div class="hero-bg-3"></div>
-        <div class="hero-inner">
-            <div class="hero-content">
-                <div class="hero-tag" data-i18n="hero.tag">
-                    🐶 種子會員限時招募 · 限額 500 位
-                </div>
-                <h1>
-                    <span data-i18n="hero.h1.line1">讓每隻毛孩</span><br>
-                    <span class="highlight" data-i18n="hero.h1.line2">都能出發探索世界</span>
-                </h1>
-                <p class="hero-desc" data-i18n="hero.desc">
-                    PawGo 是香港首個專為寵物主打造的動態拼車社群。不再被的士拒載、不再週末無處可去——我們讓每次出行都安全、方便，更讓毛孩們在路上結識新朋友。
-                </p>
-                <div class="hero-actions">
-                    <a href="#seed-member" class="btn-primary" data-i18n="hero.btn.primary">🐾 成為創始種子會員</a>
-                    <a href="#pain-points" class="btn-secondary" data-i18n="hero.btn.secondary">了解我們的故事</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <h4 data-i18n="hero.stat1.h4">60%+</h4>
-                        <p data-i18n="hero.stat1.p">寵物主的士拒載經歷</p>
-                    </div>
-                    <div class="hero-stat">
-                        <h4 data-i18n="hero.stat2.h4">40萬+</h4>
-                        <p data-i18n="hero.stat2.p">香港貓狗總數</p>
-                    </div>
-                    <div class="hero-stat">
-                        <h4 data-i18n="hero.stat3.h4">3–8分鐘</h4>
-                        <p data-i18n="hero.stat3.p">步行即達上車點</p>
-                    </div>
-                    <div class="hero-stat">
-                        <h4 data-i18n="hero.stat4.h4">500位</h4>
-                        <p data-i18n="hero.stat4.p">創始種子會員名額</p>
-                    </div>
-                </div>
+    <!-- SPLIT HERO -->
+    <section class="split-hero" id="hero">
+        <div class="split-hero-inner">
+            <div class="split-hero-tag" data-i18n="hero.tag">
+                🐶 香港首個寵物友善出行平台
             </div>
-        </div>
-    </section>
-
-    <!-- VISION BAND -->
-    <section class="section vision-band">
-        <div class="vision-band-inner">
-            <span class="vision-band-icon">✨</span>
-            <h2 data-i18n="vision.h2">想像一下這個週末</h2>
-            <p data-i18n="vision.p">App 一鍵預約，樓下步行 5 分鐘上車。毛孩在寬敞的豪華座椅上安坐，身邊還有隨車寵物助理照顧。到達寵物友善商場後，WhatsApp 群組裡已經約好了下次的狗公園聚會。</p>
-            <div class="vision-band-tags">
-                <span class="vision-band-tag" data-i18n="vision.tag1">一人兩座</span>
-                <span class="vision-band-tag" data-i18n="vision.tag2">AI 動態配對</span>
-                <span class="vision-band-tag" data-i18n="vision.tag3">寵物助理隨車</span>
-                <span class="vision-band-tag" data-i18n="vision.tag4">WhatsApp 社群</span>
-                <span class="vision-band-tag" data-i18n="vision.tag5">100% 保證上車</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- PAIN POINTS -->
-    <section class="section pain-points" id="pain-points">
-        <div class="section-inner">
-            <div class="section-badge">
-                <span class="badge-dot"></span> <span data-i18n="pain.badge">我們為何出發</span>
-            </div>
-            <h2 class="section-title" data-i18n="pain.title">每位香港寵物主，都經歷過這些瞬間</h2>
-            <p class="section-lead" data-i18n="pain.lead">
-                如果你也曾因為帶寵物而被的士拒載、週末不知帶毛孩去哪裡、想讓毛孩交朋友卻沒有機會——你並不孤單。這些是香港 40 萬寵物家庭每天都在面對的真實困境。
+            <h1>
+                <span data-i18n="hero.h1.line1">帶毛孩出門，</span><br>
+                <span class="highlight" data-i18n="hero.h1.line2">你想點出發？</span>
+            </h1>
+            <p class="split-hero-subtitle" data-i18n="hero.subtitle">
+                揀你嘅出行方式：Van 仔寵物專車即時接送，或者加入小巴創始會員，一齊改變毛孩出行。
             </p>
 
-            <div class="pain-rows">
-                <!-- Row 1: Image Left · Text Right -->
-                <div class="pain-row">
-                    <div class="pain-row-img">
-                        <img src="images/optimized/Wide_angle_street_photography__2026-06-11T05-22-43.jpg" alt="的士拒載寵物場景" loading="lazy" width="800" height="600" style="object-position: top center;">
+            <div class="split-cards">
+                <!-- BUS CARD — Founding Member -->
+                <a href="bus.html" class="split-card card-bus">
+                    <span class="split-card-badge" data-i18n="split.bus.badge">創始會員招募</span>
+                    <span class="split-card-icon">🚌</span>
+                    <h2 data-i18n="split.bus.h2">寵物友善小巴</h2>
+                    <p class="card-desc" data-i18n="split.bus.desc">
+                        限額 500 位創始種子會員，享終身折扣、新路線投票權、專屬社群。28 座豪華小巴，AI 配對同路寵友——成為 PawGo 開創者，同我哋一齊改變毛孩出行。
+                    </p>
+                    <div class="card-features">
+                        <span class="card-feat">⭐ 限額 500 位</span>
+                        <span class="card-feat">🎁 專屬優惠</span>
+                        <span class="card-feat">🗳️ 路線投票權</span>
+                        <span class="card-feat">👥 創始人社群</span>
                     </div>
-                    <div class="pain-row-body">
-                        <div class="pain-number">01</div>
-                        <div class="pain-icon" data-i18n="pain1.icon">🚫</div>
-                        <h3 data-i18n="pain1.h3">的士拒載，習以為常</h3>
-                        <span class="pain-stat" data-i18n="pain1.stat">超過 60% 寵物主曾被拒載</span>
-                        <p data-i18n="pain1.p">香港的士對寵物的態度令人無奈——司機可以合法拒載帶寵物的乘客。下雨天、趕去獸醫、想帶毛孩出門，卻在路邊等了半個鐘也攔不到一輛願意載你的車。</p>
-                    </div>
-                </div>
+                    <span class="card-btn" data-i18n="split.bus.btn">🐾 成為創始會員 →</span>
+                </a>
 
-                <!-- Row 2: Text Left · Image Right -->
-                <div class="pain-row reverse">
-                    <div class="pain-row-img">
-                        <img src="images/optimized/A_nearly_empty_pet_friendly_mi_2026-06-11T05-18-38.jpg" alt="稀疏的寵物巴士班次" loading="lazy" width="800" height="600" style="object-position: center center;">
+                <!-- VAN CARD -->
+                <a href="van.html" class="split-card card-van">
+                    <span class="split-card-badge" data-i18n="split.van.badge">寵物專車</span>
+                    <span class="split-card-icon">🚐</span>
+                    <h2 data-i18n="split.van.h2">Van 仔寵物專車接送</h2>
+                    <p class="card-desc" data-i18n="split.van.desc">
+                        的士拒載毛孩？我哋唔會。7 座寵物專車，點對點直達，配備安全帶、籠具、GPS。大型犬、多寵物家庭、獸醫覆診——全部歡迎。
+                    </p>
+                    <div class="card-features">
+                        <span class="card-feat">🐾 寵物專車</span>
+                        <span class="card-feat">📍 點對點</span>
+                        <span class="card-feat">🛡️ 安全裝備</span>
+                        <span class="card-feat">✅ 零事故</span>
                     </div>
-                    <div class="pain-row-body">
-                        <div class="pain-number">02</div>
-                        <div class="pain-icon" data-i18n="pain2.icon">📅</div>
-                        <h3 data-i18n="pain2.h3">寵物友善交通，選擇極少</h3>
-                        <span class="pain-stat" data-i18n="pain2.stat">專線巴士班次稀疏，路線僵化</span>
-                        <p data-i18n="pain2.p">現有的寵物巴士路線少、班次疏、目的地有限。你想去西九文化區，巴士卻只到某個指定商場；你想下午出發，班次卻只有早上那一班。靈活性幾乎為零。</p>
-                    </div>
-                </div>
-
-                <!-- Row 3: Image Left · Text Right -->
-                <div class="pain-row">
-                    <div class="pain-row-img">
-                        <img src="images/optimized/A_cute_lonely_french_bulldog_s_2026-06-11T05-02-02.jpg" alt="孤獨的寵物望窗" loading="lazy" width="800" height="600" style="object-position: center 30%;">
-                    </div>
-                    <div class="pain-row-body">
-                        <div class="pain-number">03</div>
-                        <div class="pain-icon" data-i18n="pain3.icon">😔</div>
-                        <h3 data-i18n="pain3.h3">毛孩社交，有心無力</h3>
-                        <span class="pain-stat" data-i18n="pain3.stat">缺乏安全、有組織的寵物社交場景</span>
-                        <p data-i18n="pain3.p">你知道毛孩需要社交，但狗公園遇到陌生狗又擔心安全。你想認識同樣養寵物的鄰居，卻沒有合適的場合。寵物主之間的社群感，在香港幾乎是空白。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOLUTION -->
-    <section class="section solution" id="solution">
-        <div class="section-inner">
-            <div class="section-badge">
-                <span class="badge-dot"></span> <span data-i18n="solution.badge">我們的答案</span>
-            </div>
-            <h2 class="section-title" data-i18n="solution.title">不只是拼車，而是一個寵物生活社群</h2>
-            <p class="section-lead" data-i18n="solution.lead">
-                PawGo 從根本上重新設計了寵物出行的每一個環節——不只是從 A 點到 B 點，而是讓旅程本身成為寵物和主人共同的快樂體驗。
-            </p>
-
-            <img class="section-banner-img" src="images/optimized/Bright_joyful_scene_inside_a_c_2026-06-11T05-08-31.jpg" alt="PawGo寵物巴士車廂內愉快的寵物社交場景" loading="lazy" width="800" height="450">
-
-            <div class="solution-grid">
-                <div class="solution-card">
-                    <div class="solution-card-icon">🤖</div>
-                    <div>
-                        <h3 data-i18n="sol1.h3">AI 動態拼車，靈活到極致</h3>
-                        <p data-i18n="sol1.p">不是固定的巴士路線，而是根據用戶需求即時生成最優路線和「虛擬站點」。當同一時段、同一方向的預約達到 8 人，行程自動確認。你家樓下就是上車點——平均步行只需 3–8 分鐘。</p>
-                    </div>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-card-icon">🛋️</div>
-                    <div>
-                        <h3 data-i18n="sol2.h3">一人兩座，豪華出行</h3>
-                        <p data-i18n="sol2.p">不是擁擠的公共交通，而是 28 座豪華小巴，每位乘客享雙座位——你和毛孩都有足夠的空間。車上配置寵物安全帶、清潔墊、飲水設備，還有隨車寵物助理全程照顧。</p>
-                    </div>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-card-icon">💬</div>
-                    <div>
-                        <h3 data-i18n="sol3.h3">每趟行程，就是一次社群聚會</h3>
-                        <p data-i18n="sol3.p">每趟車程自動建立 WhatsApp 群組。車上認識的寵物朋友，下車後還能繼續交流。從拼車到狗公園聚會、從鄰居到寵友——一個活躍的寵物社群由此誕生。</p>
-                    </div>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-card-icon">📍</div>
-                    <div>
-                        <h3 data-i18n="sol4.h3">寵物地圖 × 商場聯動</h3>
-                        <p data-i18n="sol4.p">我們不只帶你去，還告訴你到了能做什麼。整合全港寵物友善地點地圖，直達寵物友善商場、獸醫診所、美容店——下車就是目的地，旅程無縫連接。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VISUAL SHOWCASE -->
-    <section class="section showcase" id="showcase">
-        <div class="section-inner">
-            <div class="section-badge">
-                <span class="badge-dot"></span> <span data-i18n="showcase.badge">先睹為快</span>
-            </div>
-            <h2 class="section-title" data-i18n="showcase.title">我們的寵物巴士，是這樣的</h2>
-            <p class="section-lead" data-i18n="showcase.lead">
-                不只是一種想像——以下是 PawGo 寵物巴士的 AI 設計預覽。豪華、安全、充滿社交氛圍的出行體驗，從這裡開始。
-            </p>
-            <div class="showcase-grid">
-                <div class="showcase-item" onclick="openLightbox('images/optimized/A_luxury_28_seater_pet_friendl_2026-06-11T03-22-11.jpg', '28座豪華寵物巴士內部 — 每位乘客享雙座位，配備寵物安全帶、飲水設備及隨車寵物助理')">
-                    <img src="images/optimized/A_luxury_28_seater_pet_friendl_2026-06-11T03-22-11.jpg" alt="豪華寵物巴士內部" loading="lazy" width="800" height="600">
-                    <div class="showcase-overlay">
-                        <h4 data-i18n="show1.h4">🚌 豪華車廂內部</h4>
-                        <p data-i18n="show1.p">28座小巴 · 一人兩座 · 寵物安全帶 · 飲水設備</p>
-                    </div>
-                </div>
-                <div class="showcase-item" onclick="openLightbox('images/optimized/A_young_Hong_Kong_pet_owner__C_2026-06-11T03-22-11.jpg', '香港寵物主帶著金毛犬在屋苑樓下登上PawGo品牌專車 — 上車點步行僅3-8分鐘')">
-                    <img src="images/optimized/A_young_Hong_Kong_pet_owner__C_2026-06-11T03-22-11.jpg" alt="寵物主登車場景" loading="lazy" width="800" height="600">
-                    <div class="showcase-overlay">
-                        <h4 data-i18n="show2.h4">🏠 樓下即上車</h4>
-                        <p data-i18n="show2.p">虛擬站點覆蓋全港屋苑 · 步行 3–8 分鐘到達</p>
-                    </div>
-                </div>
-                <div class="showcase-item" onclick="openLightbox('images/optimized/Inside_a_modern_pet_friendly_m_2026-06-11T03-22-10.jpg', '車廂內的社交場景 — 多位寵物主帶著狗狗和貓咪愉快交流，寵物助理在旁提供零食和照顧')">
-                    <img src="images/optimized/Inside_a_modern_pet_friendly_m_2026-06-11T03-22-10.jpg" alt="車內社交場景" loading="lazy" width="800" height="600">
-                    <div class="showcase-overlay">
-                        <h4 data-i18n="show3.h4">🐾 每趟都是聚會</h4>
-                        <p data-i18n="show3.p">毛孩交友 · 主人交流 · 寵物助理全程陪伴</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEED MEMBER BENEFITS -->
-    <section class="section seed-member" id="seed-member">
-        <div class="section-inner">
-            <div class="section-badge">
-                <span class="badge-dot"></span> <span data-i18n="seed.badge">限時招募</span>
-            </div>
-            <h2 class="section-title" data-i18n="seed.title">成為 PawGo 創始種子會員</h2>
-            <p class="section-lead" data-i18n="seed.lead">
-                在 PawGo 正式上線前，我們正在尋找 500 位志同道合的寵物主，作為創始種子會員。這不只是一張乘車票——而是共同定義香港寵物出行未來的機會。
-            </p>
-
-            <div class="seed-hero-card">
-                <div class="seed-hero-inner">
-                    <div>
-                        <h2 data-i18n="seed.hero.h2">創始會員 · 終身權益</h2>
-                        <p data-i18n="seed.hero.p">首批 500 位種子會員將獲得獨一無二的創始人身份和永久福利。你的意見將直接影響產品方向，你的名字將留在 PawGo 的創始故事中。</p>
-                        <div class="seed-countdown" style="margin-top:20px;" data-i18n="seed.countdown">
-                            ⏳ 僅開放 500 個名額 · 先到先得
-                        </div>
-                    </div>
-                    <div style="text-align:center;">
-                        <div class="seed-hero-amount">
-                            HK$888<small>/ 年起</small>
-                        </div>
-                        <p style="opacity:0.8;margin-top:8p<p style="opacity:0.8;margin-top:8px;" data-i18n="seed.price.p">相當於每月不到到 HK$74<br>一杯咖啡的價格，換來一整年的出行自由</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="seed-benefits-grid">
-                <div class="seed-benefit">
-                    <div class="seed-benefit-icon">⭐</div>
-                    <h3 data-i18n="seed.plan1.name">探索會員</h3>
-                    <div class="seed-price" data-i18n="seed.plan1.price">HK$888<small>/年</small></div>
-                    <ul>
-                        <li data-i18n="seed.plan1.b1">每月 2 次免費拼車</li>
-                        <li data-i18n="seed.plan1.b2">額外乘車 85 折優惠</li>
-                        <li data-i18n="seed.plan1.b3">專屬 WhatsApp 社群</li>
-                        <li data-i18n="seed.plan1.b4">寵物地圖完整權限</li>
-                        <li data-i18n="seed.plan1.b5">平台功能優先試用</li>
-                        <li data-i18n="seed.plan1.b6">限量 PawGo 迎新禮盒</li>
-                    </ul>
-                </div>
-                <div class="seed-benefit featured" data-badge-text="🔥 最受歡迎" data-i18n-badge="seed.plan2.badge">
-                    <div class="seed-benefit-icon">🌟</div>
-                    <h3 data-i18n="seed.plan2.name">創始會員</h3>
-                    <div class="seed-price" data-i18n="seed.plan2.price">HK$1,888<small>/年</small></div>
-                    <ul>
-                        <li data-i18n="seed.plan2.b1">每月 4 次免費拼車</li>
-                        <li data-i18n="seed.plan2.b2">額外乘車 75 折優惠</li>
-                        <li data-i18n="seed.plan2.b3">創始人專屬社群</li>
-                        <li data-i18n="seed.plan2.b4">產品路線投票權</li>
-                        <li data-i18n="seed.plan2.b5">優先體驗新功能</li>
-                        <li data-i18n="seed.plan2.b6">獨家創始人紀念品</li>
-                        <li data-i18n="seed.plan2.b7">年度線下會員聚會</li>
-                    </ul>
-                </div>
-                <div class="seed-benefit">
-                    <div class="seed-benefit-icon">💎</div>
-                    <h3 data-i18n="seed.plan3.name">終身創始會員</h3>
-                    <div class="seed-price" data-i18n="seed.plan3.price">HK$5,888<small>/ 一次性</small></div>
-                    <ul>
-                        <li data-i18n="seed.plan3.b1">終身每月 6 次免費拼車</li>
-                        <li data-i18n="seed.plan3.b2">額外乘車 7 折優惠</li>
-                        <li data-i18n="seed.plan3.b3">創始人名錄永久展示</li>
-                        <li data-i18n="seed.plan3.b4">所有新功能永久優先</li>
-                        <li data-i18n="seed.plan3.b5">年度 VIP 聚會邀請</li>
-                        <li data-i18n="seed.plan3.b6">專屬終身會員徽章</li>
-                        <li data-i18n="seed.plan3.b7">限量編號紀念 NFT</li>
-                        <li data-i18n="seed.plan3.b8">推薦朋友雙方各得一次免費乘車</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ENROLLMENT: HOW TO JOIN -->
-    <section class="section enrollment" id="enrollment">
-        <div class="section-inner">
-            <div class="section-badge">
-                <span class="badge-dot"></span> <span data-i18n="enroll.badge">如何加入</span>
-            </div>
-            <h2 class="section-title" data-i18n="enroll.title">三步成為 PawGo 種子會員</h2>
-            <p class="section-lead" data-i18n="enroll.lead">
-                選擇你的會員方案，完成付款後將截圖發給我們的客服確認，即可立即解鎖所有創始權益。
-            </p>
-
-            <!-- 快速登記表單 -->
-            <div class="signup-form-wrap">
-                <div class="sf-title" data-i18n="enroll.form.title">📝 快速登記，獲取會員詳情</div>
-                <p class="sf-subtitle" data-i18n="enroll.form.subtitle">填寫以下資料，我們會透過 WhatsApp / Email 發送詳細會員資訊給你</p>
-                <form class="signup-form" action="https://formspree.io/f/xvznbbbp" method="POST">
-                    <label>
-                        <span data-i18n="enroll.form.name">你的名稱 *</span>
-                        <input type="text" name="name" placeholder="例如：陳小明" data-i18n="enroll.form.name.ph" required>
-                    </label>
-                    <label>
-                        <span data-i18n="enroll.form.email">電郵地址 *</span>
-                        <input type="email" name="email" placeholder="example@gmail.com" data-i18n="enroll.form.email.ph" required>
-                    </label>
-                    <label>
-                        <span data-i18n="enroll.form.phone">WhatsApp 號碼</span>
-                        <input type="tel" name="phone" placeholder="852 1234 5678" data-i18n="enroll.form.phone.ph">
-                    </label>
-                    <label>
-                        <span data-i18n="enroll.form.plan">感興趣的會員方案</span>
-                        <select name="membership">
-                            <option value="" data-i18n="enroll.form.plan.opt0">請選擇方案</option>
-                            <option value="explorer" data-i18n="enroll.form.plan.opt1">⭐ 探索會員 HK$888/年</option>
-                            <option value="founder" data-i18n="enroll.form.plan.opt2">🌟 創始會員 HK$1,888/年</option>
-                            <option value="lifetime" data-i18n="enroll.form.plan.opt3">💎 終身創始會員 HK$5,888/一次性</option>
-                            <option value="undecided" data-i18n="enroll.form.plan.opt4">🤔 未決定，想了解更多</option>
-                        </select>
-                    </label>
-                    <label>
-                        <span data-i18n="enroll.form.msg">留言（選填）</span>
-                        <textarea name="message" placeholder="有什麼想問的？例如：可以帶幾隻寵物？" data-i18n="enroll.form.msg.ph"></textarea>
-                    </label>
-                    <input type="hidden" name="_subject" value="PawGo 種子會員登記" data-i18n="form.subject">
-                    <input type="hidden" name="_language" value="zh-HK">
-                    <button type="submit" class="sf-submit" data-i18n="enroll.form.submit">🚀 立即登記</button>
-                    <p class="sf-note" data-i18n="enroll.form.note">我們不會濫發郵件，你的資料僅供 PawGo 會員服務使用</p>
-                </form>
-            </div>
-
-            <!-- Steps -->
-            <div class="enrollment-steps">
-                <div class="enroll-step">
-                    <div class="enroll-step-num">1</div>
-                    <h4 data-i18n="enroll.step1.h4">選擇方案</h4>
-                    <p data-i18n="enroll.step1.p">從探索、創始、終身中選擇最適合你的方案，記下金額</p>
-                </div>
-                <div class="enroll-step">
-                    <div class="enroll-step-num">2</div>
-                    <h4 data-i18n="enroll.step2.h4">完成付款</h4>
-                    <p data-i18n="enroll.step2.p">使用下方任一方式付款，並截圖保存付款記錄</p>
-                </div>
-                <div class="enroll-step">
-                    <div class="enroll-step-num">3</div>
-                    <h4 data-i18n="enroll.step3.h4">發送確認</h4>
-                    <p data-i18n="enroll.step3.p">將付款截圖發送至客服 WhatsApp 或電郵，確認方案</p>
-                </div>
-                <div class="enroll-step">
-                    <div class="enroll-step-num">✓</div>
-                    <h4 data-i18n="enroll.step4.h4">成為會員</h4>
-                    <p data-i18n="enroll.step4.p">客服確認後 24 小時內發送會員確認信，立即生效</p>
-                </div>
-            </div>
-
-            <!-- Contact + Payment Grid -->
-            <div class="contact-payment-grid">
-                <!-- Contact Methods -->
-                <div>
-                    <div class="cp-title" data-i18n="enroll.contact.title">📱 聯絡客服確認</div>
-                    <p class="cp-subtitle" data-i18n="enroll.contact.subtitle">付款後請透過以下任一方式發送截圖，我們會盡快確認</p>
-                    <div class="contact-list">
-                        <a href="https://wa.me/85251336009?text=我想成為PawGo種子會員，已付款請確認" target="_blank" rel="noopener" class="contact-item">
-                            <div class="contact-icon">💬</div>
-                            <div class="contact-info">
-                                <h5>WhatsApp</h5>
-                                <span>+852 5133 6009</span>
-                            </div>
-                        </a>
-                        <a href="https://m.me/PawGoHK" target="_blank" rel="noopener" class="contact-item">
-                            <div class="contact-icon">📘</div>
-                            <div class="contact-info">
-                                <h5>Facebook Messenger</h5>
-                                <span>fb.com/PawGoHK</span>
-                            </div>
-                        </a>
-                        <div class="contact-item" onclick="navigator.clipboard.writeText('PawGo888');alert((window.getCurrentLang && getCurrentLang()==='en')?'WeChat ID copied: PawGo888':(window.getCurrentLang&&getCurrentLang()==='ja')?'WeChat IDをコピーしました：PawGo888':'WeChat ID 已複製：PawGo888')" style="cursor:pointer;">
-                            <div class="contact-icon">💚</div>
-                            <div class="contact-info">
-                                <h5>WeChat 微信</h5>
-                                <span>ID: PawGo888</span>
-                            </div>
-                        </div>
-                        <div class="contact-item" onclick="navigator.clipboard.writeText('+85251336009');alert((window.t&&window.t('alert.line'))||'Line ID 已複製：+852 5133 6009')" style="cursor:pointer;">
-                            <div class="contact-icon">🟢</div>
-                            <div class="contact-info">
-                                <h5>LINE</h5>
-                                <span>ID: +852 5133 6009</span>
-                            </div>
-                        </div>
-                        <a href="https://x.com/PawGoHK" target="_blank" rel="noopener" class="contact-item">
-                            <div class="contact-icon">🐦</div>
-                            <div class="contact-info">
-                                <h5>Twitter / X</h5>
-                                <span>@PawGoHK</span>
-                            </div>
-                        </a>
-                        <a href="mailto:customerservice@pawgo.com?subject=種子會員確認%20-%20付款截圖" class="contact-item">
-                            <div class="contact-icon">✉️</div>
-                            <div class="contact-info">
-                                <h5>Email</h5>
-                                <span>customerservice@pawgo.com</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Payment Methods -->
-                <div>
-                    <div class="cp-title" data-i18n="enroll.pay.title">💳 付款方式</div>
-                    <p class="cp-subtitle" data-i18n="enroll.pay.subtitle">支援以下香港主流支付方式，付款後請截圖</p>
-                    <div class="payment-methods">
-                        <div class="payment-method">
-                            <div class="pm-icon">🔵</div>
-                            <h5 data-i18n="enroll.pay1.h5">Alipay HK</h5>
-                            <p data-i18n="enroll.pay1.p">掃碼轉賬至 PawGo 商戶號</p>
-                        </div>
-                        <div class="payment-method">
-                            <div class="pm-icon">🟢</div>
-                            <h5 data-i18n="enroll.pay2.h5">WeChat Pay HK</h5>
-                            <p data-i18n="enroll.pay2.p">掃碼轉賬至 PawGo 商戶號</p>
-                        </div>
-                        <div class="payment-method">
-                            <div class="pm-icon">⚡</div>
-                            <h5 data-i18n="enroll.pay3.h5">轉數快 FPS</h5>
-                            <p data-i18n="enroll.pay3.p">FPS ID: 123456789</p>
-                        </div>
-                        <div class="payment-method">
-                            <div class="pm-icon">🏦</div>
-                            <h5 data-i18n="enroll.pay4.h5">銀行轉賬</h5>
-                            <p data-i18n="enroll.pay4.p">HSBC / 中銀 / 渣打</p>
-                        </div>
-                    </div>
-                    <div class="payment-notice" data-i18n="enroll.pay.notice">
-                        <strong>⚠️ 重要提示：</strong>付款完成後，請務必將<span style="font-weight:700;">付款截圖</span>發送至客服 WhatsApp 或電郵，並註明你選擇的<span style="font-weight:700;">會員方案</span>（探索 / 創始 / 終身）。我們核實後會在 24 小時內發送會員確認信及迎新禮包詳情。
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOCIAL PROOF -->
-    <section class="section social-proof" id="social-proof">
-        <div class="section-inner">
-            <div class="proof-banner">
-                <div class="proof-stat">
-                    <div class="counter" id="interest-counter">0</div>
-                    <p data-i18n="proof.stat1.p">位寵物主已表達興趣</p>
-                </div>
-                <div class="proof-stat">
-                    <div class="counter">500</div>
-                    <p data-i18n="proof.stat2.p">創始種子會員限額</p>
-                </div>
-                <div class="proof-stat">
-                    <div class="counter">100%</div>
-                    <p data-i18n="proof.stat3.p">寵物責任險覆蓋</p>
-                </div>
-            </div>
-
-            <h2 class="section-title" style="margin-top:60px;" data-i18n="proof.title">和他們一樣，期待 PawGo</h2>
-            <p class="section-lead" data-i18n="proof.lead">
-                不只是我們在說——以下是來自試乘體驗者的真實反饋。每一位都和你一樣，是希望讓毛孩過得更好的寵物主人。
-            </p>
-
-            <div class="testimonial-cards">
-                <div class="testimonial-card">
-                    <p data-i18n="test1.p">以前帶 Cookie 去看獸醫，最怕就是攔不到的士。試過 PawGo 的試乘之後，真的覺得這就是香港寵物主最需要的服務。車廂乾淨、助理專業，Cookie 在車上還認識了一隻柴犬朋友！</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">A</div>
-                        <div>
-                            <strong data-i18n="test1.author">Amanda · 柴犬 Cookie 的主人</strong>
-                            <span data-i18n="test1.location">將軍澳居民 · 早期試乘體驗者</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p data-i18n="test2.p">作為兩隻貓咪的主人，我從來不敢想像可以帶牠們一起出門去寵物友善商場。PawGo 的拼車模式讓這一切變得可能——而且車上每個座位都有清潔墊和安全扣，非常安心。</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">J</div>
-                        <div>
-                            <strong data-i18n="test2.author">Jason · 兩隻英短的主人</strong>
-                            <span data-i18n="test2.location">啟德居民 · 種子會員意向者</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOCIAL IMPACT -->
-    <section class="section social-impact" id="social-impact">
-        <div class="section-inner">
-            <div class="section-badge">
-                <span class="badge-dot"></span> <span data-i18n="impact.badge">不止於商業</span>
-            </div>
-            <h2 class="section-title" data-i18n="impact.title">每一次乘車，都在讓香港變得更好</h2>
-
-            <!-- Charity Banner -->
-            <div class="charity-banner">
-                <div class="charity-badge" data-i18n="impact.charity.badge">🐾 乘車即捐款</div>
-                <h3 data-i18n="impact.charity.h3">你搭一程，我哋捐 HK$10</h3>
-                <p data-i18n="impact.charity.p">每位會員每次乘坐 PawGo 寵物巴士，我們將自動捐出 <strong>HK$10</strong> 予本地寵物慈善機構，用於流浪動物救助、絕育計劃及領養推廣。你不需要額外付費——捐款來自 PawGo 的營運收入，你的每次出行都直接幫助了等待一個家的毛孩。</p>
-                <div class="charity-stats-row">
-                    <div class="charity-stat">
-                        <div class="charity-num">HK$10</div>
-                        <div class="charity-label" data-i18n="impact.charity.stat1.label">每次乘車自動捐出</div>
-                    </div>
-                    <div class="charity-stat">
-                        <div class="charity-num">10,000+</div>
-                        <div class="charity-label" data-i18n="impact.charity.stat2.label">首年預計乘車次數</div>
-                    </div>
-                    <div class="charity-stat">
-                        <div class="charity-num">HK$100K+</div>
-                        <div class="charity-label" data-i18n="impact.charity.stat3.label">首年預計捐款總額</div>
-                    </div>
-                </div>
-            </div>
-
-            <p class="impact-quote" data-i18n="impact.quote">
-                「我們相信：一個對動物友善的城市，才是真正文明的城市。PawGo 的存在，就是要讓這句話變成現實。」
-            </p>
-
-            <div class="impact-grid">
-                <div class="impact-card">
-                    <span class="impact-icon">🏠</span>
-                    <h3 data-i18n="impact.card1.h3">降低棄養，守護每一個家</h3>
-                    <p data-i18n="impact.card1.p">很多棄養案例的背後，不是不愛，而是無力——無法帶寵物出行、無法負擔私家車、不知道如何照顧。PawGo 讓寵物出行變得簡單、可負擔，直接降低了因「出行困難」而導致的棄養風險。</p>
-                </div>
-                <div class="impact-card">
-                    <span class="impact-icon">🐶</span>
-                    <h3 data-i18n="impact.card2.h3">以領養代替購買</h3>
-                    <p data-i18n="impact.card2.p">我們堅定支持「領養代替購買」的理念。PawGo 社群將定期舉辦領養日活動，與本地收容所合作，為等待領養的毛孩提供曝光機會。種子會員可優先參與領養配對活動，用行動給流浪動物一個家。</p>
-                </div>
-                <div class="impact-card">
-                    <span class="impact-icon">🏥</span>
-                    <h3 data-i18n="impact.card3.h3">捐款直達前線救助</h3>
-                    <p data-i18n="impact.card3.p">每次乘車捐出的 HK$10，將直接用於：流浪動物緊急醫療、免費絕育計劃、疫苗接種、食物及庇護所支援。我們每季度公開捐款報告，讓每位會員清楚知道自己的出行幫助了哪些具體的動物和項目。</p>
-                </div>
-                <div class="impact-card">
-                    <span class="impact-icon">🤝</span>
-                    <h3 data-i18n="impact.card4.h3">打造寵物友善社區</h3>
-                    <p data-i18n="impact.card4.p">我們與屋苑、商場、商戶合作，推動更多場所接納寵物。每一次拼車到達的目的地，都在向社會傳遞一個訊息：寵物是家人，值得被這個城市善待。從交通開始，逐步改變香港的寵物友善文化。</p>
-                </div>
-                <div class="impact-card">
-                    <span class="impact-icon">🐕</span>
-                    <h3 data-i18n="impact.card5.h3">毛孩的身心健康，我們在乎</h3>
-                    <p data-i18n="impact.card5.p">寵物需要社交、需要探索、需要新鮮的環境來保持身心健康。PawGo 不只解決交通問題，我們為毛孩創造了規律的社交機會和豐富的戶外體驗——更快樂的寵物，更快樂的家庭。</p>
-                </div>
-                <div class="impact-card">
-                    <span class="impact-icon">🌱</span>
-                    <h3 data-i18n="impact.card6.h3">綠色出行，減少碳足跡</h3>
-                    <p data-i18n="impact.card6.p">8 個人拼一輛車 vs 8 輛私家車或的士——PawGo 的拼車模式大幅減少了碳排放。寵物出行也可以很環保，這是我們對香港環境的一份責任。</p>
-                </div>
-            </div>
-
-            <div class="impact-numbers">
-                <div class="impact-number">
-                    <h4>HK$100K+</h4>
-                    <p data-i18n="impact.num1.p">首年預計慈善捐款</p>
-                </div>
-                <div class="impact-number">
-                    <h4>40 萬+</h4>
-                    <p data-i18n="impact.num2.p">服務潛在毛孩數量</p>
-                </div>
-                <div class="impact-number">
-                    <h4 data-i18n="impact.num3.h4">零拒載</h4>
-                    <p data-i18n="impact.num3.p">100% 寵物友善保證</p>
-                </div>
-                <div class="impact-number">
-                    <h4>∞</h4>
-                    <p data-i18n="impact.num4.p">每趟旅程都在改變生命</p>
-                </div>
-            </div>
-
-            <!-- Charity Partners -->
-            <div class="charity-partners">
-                <h4 data-i18n="impact.charity.partners.h4">💛 我們關注的慈善機構</h4>
-                <p class="charity-disclaimer" data-i18n="impact.charity.disclaimer">PawGo 關注以下機構在香港的動物福利工作，目前正積極與各機構聯繫建立合作關係。每次乘車捐款將捐贈給已簽約的慈善夥伴，正式名單確認後將在此公佈。</p>
-                <div class="charity-partner-logos">
-                    <div class="charity-partner-tag">
-                        <span class="cp-icon">🐾</span> 愛護動物協會 (SPCA)
-                    </div>
-                    <div class="charity-partner-tag">
-                        <span class="cp-icon">🐕</span> 香港拯救狗隻 (HKDR)
-                    </div>
-                    <div class="charity-partner-tag">
-                        <span class="cp-icon">🐱</span> 保護遺棄動物協會 (SAA)
-                    </div>
-                    <div class="charity-partner-tag">
-                        <span class="cp-icon">🏥</span>  NPV 非牟利獸醫
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FUND SECURITY -->
-    <section class="section fund-security" id="fund-security">
-        <div class="section-inner">
-            <div class="section-badge">
-                <span class="badge-dot"></span> <span data-i18n="fund.badge">資金安全</span>
-            </div>
-            <h2 class="section-title" data-i18n="fund.title">你的錢，受到法律級別的保護</h2>
-            <p class="section-lead" data-i18n="fund.lead">
-                我們理解，把錢交給一個全新的項目需要極大的信任。以下是 PawGo 為保障每位種子會員資金安全而建立的三層防護體系——這不是口頭承諾，而是有銀行制度、法律條款和公開透明三重保障。
-            </p>
-
-            <!-- Hero Banner -->
-            <div class="fund-security-hero">
-                <h3 data-i18n="fund.hero.h3">🔐 獨立信託帳戶 — 你的錢不進公司戶口</h3>
-                <p data-i18n="fund.hero.p">所有種子會員的預付資金將存入獨立信託銀行帳戶（Client Trust Account），與 PawGo 日常營運帳戶完全分開。在法律上，這筆錢屬於「會員的錢」，公司只能按會員協議約定的用途使用（App 開發、路線測試、車輛租賃），不能隨意挪用於其他開支。信託帳戶受銀行監管，每一筆支出都有據可查。</p>
-
-                <div class="fund-flow">
-                    <div class="fund-flow-step">
-                        <div class="fund-flow-icon">💳</div>
-                        <h5 data-i18n="fund.flow.step1.h5">你付款</h5>
-                        <p data-i18n="fund.flow.step1.p">Alipay / WeChat Pay / FPS / 銀行轉賬</p>
-                    </div>
-                    <div class="fund-flow-arrow">→</div>
-                    <div class="fund-flow-step">
-                        <div class="fund-flow-icon">🏦</div>
-                        <h5 data-i18n="fund.flow.step2.h5">進入信託帳戶</h5>
-                        <p data-i18n="fund.flow.step2.p">獨立於公司營運戶口，受銀行監管</p>
-                    </div>
-                    <div class="fund-flow-arrow">→</div>
-                    <div class="fund-flow-step">
-                        <div class="fund-flow-icon">✅</div>
-                        <h5 data-i18n="fund.flow.step3.h5">只用於指定用途</h5>
-                        <p data-i18n="fund.flow.step3.p">App 開發 · 路線運營 · 租車 · 寵物保險</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Three Pillars -->
-            <div class="fund-security-cards">
-                <div class="fund-security-card">
-                    <div class="fs-card-icon">🏛️</div>
-                    <h4 data-i18n="fund.card1.h4">銀行級資金隔離</h4>
-                    <p data-i18n="fund.card1.p">會員費用存入獨立信託帳戶，與公司日常營運資金物理隔離。即使公司出現財務問題，信託帳戶內的會員資金也不會受到影響。這是香港金融機構認可的客戶資金保護機制。</p>
-                </div>
-                <div class="fund-security-card">
-                    <div class="fs-card-icon">⚖️</div>
-                    <h4 data-i18n="fund.card2.h4">律師審核協議</h4>
-                    <p data-i18n="fund.card2.p">每位種子會員將簽署正式的會員協議，協議條款已由香港持牌律師行審核。協議明確列明資金用途限制、退款條件及會員權益，具有法律約束力。你可以在付款前查閱完整協議文本。</p>
-                </div>
-                <div class="fund-security-card">
-                    <div class="fs-card-icon">📊</div>
-                    <h4 data-i18n="fund.card3.h4">每月公開帳目</h4>
-                    <p data-i18n="fund.card3.p">我們承諾每月在種子會員專屬社群發布「資金使用報告」，清楚列出：當月收到多少會員費、支出了多少、用在什麼地方、信託帳戶結餘。所有種子會員都有權查閱和提問，真正做到陽光下的透明。</p>
-                </div>
-            </div>
-
-            <!-- Refund Policy -->
-            <div class="refund-policy">
-                <h4 data-i18n="fund.refund.h4">🔙 退款保證 — 寫清楚的承諾</h4>
-                <ul class="refund-list">
-                    <li>
-                        <div class="rf-icon">1</div>
-                        <div data-i18n="fund.refund.1.title">
-                            <strong>種子會員募集未達最低目標（HK$200,000）：</strong>全額無條件退款，僅扣除銀行手續費。原路退回你的 FPS / 轉帳帳戶，處理時間不超過 14 天。
-                        </div>
-                    </li>
-                    <li>
-                        <div class="rf-icon">2</div>
-                        <div data-i18n="fund.refund.2.title">
-                            <strong>未能在 2026 年 9 月底前正式啟動 Beta 路線：</strong>你可以選擇全額退款，或保留會員資格並獲得額外 3 個月免費延期作為補償。
-                        </div>
-                    </li>
-                    <li>
-                        <div class="rf-icon">3</div>
-                        <div data-i18n="fund.refund.3.title">
-                            <strong>服務啟動後因不可抗力長期無法提供：</strong>按剩餘會員期限比例退還未使用部分的費用。例如你購買了一年會員但服務只運行了 3 個月，我們退還 9/12 的費用。
-                        </div>
-                    </li>
-                </ul>
-                <div class="refund-footer">
-                    <div data-i18n="fund.refund.footer">
-                    <span style="font-size:20px; flex-shrink:0;">💡</span>
-                    <span>所有退款均<strong>原路退回</strong>pan style="font-size:20px; flex-shrink:0;">💡</span>
-                    <span>所有退款均<strong>原路退回</strong>（FPS / Alipay HK / WeChat Pay HK / 銀行轉賬），處理時間 14–30 天。退款條款已寫入會員協議，受法律約束。如有爭議，以會員協議為準。</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section faq" id="faq">
-        <div class="section-inner">
-            <div class="section-badge">
-                <span class="badge-dot"></span> <span data-i18n="faq.badge">常見問題</span>
-            </div>
-            <h2 class="section-title" data-i18n="faq.title">你可能想知道的</h2>
-            <p class="section-lead" data-i18n="faq.lead">
-                我們知道，把毛孩交給一個全新的服務需要很大的信任。以下是我們最常被問到的問題——希望這些答案能讓你更安心。
-            </p>
-
-            <div class="faq-list">
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">
-                        <h3 data-i18n="faq.1.q">車上如何確保不同寵物之間的安全？萬一有衝突怎麼辦？</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            <div data-i18n="faq.1.a">每位乘客享雙座位（一人兩座），寵物之間有足夠的物理距離。每班車均配備隨車寵物助理，持有寵物急救證書，全程監控車內狀況。上車前，助理會進行基本的寵物行為評估；若發現潛在風險，會安排調整座位或分批乘車。我們還為每趟行程購買了寵物責任保險，確保萬無一失。
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">
-                        <h3 data-i18n="faq.2.q">如果我臨時有事要取消行程，會扣錢嗎？</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            <div data-i18n="faq.2.a">我們深知寵物主人的生活充滿變數。出發前 2 小時前取消，全額退款；2 小時內取消，可免費改簽至當天其他班次（如有空位）。種子會員更享「無憂取消」特權——每月 2 次免費取消，無需任何理由。
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">
-                        <h3 data-i18n="faq.3.q">PawGo 買了什麼保險？萬一發生意外怎麼辦？</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            <div data-i18n="faq.3.a">我們為每趟行程投保了全面的寵物責任保險及乘客意外保險，涵蓋寵物在車程中可能發生的意外受傷、疾病突發等情況，以及對第三方造成的損失。保險由香港持牌保險公司承保，每位寵物每次行程最高保障額達 HK$50,000。詳情可查閱我們的保險條款頁面。
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">
-                        <h3 data-i18n="faq.4.q">PawGo 的 A01 牌照是什麼？合法嗎？</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            <div data-i18n="faq.4.a">A01 牌照（私家服務巴士牌照）是香港運輸署簽發的合法營運牌照，允許持牌車輛提供預約式團體運輸服務。PawGo 嚴格依照 A01 牌照要求運營：所有行程必須提前預約、固定上車地點、不設街頭揚手即停。我們與持牌巴士營運商合作，確保每趟旅程完全合規。這是 PawGo 與普通「白牌車」最根本的區別。
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">
-                        <h3 data-i18n="faq.5.q">什麼是信託帳戶？我的錢真的安全嗎？</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            <div data-i18n="faq.5.a">信託帳戶（Client Trust Account）是一個與公司日常營運帳戶完全分開的獨立銀行帳戶。在法律上，信託帳戶內的錢屬於「客戶 / 會員的資金」，而非公司資產。PawGo 只能按照會員協議中列明的指定用途使用這些資金（例如 App 開發、路線測試、車輛租賃、寵物保險），不能隨意挪用。這意味著：即使 PawGo 公司遇到財務困難，信託帳戶內的會員資金也不會被公司債權人追索。我們還承諾每月向種子會員公開資金使用報告，真正做到透明可查。
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">
-                        <h3 data-i18n="faq.6.q">如果項目失敗，我能拿回我的錢嗎？有什麼退款保障？</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            <div data-i18n="faq.6.a">我們制定了清晰且有法律約束力的退款政策，已寫入會員協議並經香港持牌律師行審核：① 如果種子會員募集未達最低目標（HK$200,000），全額退款（僅扣除銀行手續費）；② 如果未能在 2026 年 9 月底前啟動 Beta 路線，你可以選擇全額退款或保留資格並獲得 3 個月免費延期；③ 如果服務啟動後因不可抗力長期中斷，按剩餘會員期限比例退還未使用部分。所有退款均原路退回（FPS / Alipay HK / WeChat Pay HK / 銀行轉賬），處理時間不超過 14–30 天。
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">
-                        <h3 data-i18n="faq.7.q">種子會員有最低目標金額嗎？達不到怎麼辦？</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            <div data-i18n="faq.7.a">是的，我們的種子會員募集最低目標是 HK$200,000。這筆資金將用於首批路線的車輛租賃、App 開發、寵物保險採購及隨車助理培訓。如果未能在募集期內達到此目標，所有已付款的會員將獲全額退款（僅扣除銀行手續費），原路退回。我們設定這個門檻是負責任的做法——確保有足夠資源提供優質服務，而不是收了錢卻無法交付承諾的體驗。
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">
-                        <h3 data-i18n="faq.8.q">會員協議是正式法律文件嗎？我可以先看再付款嗎？</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            <div data-i18n="faq.8.a">是的，會員協議是一份正式法律文件，已由香港持牌律師行審核，具有完整的法律約束力。協議中明確列明了資金用途限制、退款條件、會員權益及公司的義務。你可以在付款前透過 WhatsApp 或 Email 聯繫我們索取完整協議文本，我們鼓勵每位潛在會員先閱讀再決定。我們相信，真正的信任不是靠隱瞞條款建立的。
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">
-                        <h3 data-i18n="faq.9.q">我可以帶超過一隻寵物上車嗎？</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            <div data-i18n="faq.9.a">當然可以！每位乘客可攜帶最多 2 隻中小型寵物（或 1 隻大型寵物）共享一個雙人座位。如果你有多隻寵物需要額外空間，可以預訂額外座位。所有寵物上車時須置於清潔墊上，大型犬隻需佩戴牽引繩。
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ROADMAP -->
-    <section class="section roadmap" id="roadmap">
-        <div class="section-inner">
-            <div class="section-badge">
-                <span class="badge-dot"></span> <span data-i18n="roadmap.badge">我們的計劃</span>
-            </div>
-            <h2 class="section-title" data-i18n="roadmap.title">加入後，你會看到這些改變</h2>
-            <p class="section-lead" data-i18n="roadmap.lead">
-                PawGo 已於 2026 年中正式啟動——以下是由現在開始的發展時間表。從第一條路線開通，到覆蓋全港每個屋苑，你的會員身份將一路見證每一步成長，你的每次反饋都會影響我們下一步往哪裡走。
-            </p>
-
-            <div class="roadmap-timeline">
-                <div class="roadmap-item">
-                    <div class="roadmap-period" data-i18n="roadmap.1.period">階段一 · 2026 Q2–Q3（進行中 🔄）</div>
-                    <h3 data-i18n="roadmap.1.h3">🏗️ 基礎建設 & 種子會員招募</h3>
-                    <ul>
-                        <li data-i18n="roadmap.1.li1">公司註冊已完成，核心團隊組建就位</li>
-                        <li data-i18n="roadmap.1.li2">App MVP 開發全力推進中，WhatsApp 社群基礎搭建</li>
-                        <li data-i18n="roadmap.1.li3">首批 6–8 個屋苑站點陸續簽約（Lohas Park、啟德等）</li>
-                        <li data-i18n="roadmap.1.li4">500 位創始種子會員招募火熱進行中</li>
-                        <li data-i18n="roadmap.1.li5">寵物責任險投保，A01 牌照合規框架確認</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <div class="roadmap-period" data-i18n="roadmap.2.period">階段二 · 2026 Q3–Q4</div>
-                    <h3 data-i18n="roadmap.2.h3">🚀 首批路線試運營</h3>
-                    <ul>
-                        <li data-i18n="roadmap.2.li1">首條路線開通：Lohas Park ↔ 西九文化區 / AIRSIDE</li>
-                        <li data-i18n="roadmap.2.li2">種子會員率先體驗，收集真實反饋</li>
-                        <li data-i18n="roadmap.2.li3">每趟行程自動建立 WhatsApp 社群群組</li>
-                        <li data-i18n="roadmap.2.li4">舉辦首次線下會員聚會</li>
-                        <li data-i18n="roadmap.2.li5">根據用戶反饋迭代產品</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <div class="roadmap-period" data-i18n="roadmap.3.period">階段三 · 2026 Q4–2027 Q1</div>
-                    <h3 data-i18n="roadmap.3.h3">📈 更多路線 · 更好體驗</h3>
-                    <ul>
-                        <li data-i18n="roadmap.3.li1">原生 App V2.0 上線：動態拼車算法 + 寵物圈社群</li>
-                        <li data-i18n="roadmap.3.li2">根據種子會員投票，新增第二、第三條路線</li>
-                        <li data-i18n="roadmap.3.li3">首批商場合作上線（帶毛孩逛街、用餐更方便）</li>
-                        <li data-i18n="roadmap.3.li4">會員乘車滿意度目標 95%+，路線持續優化</li>
-                        <li data-i18n="roadmap.3.li5">開放更多屋苑站點，讓更多寵物主加入社群</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <div class="roadmap-period" data-i18n="roadmap.4.period">階段四 · 2027–2031+</div>
-                    <h3 data-i18n="roadmap.4.h3">🌐 全港寵物生活生態</h3>
-                    <ul>
-                        <li data-i18n="roadmap.4.li1">常規路線擴展至 15+ 條，覆蓋全港主要屋苑</li>
-                        <li data-i18n="roadmap.4.li2">推出 PawGo Marketplace：會員專享寵物用品、保險優惠</li>
-                        <li data-i18n="roadmap.4.li3">Pet Map 2.0：實時寵物友善場所資訊 + 真實社群評價</li>
-                        <li data-i18n="roadmap.4.li4">週末會員社群聚會常態化，覆蓋全港 18 區</li>
-                        <li data-i18n="roadmap.4.li5">會員專屬線下活動：寵物嘉年華、主題工作坊、聯誼派對</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TEAM -->
-    <section class="section team" id="team">
-        <div class="section-inner">
-            <div class="section-badge">
-                <span class="badge-dot"></span> <span data-i18n="team.badge">我們的團隊</span>
-            </div>
-            <h2 class="section-title" data-i18n="team.title">一群真心愛寵物的人</h2>
-            <p class="section-lead" data-i18n="team.lead">
-                我們不只是創業者，更是寵物主人。每一個功能設計的背後，都有我們自己和毛孩的真實經歷。精幹而全面的團隊配置，確保每一趟旅程都值得信賴。
-            </p>
-
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-avatar">👤</div>
-                    <h3 data-i18n="team.1.h3">創辦人</h3>
-                    <div class="team-role" data-i18n="team.1.role">Founder & CEO</div>
-                    <span class="team-type" data-i18n="team.1.type">全職</span>
-                    <p data-i18n="team.1.p">親身經歷無數次的士拒載。相信每一隻毛孩都值得擁有探索世界的權利。負責策略規劃、融資與對外合作。</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-avatar">🗺️</div>
-                    <h3 data-i18n="team.2.h3">營運經理</h3>
-                    <div class="team-role" data-i18n="team.2.role">Operations Manager</div>
-                    <span class="team-type" data-i18n="team.2.type">全職</span>
-                    <p data-i18n="team.2.p">路線規劃、車輛調度、服務品質管控。確保每趟行程準點、安全、讓主人放心。</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-avatar">💬</div>
-                    <h3 data-i18n="team.3.h3">社區經理</h3>
-                    <div class="team-role" data-i18n="team.3.role">Community Manager</div>
-                    <span class="team-type" data-i18n="team.3.type">全職</span>
-                    <p data-i18n="team.3.p">社交媒體運營、WhatsApp 群組管理、線下聚會策劃。打造香港最溫暖的寵物社群。</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-avatar">🤝</div>
-                    <h3 data-i18n="team.4.h3">業務發展經理</h3>
-                    <div class="team-role" data-i18n="team.4.role">BD Manager</div>
-                    <span class="team-type" data-i18n="team.4.type">全職</span>
-                    <p data-i18n="team.4.p">商場、獸醫診所、美容店合作開拓。讓寵物友善場所越來越多。</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-avatar">📊</div>
-                    <h3 data-i18n="team.5.h3">數據分析師</h3>
-                    <div class="team-role" data-i18n="team.5.role">Data Analyst</div>
-                    <span class="team-type" data-i18n="team.5.type">兼職</span>
-                    <p data-i18n="team.5.p">路線優化、用戶行為分析。用數據讓每次拼車配對更精準、體驗更好。</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-avatar">🐶</div>
-                    <h3 data-i18n="team.6.h3">寵物助理 × N</h3>
-                    <div class="team-role" data-i18n="team.6.role">Pet Care Assistant</div>
-                    <span class="team-type" data-i18n="team.6.type">兼職</span>
-                    <p data-i18n="team.6.p">隨車照顧寵物、實時拍照分享、車上社交破冰。每位助理均持寵物急救證書。他們才是毛孩們最喜歡的人。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRUST BADGES -->
-    <section class="trust-badges" id="trust-badges">
-        <div class="trust-badges-inner">
-            <div class="trust-badge-item">
-                <div class="trust-badge-icon">🔒</div>
-                <div class="trust-badge-info">
-                    <h4 data-i18n="trust.1.h4">獨立信託帳戶</h4>
-                    <p data-i18n="trust.1.p">會員資金銀行級隔離監管</p>
-                </div>
-            </div>
-            <div class="trust-badge-item">
-                <div class="trust-badge-icon">⚖️</div>
-                <div class="trust-badge-info">
-                    <h4 data-i18n="trust.2.h4">律師審核協議</h4>
-                    <p data-i18n="trust.2.p">會員權益受法律保障</p>
-                </div>
-            </div>
-            <div class="trust-badge-item">
-                <div class="trust-badge-icon">📊</div>
-                <div class="trust-badge-info">
-                    <h4 data-i18n="trust.3.h4">每月公開帳目</h4>
-                    <p data-i18n="trust.3.p">資金使用全程透明可查</p>
-                </div>
-            </div>
-            <div class="trust-badge-item">
-                <div class="trust-badge-icon">🔙</div>
-                <div class="trust-badge-info">
-                    <h4 data-i18n="trust.4.h4">明確退款保證</h4>
-                    <p data-i18n="trust.4.p">未達標或延遲全額退還</p>
-                </div>
+                    <span class="card-btn" data-i18n="split.van.btn">🚐 了解寵物專車 →</span>
+                </a>
             </div>
         </div>
     </section>
@@ -2242,7 +560,7 @@
     <footer class="footer footer-glow" id="footer">
         <div class="footer-inner">
             <div class="footer-brand">
-                <a href="#" class="logo" style="margin-bottom:16px;display:flex;">
+                <a href="index.html" class="logo" style="margin-bottom:16px;display:flex;">
                     <span class="logo-icon">🐾</span>
                     PawGo
                 </a>
@@ -2254,22 +572,22 @@
             </div>
             <div class="footer-col">
                 <h4 data-i18n="footer.col1.h4">產品</h4>
-                <a href="#solution" data-i18n="footer.col1.a1">動態拼車</a>
-                <a href="#solution" data-i18n="footer.col1.a2">寵物地圖</a>
-                <a href="#solution" data-i18n="footer.col1.a3">寵物圈社群</a>
-                <a href="#solution" data-i18n="footer.col1.a4">寵物助理服務</a>
+                <a href="bus.html" data-i18n="footer.col1.a1">動態拼車</a>
+                <a href="bus.html" data-i18n="footer.col1.a2">寵物地圖</a>
+                <a href="bus.html" data-i18n="footer.col1.a3">寵物圈社群</a>
+                <a href="bus.html" data-i18n="footer.col1.a4">寵物助理服務</a>
             </div>
             <div class="footer-col">
                 <h4 data-i18n="footer.col2.h4">公司</h4>
-                <a href="#team" data-i18n="footer.col2.a1">團隊</a>
-                <a href="#social-impact" data-i18n="footer.col2.a2">社會價值</a>
-                <a href="#roadmap" data-i18n="footer.col2.a3">發展藍圖</a>
+                <a href="bus.html#about" data-i18n="footer.col2.a1">團隊</a>
+                <a href="bus.html#social-impact" data-i18n="footer.col2.a2">社會價值</a>
+                <a href="bus.html#faq" data-i18n="footer.col2.a3">發展藍圖</a>
                 <a href="#" data-i18n="footer.col2.a4">聯絡我們</a>
             </div>
             <div class="footer-col">
                 <h4 data-i18n="footer.col3.h4">法律</h4>
                 <a href="privacy-policy.html" data-i18n="footer.col3.a1">隱私政策</a>
-                <a href="#" data-i18n="footer.col3.a2">服務條款</a>
+                <a href="bus.html#fund-security" data-i18n="footer.col3.a2">服務條款</a>
                 <a href="#" data-i18n="footer.col3.a3">A01 牌照資訊</a>
             </div>
         </div>
@@ -2286,13 +604,6 @@
         </div>
     </footer>
 
-    <!-- LIGHTBOX -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img src="" alt="" id="lightbox-img">
-        <div class="lightbox-caption" id="lightbox-caption"></div>
-    </div>
-
     <script>
         // Header scroll
         const header = document.getElementById('header');
@@ -2301,95 +612,10 @@
             else header.classList.remove('scrolled');
         });
 
-        // Intersection Observer for fade-in
-        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.pain-row, .solution-card, .seed-benefit, .impact-card, .roadmap-item, .team-card, .showcase-item, .testimonial-card, .trust-badge-item, .enroll-step, .payment-method, .contact-item, .fund-security-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        setTimeout(() => {
-            document.querySelectorAll('.pain-row, .solution-card, .seed-benefit, .impact-card, .roadmap-item, .team-card, .showcase-item, .testimonial-card, .trust-badge-item, .enroll-step, .payment-method, .contact-item, .fund-security-card').forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
-                    el.style.opacity = '1';
-                    el.style.transform = 'translateY(0)';
-                }
-            });
-        }, 100);
-
-        // Lightbox
-        function openLightbox(src, caption) {
-            const lb = document.getElementById('lightbox');
-            document.getElementById('lightbox-img').src = src;
-            document.getElementById('lightbox-caption').textContent = caption;
-            lb.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeLightbox() {
-            const lb = document.getElementById('lightbox');
-            lb.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeLightbox();
-        });
-
-        // FAQ toggle
-        function toggleFaq(item) {
-            const wasActive = item.classList.contains('active');
-            // Close all
-            document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-            // Open clicked (unless it was already open)
-            if (!wasActive) item.classList.add('active');
-        }
-
-        // Counter animation
-        function animateCounter(el, target, duration) {
-            const start = 0;
-            const startTime = performance.now();
-            function update(now) {
-                const elapsed = now - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                el.textContent = Math.floor(eased * target).toLocaleString() + '+';
-                if (progress < 1) requestAnimationFrame(update);
-                else el.textContent = target.toLocaleString() + '+';
-            }
-            requestAnimationFrame(update);
-        }
-
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counter = document.getElementById('interest-counter');
-                    if (counter.textContent === '0') {
-                        animateCounter(counter, 328, 2000);
-                    }
-                    counterObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const proofBanner = document.querySelector('.proof-banner');
-        if (proofBanner) counterObserver.observe(proofBanner);
-
         // Floating contact buttons toggle
         function toggleFloating() {
             document.getElementById('floatingButtons').classList.toggle('open');
         }
-        // Close floating buttons when clicking outside
         document.addEventListener('click', function(e) {
             const fb = document.getElementById('floatingButtons');
             if (fb.classList.contains('open') && !fb.contains(e.target)) {
