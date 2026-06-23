@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta.bus.title">PawGo — 寵物友善小巴 | 創始會員招募</title>
+    <meta name="description" content="PawGo 創始會員招募 — 限額 500 位，終身最優惠價格，路線投票決定權。香港首個寵物友善拼車平台，28座豪華小巴，屋苑門口接送。" data-i18n="meta.bus.desc">
+    <meta name="keywords" content="PawGo,寵物拼車,香港寵物,寵物友善,拼車,毛孩出行,寵物小巴,創始會員">
+    <meta name="author" content="PawGo">
+    <link rel="canonical" href="https://www.pawgohk.com/bus.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.pawgohk.com/bus.html">
+    <meta property="og:title" content="PawGo — 創始會員招募 | 限額 500 位" data-i18n="meta.bus.og.title">
+    <meta property="og:description" content="加入 PawGo 創始會員，享終身最優惠價格、路線投票權——限額 500 位，額滿即止。" data-i18n="meta.bus.og.desc">
+    <meta property="og:image" content="https://www.pawgohk.com/images/optimized/pawgo-og-banner.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="zh_HK">
+    <meta property="og:site_name" content="PawGo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PawGo — 創始會員招募 | 限額 500 位" data-i18n="meta.bus.twitter.title">
+    <meta name="twitter:description" content="加入 PawGo 創始會員，享終身最優惠、路線投票權，限額 500！" data-i18n="meta.bus.twitter.desc">
+    <meta name="twitter:image" content="https://www.pawgohk.com/images/optimized/pawgo-og-banner.jpg">
+    <meta name="theme-color" content="#FF5C3C">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+HK:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF5C3C;
+            --primary-dark: #E04A2A;
+            --primary-light: #FF8C6B;
+            --accent-gold: #F4A83D;
+            --bg-cream: #FFFAF5;
+            --bg-warm-white: #FFF8F3;
+            --bg-peach: #FFF0E8;
+            --bg-coral: #FFE8DF;
+            --bg-soft: #FFF5EE;
+            --text-primary: #2D1B14;
+            --text-secondary: #6B4C3F;
+            --text-light: #9B7B6E;
+            --text-muted: #BF9F8E;
+            --white: #FFFFFF;
+            --border: #F0E0D6;
+            --shadow-sm: 0 2px 8px rgba(255, 92, 60, 0.08);
+            --shadow: 0 4px 24px rgba(255, 92, 60, 0.10);
+            --shadow-lg: 0 12px 48px rgba(255, 92, 60, 0.12);
+            --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.06);
+            --radius-sm: 8px;
+            --radius: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --font-display: 'Noto Sans HK', 'Inter', -apple-system, sans-serif;
+            --font-body: 'Noto Sans HK', 'Inter', -apple-system, sans-serif;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body {
+            font-family: var(--font-body); color: var(--text-primary);
+            background: var(--bg-cream); line-height: 1.7;
+            -webkit-font-smoothing: antialiased; overflow-x: hidden;
+        }
+        /* ===== HEADER ===== */
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,250,245,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(240,224,214,0.6); transition: var(--transition); }
+        .header.scrolled { box-shadow: var(--shadow-sm); }
+        .header-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-display); font-weight: 900; font-size: 28px; color: var(--primary); letter-spacing: -0.5px; }
+        .logo-icon { width: 42px; height: 42px; background: linear-gradient(135deg, var(--primary), var(--accent-gold)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white; box-shadow: 0 4px 12px rgba(255,92,60,0.3); }
+        .nav { display: flex; align-items: center; gap: 16px; }
+        .nav a { text-decoration: none; font-size: 13px; font-weight: 500; color: var(--text-secondary); transition: var(--transition); position: relative; white-space: nowrap; flex-shrink: 0; }
+        .nav a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--primary); border-radius: 1px; transition: var(--transition); }
+        .nav a:hover { color: var(--primary); }
+        .nav a:hover::after { width: 100%; }
+        .nav a.nav-van-link { font-weight: 600; color: var(--accent-gold); }
+        .header-cta { padding: 10px 24px; background: var(--primary); color: var(--white); border: none; border-radius: 50px; font-family: var(--font-body); font-size: 14px; font-weight: 600; cursor: pointer; transition: var(--transition); text-decoration: none; }
+        .header-cta:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,92,60,0.35); }
+        /* ===== SECTION BASE ===== */
+        .section { padding: 100px 32px; }
+        .section-inner { max-width: 1200px; margin: 0 auto; }
+        .section-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--bg-peach); color: var(--primary); font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 50px; margin-bottom: 20px; letter-spacing: 0.5px; text-transform: uppercase; }
+        .section-badge .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--primary); animation: pulse-dot 2s ease-in-out infinite; }
+        @keyframes pulse-dot { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+        .section-title { font-family: var(--font-display); font-size: 44px; font-weight: 900; line-height: 1.2; color: var(--text-primary); margin-bottom: 16px; letter-spacing: -1px; }
+        .section-lead { font-size: 18px; color: var(--text-secondary); max-width: 640px; line-height: 1.7; margin-bottom: 60px; }
+        /* ===== HERO ===== */
+        .hero { padding: 160px 32px 120px; position: relative; overflow: hidden; background: url('images/hero-banner.jpg') center center/cover no-repeat; min-height: 600px; }
+        .hero::before { content:''; position:absolute; inset:0; background: linear-gradient(105deg, rgba(20,10,5,0.72) 0%, rgba(20,10,5,0.55) 50%, rgba(20,10,5,0.30) 100%); z-index:0; }
+        .hero-inner { max-width: 900px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
+        .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,92,60,0.85); color: #fff; font-size: 14px; font-weight: 700; padding: 8px 20px; border-radius: 50px; margin-bottom: 28px; backdrop-filter: blur(4px); }
+        .hero h1 { font-family: var(--font-display); font-size: 60px; font-weight: 900; line-height: 1.15; color: #fff; margin-bottom: 24px; letter-spacing: -1.5px; text-shadow: 0 2px 12px rgba(0,0,0,0.3); }
+        .hero h1 .highlight { background: linear-gradient(135deg, #FFD166, #FF8C6B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-desc { font-size: 19px; color: rgba(255,255,255,0.90); line-height: 1.8; margin: 0 auto 36px; max-width: 680px; text-shadow: 0 1px 6px rgba(0,0,0,0.3); }
+        .hero-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .btn-primary { padding: 16px 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: var(--white); border: none; border-radius: 50px; font-family: var(--font-body); font-size: 16px; font-weight: 700; cursor: pointer; transition: var(--transition); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 8px 24px rgba(255,92,60,0.4); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255,92,60,0.5); }
+        .btn-secondary { padding: 16px 36px; background: rgba(255,255,255,0.15); color: #fff; border: 2px solid rgba(255,255,255,0.6); border-radius: 50px; font-family: var(--font-body); font-size: 16px; font-weight: 600; cursor: pointer; transition: var(--transition); text-decoration: none; backdrop-filter: blur(4px); }
+        .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.25); }
+        .hero-stats { display: flex; justify-content: center; gap: 48px; margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.25); flex-wrap: wrap; }
+        .hero-stat h4 { font-family: var(--font-display); font-size: 28px; font-weight: 900; color: #FFD166; line-height: 1; margin-bottom: 4px; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+        .hero-stat p { font-size: 13px; color: rgba(255,255,255,0.80); }
+        /* ===== URGENCY BAND ===== */
+        .urgency-band { background: linear-gradient(180deg, var(--primary) 0%, #C4452A 100%); position: relative; overflow: hidden; }
+        .urgency-band::before { content:''; position:absolute; inset:0; background: url('images/hero-banner.jpg') center center/cover no-repeat; opacity:0.06; filter:saturate(0); }
+        .urgency-band-inner { position:relative; z-index:1; max-width:800px; margin:0 auto; text-align:center; padding:72px 32px; }
+        .urgency-band h2 { font-family:var(--font-display); font-size:36px; font-weight:900; color:#fff; margin-bottom:20px; }
+        .urgency-band p { font-size:18px; line-height:2; color:rgba(255,255,255,0.92); max-width:680px; margin:0 auto 32px; }
+        .urgency-band-tags { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+        .urgency-band-tag { padding:8px 18px; background:rgba(255,255,255,0.18); color:#fff; font-size:14px; font-weight:700; border-radius:50px; backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.25); }
+        /* ===== BUS FEATURES GRID ===== */
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .feature-card { background: var(--white); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow-card); transition: var(--transition); }
+        .feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+        .feature-icon { font-size: 36px; margin-bottom: 16px; }
+        .feature-card h3 { font-family: var(--font-display); font-size: 18px; font-weight: 800; margin-bottom: 10px; color: var(--text-primary); }
+        .feature-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+        /* ===== MEMBERSHIP PLANS ===== */
+        .seed-member { background: linear-gradient(135deg, var(--bg-warm-white), var(--bg-peach)); }
+        .seed-benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .seed-benefit { background: var(--white); border-radius: var(--radius-lg); padding: 40px 32px; box-shadow: var(--shadow-card); position: relative; transition: var(--transition); border: 2px solid transparent; }
+        .seed-benefit:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--primary); }
+        .seed-benefit.featured { border-color: var(--primary); box-shadow: var(--shadow-lg); transform: scale(1.03); }
+        .seed-benefit.featured::before { content: attr(data-badge); position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; font-size: 13px; font-weight: 700; padding: 6px 18px; border-radius: 50px; white-space: nowrap; }
+        .seed-benefit-icon { font-size: 40px; margin-bottom: 16px; }
+        .seed-benefit h3 { font-family: var(--font-display); font-size: 22px; font-weight: 900; margin-bottom: 8px; }
+        .seed-price { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--primary); margin-bottom: 24px; }
+        .seed-price small { font-size: 16px; font-weight: 600; color: var(--text-light); }
+        .seed-benefit ul { list-style: none; padding: 0; border-top: 1px solid var(--border); padding-top: 20px; }
+        .seed-benefit li { font-size: 14px; color: var(--text-secondary); padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+        .seed-benefit li::before { content: '✓'; color: var(--primary); font-weight: 700; flex-shrink: 0; }
+        .seed-cta-wrap { text-align: center; margin-top: 40px; }
+        .seed-cta-wrap .seed-note { font-size: 15px; color: var(--text-secondary); margin-top: 16px; }
+        /* ===== WHY JOIN NOW ===== */
+        .whyjoin-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+        .whyjoin-card { background: var(--white); border-radius: var(--radius); padding: 36px; box-shadow: var(--shadow-card); display: flex; gap: 20px; align-items: flex-start; transition: var(--transition); border-left: 4px solid var(--primary); }
+        .whyjoin-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+        .whyjoin-icon { font-size: 36px; flex-shrink: 0; }
+        .whyjoin-card h3 { font-family: var(--font-display); font-size: 20px; font-weight: 800; margin-bottom: 10px; }
+        .whyjoin-card p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
+        /* ===== ENROLLMENT FORM ===== */
+        .enrollment { background: linear-gradient(135deg, var(--bg-peach), var(--bg-cream)); }
+        .signup-form-wrap { max-width: 700px; margin: 0 auto; background: var(--white); border-radius: var(--radius-xl); padding: 52px 48px; box-shadow: var(--shadow-lg); border: 2px solid var(--border); }
+        .sf-title { font-family: var(--font-display); font-size: 24px; font-weight: 800; color: var(--text-primary); margin-bottom: 8px; }
+        .sf-subtitle { font-size: 15px; color: var(--text-secondary); margin-bottom: 32px; }
+        .signup-form { display: flex; flex-direction: column; gap: 20px; }
+        .signup-form label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: var(--text-primary); }
+        .signup-form input, .signup-form select, .signup-form textarea { padding: 14px 16px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 15px; color: var(--text-primary); background: var(--bg-soft); transition: var(--transition); outline: none; }
+        .signup-form input:focus, .signup-form select:focus, .signup-form textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(255,92,60,0.1); }
+        .signup-form textarea { min-height: 100px; resize: vertical; }
+        .sf-submit { padding: 18px 40px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; border: none; border-radius: 50px; font-family: var(--font-body); font-size: 17px; font-weight: 700; cursor: pointer; transition: var(--transition); box-shadow: 0 8px 24px rgba(255,92,60,0.3); }
+        .sf-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255,92,60,0.45); }
+        .sf-note { font-size: 13px; color: var(--text-muted); text-align: center; }
+        /* ===== TESTIMONIALS ===== */
+        .testimonial-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .testimonial-card { background: var(--white); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow-card); position: relative; }
+        .testimonial-card::before { content: '"'; position: absolute; top: 16px; left: 20px; font-family: Georgia, serif; font-size: 72px; color: var(--bg-peach); line-height: 1; pointer-events: none; }
+        .testimonial-card p { font-size: 16px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 16px; padding-left: 20px; font-style: italic; }
+        .testimonial-author { display: flex; align-items: center; gap: 12px; padding-left: 20px; border-top: 1px solid var(--border); padding-top: 16px; }
+        .testimonial-author .author-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--accent-gold)); display: flex; align-items: center; justify-content: center; font-size: 20px; color: white; font-weight: 700; }
+        .testimonial-author strong { font-size: 14px; color: var(--text-primary); display: block; }
+        .testimonial-author span { font-size: 12px; color: var(--text-light); }
+        /* ===== FUND SECURITY ===== */
+        .fund-security { background: var(--white); }
+        .fund-security-hero { background: linear-gradient(135deg, #1B5E20, #2E7D32); border-radius: var(--radius-xl); padding: 48px 40px; color: white; box-shadow: var(--shadow-lg); margin-bottom: 40px; }
+        .fund-security-hero h3 { font-family: var(--font-display); font-size: 24px; font-weight: 800; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+        .fund-security-hero > p { font-size: 16px; line-height: 1.8; opacity: 0.9; margin-bottom: 0; }
+        .fund-flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; align-items: center; margin-top: 40px; padding: 32px 24px; background: rgba(255,255,255,0.1); border-radius: var(--radius); text-align: center; }
+        .fund-flow-step { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+        .fund-flow-icon { width: 64px; height: 64px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 32px; }
+        .fund-flow-step h5 { font-size: 14px; font-weight: 700; }
+        .fund-flow-step p { font-size: 12px; opacity: 0.75; max-width: 140px; line-height: 1.5; }
+        .fund-flow-arrow { font-size: 28px; opacity: 0.5; }
+        .fund-security-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+        .fund-security-card { background: var(--bg-warm-white); border-radius: var(--radius); padding: 32px 24px; border: 1.5px solid var(--border); text-align: center; }
+        .fs-card-icon { font-size: 36px; margin-bottom: 12px; }
+        .fund-security-card h4 { font-family: var(--font-display); font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+        .fund-security-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+        .refund-policy { background: var(--bg-cream); border-radius: var(--radius-lg); padding: 40px; margin-top: 40px; border: 2px dashed var(--primary-light); }
+        .refund-policy h4 { font-family: var(--font-display); font-size: 20px; font-weight: 800; margin-bottom: 24px; color: var(--text-primary); }
+        .refund-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+        .refund-list li { display: flex; gap: 16px; align-items: flex-start; padding: 16px; background: var(--white); border-radius: var(--radius-sm); box-shadow: var(--shadow-card); font-size: 14px; line-height: 1.7; color: var(--text-secondary); }
+        .rf-icon { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+        .refund-footer { margin-top: 20px; padding: 16px 20px; background: var(--bg-peach); border-radius: var(--radius-sm); font-size: 14px; color: var(--text-secondary); line-height: 1.7; display: flex; gap: 12px; align-items: flex-start; }
+        /* ===== FAQ ===== */
+        .faq { background: var(--bg-cream); }
+        .faq-list { display: flex; flex-direction: column; gap: 0; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); }
+        .faq-item { background: var(--white); border-bottom: 1px solid var(--border); cursor: pointer; transition: var(--transition); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 24px 28px; }
+        .faq-question h3 { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--text-primary); }
+        .faq-icon { font-size: 24px; font-weight: 300; color: var(--primary); flex-shrink: 0; margin-left: 16px; transition: var(--transition); }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .faq-answer-inner { padding: 0 28px 24px; font-size: 15px; color: var(--text-secondary); line-height: 1.8; }
+        .faq-item.open .faq-answer { max-height: 300px; }
+        /* ===== ROUTE PROGRESS ===== */
+        .route-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .route-card { background: var(--white); border-radius: var(--radius); padding: 36px; box-shadow: var(--shadow-card); }
+        .route-card-icon { font-size: 32px; margin-bottom: 12px; }
+        .route-card h3 { font-family: var(--font-display); font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+        .route-card p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+        /* ===== SOCIAL PROOF / STATS ===== */
+        .proof-banner { background: linear-gradient(135deg, var(--text-primary), #4A3028); border-radius: var(--radius-xl); padding: 48px; color: white; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; align-items: center; box-shadow: var(--shadow-lg); margin-bottom: 40px; }
+        .proof-stat { text-align: center; padding: 24px; border-right: 1px solid rgba(255,255,255,0.15); }
+        .proof-stat:last-child { border-right: none; }
+        .proof-stat .counter { font-family: var(--font-display); font-size: 48px; font-weight: 900; background: linear-gradient(135deg, var(--primary-light), var(--accent-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1; margin-bottom: 8px; }
+        .proof-stat p { font-size: 15px; opacity: 0.8; }
+        /* ===== FOOTER ===== */
+        .footer { background: var(--text-primary); padding: 60px 32px 32px; }
+        .footer-glow { box-shadow: 0 -4px 40px rgba(255,92,60,0.08); }
+        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+        .footer-brand p { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.8; margin-top: 8px; }
+        .footer-col h4 { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+        .footer-col a { display: block; color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; margin-bottom: 10px; transition: var(--transition); }
+        .footer-col a:hover { color: var(--primary-light); }
+        .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.4); font-size: 13px; gap: 16px; flex-wrap: wrap; }
+        .footer-socials { display: flex; gap: 16px; font-size: 22px; }
+        .footer-socials a, .footer-socials span { opacity: 0.6; transition: var(--transition); }
+        .footer-socials a:hover, .footer-socials span:hover { opacity: 1; }
+        /* ===== FLOATING BUTTONS ===== */
+        .float-actions { position: fixed; bottom: 32px; right: 32px; display: flex; flex-direction: column; gap: 12px; z-index: 999; }
+        .float-btn { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.15); transition: var(--transition); text-decoration: none; border: none; }
+        .float-btn:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+        .float-wa { background: #25D366; }
+        .float-fb { background: #1877F2; }
+        .float-top { background: var(--primary); color: white; font-size: 20px; }
+        /* ===== LANGUAGE SWITCHER ===== */
+        .lang-switcher { display: flex; gap: 4px; background: var(--bg-peach); border-radius: 50px; padding: 4px; }
+        .lang-option { padding: 6px 12px; background: none; border: none; border-radius: 50px; font-family: var(--font-body); font-size: 12px; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: var(--transition); }
+        .lang-option.active { background: var(--white); color: var(--primary); box-shadow: var(--shadow-sm); }
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .seed-benefits-grid { grid-template-columns: 1fr; }
+            .seed-benefit.featured { transform: none; }
+            .fund-security-cards { grid-template-columns: 1fr; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .section { padding: 60px 20px; }
+            .section-title { font-size: 32px; }
+            .hero { padding: 120px 20px 80px; }
+            .hero h1 { font-size: 38px; }
+            .hero-desc { font-size: 16px; }
+            .hero-stats { gap: 24px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .whyjoin-grid { grid-template-columns: 1fr; }
+            .testimonial-cards { grid-template-columns: 1fr; }
+            .proof-banner { grid-template-columns: 1fr; }
+            .proof-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
+            .proof-stat:last-child { border-bottom: none; }
+            .fund-flow { grid-template-columns: 1fr; }
+            .fund-flow-arrow { transform: rotate(90deg); }
+            .route-grid { grid-template-columns: 1fr; }
+            .signup-form-wrap { padding: 32px 24px; }
+            .header-inner { padding: 0 20px; }
+            .nav { display: none; }
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+            .float-actions { bottom: 20px; right: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- FLOATING BUTTONS -->
+    <div class="float-actions">
+        <a href="https://wa.me/85251336009" target="_blank" rel="noopener" class="float-btn float-wa" aria-label="WhatsApp">💬</a>
+        <a href="https://www.facebook.com/PawGoHK/" target="_blank" rel="noopener" class="float-btn float-fb" aria-label="Facebook">📘</a>
+        <button class="float-btn float-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-close" onclick="closeLightbox()">×</div>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🐾</span>PawGo
+            </a>
+            <nav class="nav">
+                <a href="#service" data-i18n="nav_bus.service">巴士服務</a>
+                <a href="#membership" data-i18n="nav_bus.membership">會員計劃</a>
+                <a href="#whyjoin" data-i18n="nav_bus.whyjoin">加入理由</a>
+                <a href="#faq" data-i18n="nav_bus.faq">常見問題</a>
+                <a href="van.html" class="nav-van-link">🚐 Van 仔接送</a>
+                <div class="lang-switcher">
+                    <button class="lang-option active" data-lang="zh" onclick="switchLang('zh')" aria-label="中文">中</button>
+                    <button class="lang-option" data-lang="en" onclick="switchLang('en')" aria-label="English">EN</button>
+                    <button class="lang-option" data-lang="ja" onclick="switchLang('ja')" aria-label="日本語">日</button>
+                </div>
+            </nav>
+            <a href="#enrollment" class="header-cta" data-i18n="header_bus.cta">🐾 成為創始會員 →</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-tag" data-i18n="bus_hero.tag">
+                🚌 創始會員招募 · 限額 500 位
+            </div>
+            <h1>
+                <span data-i18n="bus_hero.h1.line1">加入 PawGo，</span><br>
+                <span class="highlight" data-i18n="bus_hero.h1.line2">成為創始會員</span>
+            </h1>
+            <p class="hero-desc" data-i18n="bus_hero.desc">
+                香港首個寵物友善拼車平台現正招募 <strong>500 位創始會員</strong>。28 座豪華小巴、AI 動態配對、屋苑門口接送。創始會員享終身優惠、路線投票權，與我哋一起打造屬於毛孩的出行文化。
+            </p>
+            <div class="hero-actions">
+                <a href="#enrollment" class="btn-primary" data-i18n="bus_hero.btn.primary">🐾 成為創始會員</a>
+                <a href="#service" class="btn-secondary" data-i18n="bus_hero.btn.secondary">了解巴士服務</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat"><h4 data-i18n="bus_hero.stat1.h4">500 位</h4><p data-i18n="bus_hero.stat1.p">創始會員限額</p></div>
+                <div class="hero-stat"><h4 data-i18n="bus_hero.stat2.h4">28 座</h4><p data-i18n="bus_hero.stat2.p">豪華小巴 · 一人兩座</p></div>
+                <div class="hero-stat"><h4 data-i18n="bus_hero.stat3.h4">AI 配對</h4><p data-i18n="bus_hero.stat3.p">同方向寵友自動成團</p></div>
+                <div class="hero-stat"><h4 data-i18n="bus_hero.stat4.h4">100%</h4><p data-i18n="bus_hero.stat4.p">寵物友善保證</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- URGENCY BAND -->
+    <section class="section urgency-band">
+        <div class="urgency-band-inner">
+            <h2 data-i18n="urgency.h2">⏳ 為什麼現在加入？</h2>
+            <p data-i18n="urgency.p">創始會員名額只有 500 個，一旦額滿即止。現在加入，你將享有只有創始會員才有的終身特權——後期加入的會員永遠唔會再有這些待遇。</p>
+            <div class="urgency-band-tags">
+                <span class="urgency-band-tag" data-i18n="urgency.tag1">限額 500 位</span>
+                <span class="urgency-band-tag" data-i18n="urgency.tag2">終身優惠價格</span>
+                <span class="urgency-band-tag" data-i18n="urgency.tag3">路線投票決定權</span>
+                <span class="urgency-band-tag" data-i18n="urgency.tag4">創始人名錄</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUS SERVICE FEATURES -->
+    <section class="section" style="background: var(--bg-cream);" id="service">
+        <div class="section-inner">
+            <div class="section-badge"><span class="badge-dot"></span> <span data-i18n="bus_features.badge">巴士服務</span></div>
+            <h2 class="section-title" data-i18n="bus_features.h2">寵物友善小巴 · 拼車出行</h2>
+            <p class="section-lead" data-i18n="bus_features.subtitle">28 座豪華小巴，一人兩座，空間闊落。全港首個以寵物為中心設計的拼車服務——每趟車程都係一次毛孩聚會。</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" data-i18n="bus_features.f1.icon">🤖</div>
+                    <h3 data-i18n="bus_features.f1.title">AI 動態配對</h3>
+                    <p data-i18n="bus_features.f1.desc">根據出發地、目的地、時間自動配對同路寵友，唔係固定路線，更靈活更智慧</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" data-i18n="bus_features.f2.icon">🏠</div>
+                    <h3 data-i18n="bus_features.f2.title">屋苑門口接送</h3>
+                    <p data-i18n="bus_features.f2.desc">虛擬站點覆蓋全港主要屋苑，步行 3–8 分鐘即到上車點，唔使喺街頭攔車</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" data-i18n="bus_features.f3.icon">👩‍⚕️</div>
+                    <h3 data-i18n="bus_features.f3.title">寵物助理隨車</h3>
+                    <p data-i18n="bus_features.f3.desc">每班車配備持寵物急救證書嘅助理，全程照顧、拍照記錄、社交破冰</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" data-i18n="bus_features.f4.icon">💬</div>
+                    <h3 data-i18n="bus_features.f4.title">每程建立社群</h3>
+                    <p data-i18n="bus_features.f4.desc">每班車自動建立 WhatsApp 群組，識到嘅寵物朋友落車後仲可以繼續交流</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" data-i18n="bus_features.f5.icon">🛡️</div>
+                    <h3 data-i18n="bus_features.f5.title">安全保障完善</h3>
+                    <p data-i18n="bus_features.f5.desc">持牌 A01 車隊、防水易清潔車廂、寵物安全帶、寵物責任保險，每趟行程全程受保</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" data-i18n="bus_features.f6.icon">💚</div>
+                    <h3 data-i18n="bus_features.f6.title">乘車即捐款</h3>
+                    <p data-i18n="bus_features.f6.desc">每次乘車自動捐出 HK$10 俾本地動物慈善機構，你嘅出行讓香港更好</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEMBERSHIP PLANS -->
+    <section class="section seed-member" id="membership">
+        <div class="section-inner">
+            <div class="section-badge"><span class="badge-dot"></span> <span data-i18n="seed.badge">限時招募</span></div>
+            <h2 class="section-title" data-i18n="seed.title">成為 PawGo 創始種子會員</h2>
+            <p class="section-lead" data-i18n="seed.lead">⏳ 僅開放 500 個創始會員名額。創始會員享有終身最優惠費率、路線投票決定權、創始人名錄永久展示，以及一系列只有創始成員才有嘅獨家特權。</p>
+            <div class="seed-benefits-grid">
+                <div class="seed-benefit">
+                    <div class="seed-benefit-icon">⭐</div>
+                    <h3 data-i18n="seed.plan1.name">探索會員</h3>
+                    <div class="seed-price" data-i18n="seed.plan1.price">HK$888<small>/年</small></div>
+                    <ul>
+                        <li data-i18n="seed.plan1.b1">每月 2 次免費拼車</li>
+                        <li data-i18n="seed.plan1.b2">額外乘車 85 折優惠</li>
+                        <li data-i18n="seed.plan1.b3">專屬 WhatsApp 社群</li>
+                        <li data-i18n="seed.plan1.b4">寵物地圖完整權限</li>
+                        <li data-i18n="seed.plan1.b5">平台功能優先試用</li>
+                        <li data-i18n="seed.plan1.b6">限量 PawGo 迎新禮盒</li>
+                    </ul>
+                </div>
+                <div class="seed-benefit featured" data-badge="🔥 最受歡迎">
+                    <div class="seed-benefit-icon">🌟</div>
+                    <h3 data-i18n="seed.plan2.name">創始會員</h3>
+                    <div class="seed-price" data-i18n="seed.plan2.price">HK$1,888<small>/年</small></div>
+                    <ul>
+                        <li data-i18n="seed.plan2.b1">每月 4 次免費拼車</li>
+                        <li data-i18n="seed.plan2.b2">額外乘車 75 折優惠</li>
+                        <li data-i18n="seed.plan2.b3">創始人專屬社群</li>
+                        <li data-i18n="seed.plan2.b4">產品路線投票權</li>
+                        <li data-i18n="seed.plan2.b5">優先體驗新功能</li>
+                        <li data-i18n="seed.plan2.b6">獨家創始人紀念品</li>
+                        <li data-i18n="seed.plan2.b7">年度線下會員聚會</li>
+                    </ul>
+                </div>
+                <div class="seed-benefit">
+                    <div class="seed-benefit-icon">💎</div>
+                    <h3 data-i18n="seed.plan3.name">終身創始會員</h3>
+                    <div class="seed-price" data-i18n="seed.plan3.price">HK$5,888<small>/ 一次性</small></div>
+                    <ul>
+                        <li data-i18n="seed.plan3.b1">終身每月 6 次免費拼車</li>
+                        <li data-i18n="seed.plan3.b2">額外乘車 7 折優惠</li>
+                        <li data-i18n="seed.plan3.b3">創始人名錄永久展示</li>
+                        <li data-i18n="seed.plan3.b4">所有新功能永久優先</li>
+                        <li data-i18n="seed.plan3.b5">年度 VIP 聚會邀請</li>
+                        <li data-i18n="seed.plan3.b6">專屬終身會員徽章</li>
+                        <li data-i18n="seed.plan3.b7">限量編號紀念 NFT</li>
+                        <li data-i18n="seed.plan3.b8">推薦朋友雙方各得一次免費乘車</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="seed-cta-wrap">
+                <a href="#enrollment" class="btn-primary" style="font-size:17px; padding: 18px 48px;">🐾 立即成為創始會員</a>
+                <p class="seed-note" data-i18n="seed.countdown">⏳ 僅開放 500 個名額 · 先到先得</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY JOIN NOW -->
+    <section class="section" style="background: var(--white);" id="whyjoin">
+        <div class="section-inner">
+            <div class="section-badge"><span class="badge-dot"></span> <span data-i18n="bus_whyjoin.badge">創始會員特權</span></div>
+            <h2 class="section-title" data-i18n="bus_whyjoin.h2">為什麼要成為創始會員？</h2>
+            <p class="section-lead" data-i18n="bus_whyjoin.subtitle">創始會員唔只係一張車票——而係你對香港寵物出行文化嘅投票，同永久鎖定嘅獨家特權。</p>
+            <div class="whyjoin-grid">
+                <div class="whyjoin-card">
+                    <div class="whyjoin-icon" data-i18n="bus_whyjoin.p1.icon">🔒</div>
+                    <div>
+                        <h3 data-i18n="bus_whyjoin.p1.title">終身鎖定最優惠價</h3>
+                        <p data-i18n="bus_whyjoin.p1.desc">創始會員費率係 PawGo 有史以來最低價格，終身有效。日後服務全面開通後，新會員費用只會更高。現在加入，永久享受創始優惠。</p>
+                    </div>
+                </div>
+                <div class="whyjoin-card">
+                    <div class="whyjoin-icon" data-i18n="bus_whyjoin.p2.icon">🗳️</div>
+                    <div>
+                        <h3 data-i18n="bus_whyjoin.p2.title">你決定下一條路線</h3>
+                        <p data-i18n="bus_whyjoin.p2.desc">創始會員擁有路線投票權——下一條路線通往邊個地區，由你同其他創始會員投票決定。你嘅意見直接影響 PawGo 嘅發展方向，唔係普通用家可以參與嘅事。</p>
+                    </div>
+                </div>
+                <div class="whyjoin-card">
+                    <div class="whyjoin-icon" data-i18n="bus_whyjoin.p3.icon">🏆</div>
+                    <div>
+                        <h3 data-i18n="bus_whyjoin.p3.title">創始人名錄永久展示</h3>
+                        <p data-i18n="bus_whyjoin.p3.desc">終身創始會員嘅名字將永久展示喺 PawGo 官網嘅「創始人名錄」——你係第一批讓呢個服務成真嘅人，歷史會記住你。</p>
+                    </div>
+                </div>
+                <div class="whyjoin-card">
+                    <div class="whyjoin-icon" data-i18n="bus_whyjoin.p4.icon">🎁</div>
+                    <div>
+                        <h3 data-i18n="bus_whyjoin.p4.title">獨家創始人紀念品</h3>
+                        <p data-i18n="bus_whyjoin.p4.desc">每位創始會員均會獲得專屬限量紀念品，包括創始人徽章、限量禮盒，以及一枚印有你專屬編號嘅紀念 NFT。這些不會再有第二次。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENROLLMENT FORM -->
+    <section class="section enrollment" id="enrollment">
+        <div class="section-inner">
+            <div class="section-badge"><span class="badge-dot"></span> <span data-i18n="enrollment.badge">立即加入</span></div>
+            <h2 class="section-title" data-i18n="enrollment.title">準備好讓毛孩自由出行？</h2>
+            <p class="section-lead" data-i18n="enrollment.lead">填寫以下資料，我哋會透過 WhatsApp 發送詳細會員資訊同付款方式俾你。無壓力，先了解再決定。</p>
+            <div class="signup-form-wrap">
+                <div class="sf-title" data-i18n="enrollment.form.title">📝 快一步登記，了解會員詳情</div>
+                <p class="sf-subtitle" data-i18n="enrollment.form.subtitle">填寫以下資料，我們會透過 WhatsApp / Email 發送詳細會員資訊給你</p>
+                <form class="signup-form" action="https://formspree.io/f/xvznbbbp" method="POST">
+                    <label><span data-i18n="enrollment.form.name">你的名稱 *</span><input type="text" name="name" placeholder="例如：陳小明" data-i18n="enrollment.form.name.ph" required></label>
+                    <label><span data-i18n="enrollment.form.email">電郵地址 *</span><input type="email" name="email" placeholder="example@gmail.com" data-i18n="enrollment.form.email.ph" required></label>
+                    <label><span data-i18n="enrollment.form.phone">WhatsApp 號碼</span><input type="tel" name="phone" placeholder="852 1234 5678" data-i18n="enrollment.form.phone.ph"></label>
+                    <label><span data-i18n="enrollment.form.plan">感興趣的服務</span>
+                        <select name="membership">
+                            <option value="" data-i18n="enrollment.form.plan.opt0">請選擇</option>
+                            <option value="explorer" data-i18n="enrollment.form.plan.opt1">⭐ 基本會員 HK$888/年</option>
+                            <option value="founder" data-i18n="enrollment.form.plan.opt2">🌟 進階會員 HK$1,888/年</option>
+                            <option value="lifetime" data-i18n="enrollment.form.plan.opt3">💎 終身會員 HK$5,888/一次性</option>
+                            <option value="undecided" data-i18n="enrollment.form.plan.opt4">🤔 未決定，想了解多啲</option>
+                        </select>
+                    </label>
+                    <label><span data-i18n="enrollment.form.msg">留言（選填）</span><textarea name="message" placeholder="例如：我住喺將軍澳，想知有無路線？" data-i18n="enrollment.form.msg.ph"></textarea></label>
+                    <input type="hidden" name="_subject" value="PawGo 創始會員查詢">
+                    <input type="hidden" name="_language" value="zh-HK">
+                    <button type="submit" class="sf-submit" data-i18n="enrollment.form.submit">🚀 立即登記</button>
+                    <p class="sf-note" data-i18n="enrollment.form.note">你的資料僅供 PawGo 會員服務使用，我們不會濫發訊息</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section social-proof" id="testimonials" style="background: var(--bg-cream);">
+        <div class="section-inner">
+            <div class="proof-banner">
+                <div class="proof-stat"><div class="counter">500</div><p data-i18n="bus_hero.stat1.p">創始會員限額</p></div>
+                <div class="proof-stat"><div class="counter">28</div><p data-i18n="bus_hero.stat2.p">豪華小巴 · 一人兩座</p></div>
+                <div class="proof-stat"><div class="counter">100%</div><p data-i18n="bus_hero.stat4.p">寵物友善保證</p></div>
+            </div>
+            <h2 class="section-title" style="text-align:center;" data-i18n="testimonials.title">用家真實心聲</h2>
+            <p class="section-lead" data-i18n="testimonials.lead">以下係試乘體驗者嘅真實分享——佢哋同你一樣，都係想俾毛孩更好生活嘅寵物主人。</p>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <p data-i18n="testimonials.1.p">以前帶 Cookie 去睇獸醫，最驚就係攔唔到的士。試過 PawGo 之後真係覺得呢個就係香港寵物主最需要嘅服務。車廂乾淨、助理專業，Cookie 喺車上仲識咗隻柴犬朋友！</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div>
+                            <strong data-i18n="testimonials.1.author">Amanda · 柴犬 Cookie 主人</strong>
+                            <span data-i18n="testimonials.1.location">將軍澳居民 · 早期試乘體驗者</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p data-i18n="testimonials.2.p">養咗兩隻英短，從來唔敢想像可以帶佢哋一齊出門。PawGo 嘅 Van 仔接送真係好方便——車廂乾淨、空間啱啱好，兩隻貓仲可以一齊坐。以後去寵物美容唔使再煩。</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div>
+                            <strong data-i18n="testimonials.2.author">Jason · 兩隻英短主人</strong>
+                            <span data-i18n="testimonials.2.location">啟德居民 · 種子會員意向者</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROUTE PROGRESS -->
+    <section class="section" style="background: var(--white);" id="routes">
+        <div class="section-inner">
+            <div class="section-badge"><span class="badge-dot"></span> <span data-i18n="bus_route.badge">路線進展</span></div>
+            <h2 class="section-title" data-i18n="bus_route.h2">路線發展 & 最新動態</h2>
+            <p class="section-lead" data-i18n="bus_route.subtitle">PawGo 正逐步擴展服務網絡。入會後你嘅意見會直接影響下一條路線開去邊。</p>
+            <div class="route-grid">
+                <div class="route-card">
+                    <div class="route-card-icon">📍</div>
+                    <h3 data-i18n="news.route1.h3">首條路線已確認</h3>
+                    <p style="color:var(--primary);font-weight:700;margin-bottom:16px;font-size:14px;" data-i18n="news.route1.badge">🚀 2026 Q3 開通</p>
+                    <p data-i18n="news.route1.p">Lohas Park（日出康城）↔ 西九文化區 / AIRSIDE 啟德。途經多個寵物友善商場同狗公園，週末出遊首選路線。</p>
+                </div>
+                <div class="route-card">
+                    <div class="route-card-icon">🗳️</div>
+                    <h3 data-i18n="news.route2.h3">會員投票決定下一站</h3>
+                    <p style="color:var(--accent-gold);font-weight:700;margin-bottom:16px;font-size:14px;" data-i18n="news.route2.badge">🗳️ 即將投票</p>
+                    <p data-i18n="news.route2.p">第二條路線去邊？由種子會員投票決定！候選包括：將軍澳南 ↔ 南區（數碼港 / 淺水灣）、沙田 ↔ 大埔、元朗 ↔ 屯門。你嘅一票決定下一條路線。</p>
+                </div>
+                <div class="route-card">
+                    <div class="route-card-icon">📱</div>
+                    <h3 data-i18n="news.app.h3">App 開發進度</h3>
+                    <p style="color:var(--primary);font-weight:700;margin-bottom:16px;font-size:14px;" data-i18n="news.app.badge">🔄 MVP 開發中</p>
+                    <p data-i18n="news.app.p">原生 App 正在全力開發，核心功能包括：AI 動態拼車配對、即時車輛追蹤、一鍵預約 Van 仔、會員社群互動。預計 2026 Q3 推出 Beta 版本。</p>
+                </div>
+                <div class="route-card">
+                    <div class="route-card-icon">🚐</div>
+                    <h3 data-i18n="news.van.h3">Van 仔服務現已上線</h3>
+                    <p style="color:#2E7D32;font-weight:700;margin-bottom:16px;font-size:14px;" data-i18n="news.van.badge">✅ 即時可用</p>
+                    <p data-i18n="news.van.p">7 座 Van 仔接送服務已率先開放預約，覆蓋全港主要區域。適合去獸醫、美容院、小型聚會。WhatsApp 客服一對一安排行程。<a href="van.html" style="color:var(--accent-gold);font-weight:700;">了解 Van 接送 →</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FUND SECURITY -->
+    <section class="section fund-security" id="fund-security">
+        <div class="section-inner">
+            <div class="section-badge"><span class="badge-dot"></span> <span data-i18n="fund.badge">資金安全</span></div>
+            <h2 class="section-title" data-i18n="fund.title">你的錢，受到法律級別的保護</h2>
+            <p class="section-lead" data-i18n="fund.lead">我哋理解，將錢交俾一個新平台需要好大嘅信任。以下係 PawGo 為每位會員建立嘅三層資金保障——唔係口頭承諾，而係有銀行制度同法律條款雙重約束。</p>
+            <div class="fund-security-hero">
+                <h3 data-i18n="fund.hero.h3">🔐 獨立信託帳戶 — 你的錢不進公司戶口</h3>
+                <p data-i18n="fund.hero.p">所有會員預付資金存入獨立信託銀行帳戶，同 PawGo 日常營運帳戶完全分開。法律上呢筆錢屬於「會員嘅錢」，公司只能按會員協議約定用途使用，唔可以隨便挪用。</p>
+                <div class="fund-flow">
+                    <div class="fund-flow-step">
+                        <div class="fund-flow-icon">💳</div>
+                        <h5 data-i18n="fund.flow.step1.h5">你付款</h5>
+                        <p data-i18n="fund.flow.step1.p">Alipay / WeChat Pay / FPS / 銀行轉賬</p>
+                    </div>
+                    <div class="fund-flow-arrow">→</div>
+                    <div class="fund-flow-step">
+                        <div class="fund-flow-icon">🏦</div>
+                        <h5 data-i18n="fund.flow.step2.h5">進入信託帳戶</h5>
+                        <p data-i18n="fund.flow.step2.p">獨立於公司營運戶口，受銀行監管</p>
+                    </div>
+                    <div class="fund-flow-arrow">→</div>
+                    <div class="fund-flow-step">
+                        <div class="fund-flow-icon">✅</div>
+                        <h5 data-i18n="fund.flow.step3.h5">只用於指定用途</h5>
+                        <p data-i18n="fund.flow.step3.p">App 開發 · 路線運營 · 租車 · 寵物保險</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fund-security-cards">
+                <div class="fund-security-card"><div class="fs-card-icon">🏛️</div><h4 data-i18n="fund.card1.h4">銀行級資金隔離</h4><p data-i18n="fund.card1.p">會員費存入獨立信託帳戶，同公司日常營運資金物理隔離。</p></div>
+                <div class="fund-security-card"><div class="fs-card-icon">⚖️</div><h4 data-i18n="fund.card2.h4">律師審核協議</h4><p data-i18n="fund.card2.p">會員協議條款已由香港持牌律師行審核，具有法律約束力。</p></div>
+                <div class="fund-security-card"><div class="fs-card-icon">📊</div><h4 data-i18n="fund.card3.h4">每月公開帳目</h4><p data-i18n="fund.card3.p">每月喺會員專屬社群發布資金使用報告，真正陽光下透明運作。</p></div>
+            </div>
+            <div class="refund-policy">
+                <h4 data-i18n="fund.refund.h4">🔙 退款保證 — 寫清楚的承諾</h4>
+                <ul class="refund-list">
+                    <li><div class="rf-icon">1</div><div data-i18n="fund.refund.1.title"><strong>會員募集未達最低目標（HK$200,000）：</strong>全額無條件退款，僅扣除銀行手續費。</div></li>
+                    <li><div class="rf-icon">2</div><div data-i18n="fund.refund.2.title"><strong>未能在 2026 年 9 月底前正式啟動 Beta 路線：</strong>你可以選擇全額退款，或者保留會籍並獲得額外 3 個月免費延期。</div></li>
+                    <li><div class="rf-icon">3</div><div data-i18n="fund.refund.3.title"><strong>服務啟動後因不可抗力長期無法提供：</strong>按剩餘會員期限比例退還未使用部分費用。</div></li>
+                </ul>
+                <div class="refund-footer">
+                    <div data-i18n="fund.refund.footer"><span style="font-size:20px;flex-shrink:0;">💡</span><span>所有退款均<strong>原路退回</strong>，處理時間 14–30 天。退款條款已寫入會員協議，受法律約束。</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+        <div class="section-inner">
+            <div class="section-badge"><span class="badge-dot"></span> <span data-i18n="faq.badge">常見問題</span></div>
+            <h2 class="section-title" data-i18n="faq.title">你可能想知道的</h2>
+            <p class="section-lead" data-i18n="faq.lead">將毛孩交俾新服務需要信任。以下係我哋最常被問到嘅問題。</p>
+            <div class="faq-list">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question"><h3 data-i18n="faq.1.q">巴士同 Van 仔有咩分別？我應該揀邊款？</h3><div class="faq-icon">+</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner"><div data-i18n="faq.1.a">巴士係 28 座豪華小巴，適合多人拼車，價錢更經濟，仲可以識到其他寵物朋友。Van 仔係 7 座廂型車，空間更私密，適合小家庭或個別出行。兩款都係同等安全標準。</div></div></div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question"><h3 data-i18n="faq.2.q">車上點樣確保唔同寵物之間嘅安全？</h3><div class="faq-icon">+</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner"><div data-i18n="faq.2.a">巴士每位乘客享雙座位，寵物之間有足夠距離。每班車配備持寵物急救證書嘅隨車助理，全程監控。上車前助理會做基本行為評估。</div></div></div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question"><h3 data-i18n="faq.3.q">可以帶超過一隻寵物嗎？</h3><div class="faq-icon">+</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner"><div data-i18n="faq.3.a">當然可以！每位乘客可帶最多 2 隻中小型寵物共享一個雙人座位。多寵物家庭可預訂額外座位。</div></div></div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question"><h3 data-i18n="faq.4.q">PawGo 嘅車隊有咩牌照？合法嗎？</h3><div class="faq-icon">+</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner"><div data-i18n="faq.4.a">全部車輛持香港運輸署 A01 牌照合法營運，同持牌巴士營運商合作。呢個係 PawGo 同普通「白牌車」最根本嘅分別。</div></div></div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question"><h3 data-i18n="faq.5.q">買咗咩保險？萬一有意外點算？</h3><div class="faq-icon">+</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner"><div data-i18n="faq.5.a">我哋為每趟行程投保全面嘅寵物責任保險同乘客意外保險，由香港持牌保險公司承保，每位寵物每次行程最高保障額達 HK$50,000。</div></div></div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question"><h3 data-i18n="faq.6.q">點樣預約 Van 仔？</h3><div class="faq-icon">+</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner"><div data-i18n="faq.6.a">Van 仔接送目前透過 WhatsApp 客服一對一預約。App 上線後將支援 App 內一鍵預約。了解 Van 服務：<a href="van.html" style="color:var(--accent-gold);font-weight:700;">前往 Van 接送頁面 →</a></div></div></div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question"><h3 data-i18n="faq.7.q">退款政策係點？</h3><div class="faq-icon">+</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner"><div data-i18n="faq.7.a">清晰退款政策已寫入會員協議：① 未達最低目標全額退款；② 未能如期啟動可選全額退款或保留會籍加延期；③ 因不可抗力中斷按比例退還。所有退款原路退回，處理時間 14–30 天。</div></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CROSS-LINK TO VAN -->
+    <section class="section" style="background: linear-gradient(135deg, #FFF8E1, #FFF3E0); text-align: center;">
+        <div class="section-inner">
+            <span style="font-size:48px;display:block;margin-bottom:16px;">🚐</span>
+            <h2 class="section-title" data-i18n="bus.vanlink.title" style="font-size:32px;">的士成日拒載毛孩？試試 Van 仔寵物專車</h2>
+            <p style="font-size:18px;color:var(--text-secondary);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto;" data-i18n="bus.vanlink.desc">7 座寵物專車，點對點直達，配備安全帶、籠具、GPS。大型犬、多寵物家庭、獸醫覆診——我哋全部歡迎，唔會拒載。</p>
+            <a href="van.html" class="btn-primary" style="background:linear-gradient(135deg, var(--accent-gold), #FFD166); box-shadow:0 8px 24px rgba(244,168,61,0.4);" data-i18n="bus.vanlink.btn">🚐 了解寵物專車 →</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer footer-glow" id="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="logo" style="margin-bottom:16px;display:flex;color:var(--primary);text-decoration:none;font-family:var(--font-display);font-weight:900;font-size:28px;gap:10px;">
+                    <span style="width:42px;height:42px;background:linear-gradient(135deg,var(--primary),var(--accent-gold));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;">🐾</span>PawGo
+                </a>
+                <p data-i18n="footer.brand.p">香港首個動態寵物拼車社群平台。<br>不只是交通——是毛孩的社交圈，<br>是寵物主人的第二個家。</p>
+            </div>
+            <div class="footer-col"><h4 data-i18n="footer.col1.h4">產品</h4><a href="#service" data-i18n="footer.col1.a1">動態拼車</a><a href="van.html" data-i18n="footer.col1.a2">寵物地圖</a><a href="#" data-i18n="footer.col1.a3">寵物圈社群</a><a href="#" data-i18n="footer.col1.a4">寵物助理服務</a></div>
+            <div class="footer-col"><h4 data-i18n="footer.col2.h4">公司</h4><a href="#" data-i18n="footer.col2.a1">團隊</a><a href="#" data-i18n="footer.col2.a2">社會價值</a><a href="#" data-i18n="footer.col2.a3">發展藍圖</a><a href="#" data-i18n="footer.col2.a4">聯絡我們</a></div>
+            <div class="footer-col"><h4 data-i18n="footer.col3.h4">法律</h4><a href="privacy-policy.html" data-i18n="footer.col3.a1">隱私政策</a><a href="#" data-i18n="footer.col3.a2">服務條款</a><a href="#" data-i18n="footer.col3.a3">A01 牌照資訊</a></div>
+        </div>
+        <div class="footer-inner footer-bottom">
+            <span data-i18n="footer.copyright">© 2026 PawGo. All rights reserved. 香港有限公司</span>
+            <div class="footer-socials">
+                <a href="https://wa.me/85251336009" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+                <a href="https://www.facebook.com/PawGoHK/" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+                <a href="https://x.com/PawGoHK" target="_blank" rel="noopener" aria-label="Twitter">🐦</a>
+                <span onclick="navigator.clipboard.writeText('PawGo888');alert('WeChat ID 已複製：PawGo888')" style="cursor:pointer;" title="WeChat: PawGo888">💚</span>
+                <span onclick="navigator.clipboard.writeText('+85251336009');alert('Line ID 已複製：+852 5133 6009')" style="cursor:pointer;" title="LINE: +852 5133 6009">🟢</span>
+            </div>
+            <span data-i18n="footer.tagline">🐾 讓每隻毛孩，都能出發探索世界</span>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) { header.classList.add('scrolled'); }
+            else { header.classList.remove('scrolled'); }
+        });
+
+        // FAQ toggle
+        function toggleFaq(item) {
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+            if (!isOpen) { item.classList.add('open'); }
+        }
+
+        // Lightbox
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('active');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+        // Lang switcher active state sync
+        function syncLangButtons() {
+            const lang = window.getCurrentLang ? window.getCurrentLang() : 'zh';
+            document.querySelectorAll('.lang-option').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            syncLangButtons();
+            document.querySelectorAll('.lang-option').forEach(btn => {
+                btn.addEventListener('click', () => setTimeout(syncLangButtons, 50));
+            });
+        });
+    </script>
+</body>
+</html>
