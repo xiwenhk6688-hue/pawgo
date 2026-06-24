@@ -49,15 +49,15 @@
 
     // ═══ VAN PAGE META ═══
     'meta.van.title': { zh: 'PawGo — 寵物專車接送 | 香港高端寵物出行', en: 'PawGo — Pet Chauffeur | HK Pet Point-to-Point', ja: 'PawGo — ペット専用車送迎 | 香港プレミアムペット移動' },
-    'meta.van.desc': { zh: 'PawGo 高端寵物專車 — 的士拒載毛孩？我哋唔會。7座專車點對點接送，寵物安全帶、籠具、GPS追蹤，大型犬都歡迎。預約制，去獸醫、美容院首選。', en: 'PawGo Pet Chauffeur — Taxis reject your pet? We never do. 7-seat dedicated vehicle, seatbelts, crates, GPS. Large dogs welcome. Perfect for vet & grooming trips.', ja: 'PawGoペット専用車——タクシーに拒否されても、私たちはしません。7人乗り専用車、シートベルト、ケージ、GPS。大型犬歓迎。獣医・トリミングに最適。' },
+    'meta.van.desc': { zh: 'PawGo 高端寵物專車 — 的士拒載毛孩？我哋唔會。寬敞的五座舒適專車點對點接送，寵物安全帶、籠具、GPS追蹤，大型犬都歡迎。預約制，去獸醫、美容院首選。', en: 'PawGo Pet Chauffeur — Taxis reject your pet? We never do. spacious 5-seat dedicated vehicle, seatbelts, crates, GPS. Large dogs welcome. Perfect for vet & grooming trips.', ja: 'PawGoペット専用車——タクシーに拒否されても、私たちはしません。広々とした5人乗り専用車、シートベルト、ケージ、GPS。大型犬歓迎。獣医・トリミングに最適。' },
     'meta.van.og.title': { zh: 'PawGo — 高端寵物專車接送 | 香港寵物出行首選', en: 'PawGo — Pet Chauffeur | HK Premium Pet Transport', ja: 'PawGo — ペット専用車 | 香港プレミアムペット移動' },
-    'meta.van.og.desc': { zh: '的士拒載？我哋唔會。7座寵物專車、安全帶+籠具+GPS、專業司機、零事故紀錄——PawGo 高端寵物專車。', en: 'Taxis say no? We say yes. 7-seat pet taxi, seatbelts+crates+GPS, pro drivers, zero accidents — PawGo Pet Chauffeur.', ja: 'タクシーがノーと言っても、私たちはイエス。7人乗りペットタクシー、シートベルト+ケージ+GPS、プロドライバー、事故ゼロ——PawGoペット専用車。' },
+    'meta.van.og.desc': { zh: '的士拒載？我哋唔會。寬敞的五座舒適寵物專車、安全帶+籠具+GPS、專業司機、零事故紀錄——PawGo 高端寵物專車。', en: 'Taxis say no? We say yes. spacious 5-seat pet taxi, seatbelts+crates+GPS, pro drivers, zero accidents — PawGo Pet Chauffeur.', ja: 'タクシーがノーと言っても、私たちはイエス。広々とした5人乗りペットタクシー、シートベルト+ケージ+GPS、プロドライバー、事故ゼロ——PawGoペット専用車。' },
     'meta.van.twitter.title': { zh: 'PawGo — 高端寵物專車接送 | 香港寵物出行', en: 'PawGo — Pet Chauffeur | HK Premium Pet Transport', ja: 'PawGo — ペット専用車 | 香港プレミアムペット移動' },
-    'meta.van.twitter.desc': { zh: '的士拒載毛孩？我哋唔會。7座寵物專車、安全帶+籠具+GPS！', en: 'Taxis reject pets? We never do. 7-seat pet taxi, seatbelts+crates+GPS!', ja: 'タクシーに拒否されても——7人乗りペットタクシー、シートベルト+ケージ+GPS！' },
+    'meta.van.twitter.desc': { zh: '的士拒載毛孩？我哋唔會。寬敞的五座舒適寵物專車、安全帶+籠具+GPS！', en: 'Taxis reject pets? We never do. spacious 5-seat pet taxi, seatbelts+crates+GPS!', ja: 'タクシーに拒否されても——広々とした5人乗りペットタクシー、シートベルト+ケージ+GPS！' },
 
     // ═══ CROSS-LINK KEYS ═══
     'bus.vanlink.title': { zh: '的士成日拒載毛孩？試試 高端寵物專車', en: 'Taxis Reject Your Pet? Try Our Pet Chauffeur', ja: 'タクシーに拒否された？ペット専用車を試そう' },
-    'bus.vanlink.desc': { zh: '7 座寵物專車，點對點直達，配備安全帶、籠具、GPS。大型犬、多寵物家庭、獸醫覆診——我哋全部歡迎，唔會拒載。', en: '7-seat pet taxi, point-to-point direct, with seatbelts, crates, GPS. Large dogs, multi-pet families, vet visits — we welcome all, we never reject.', ja: '7人乗りペットタクシー、直行、シートベルト・ケージ・GPS完備。大型犬、複数ペット、獣医通院——すべて歓迎、拒否しません。' },
+    'bus.vanlink.desc': { zh: '寬敞的五座舒適寵物專車，點對點直達，配備安全帶、籠具、GPS。大型犬、多寵物家庭、獸醫覆診——我哋全部歡迎，唔會拒載。', en: 'spacious 5-seat pet taxi, point-to-point direct, with seatbelts, crates, GPS. Large dogs, multi-pet families, vet visits — we welcome all, we never reject.', ja: '広々とした5人乗りペットタクシー、直行、シートベルト・ケージ・GPS完備。大型犬、複数ペット、獣医通院——すべて歓迎、拒否しません。' },
     'bus.vanlink.btn': { zh: '🚐 了解寵物專車 →', en: '🚐 Explore Pet Taxi →', ja: '🚐 ペットタクシーを見る →' },
     'van.buslink.title': { zh: '想熱鬧啲、抵玩啲？試試巴士拼車', en: 'Want a Fun, Affordable Group Ride? Try the Bus', ja: 'もっと賑やかでお得に？バスライドシェアを試そう' },
     'van.buslink.desc': { zh: '28 座豪華小巴，AI 動態配對同路寵友，每趟車程都係一次寵物聚會。', en: '28-seat luxury minibus, AI matches pet friends heading the same way — every trip is a pet social.', ja: '28席ラグジュアリーミニバス、AIが同方向のペット友達をマッチング——毎回がペット交流会。' },
@@ -110,8 +110,8 @@
     'hero.svc.bus.tag3': { zh: '社群出行', en: 'Social Rides', ja: 'ソーシャル乗車' },
     'hero.svc.van.subtitle': { zh: '寵物專車點對點接送', en: 'Premium Pet Chauffeur', ja: 'バン ポイントツーポイント送迎' },
     'hero.svc.van.h3': { zh: '私密靈活，一家專享', en: 'Private & Flexible, Just for You', ja: 'プライベート＆フレキシブル、あなただけに' },
-    'hero.svc.van.p': { zh: '7 座小型廂型車，點對點直達。適合小家庭、個別預約——去獸醫、美容院、私密出行，更靈活更自在。', en: '7-seat compact van, point-to-point direct service. Perfect for small families and individual bookings — vet visits, grooming, private outings with total flexibility.', ja: '7人乗りコンパクトバン、ポイントツーポイント直行。小さなご家族や個人予約に最適——獣医、トリミング、プライベートなお出かけに。' },
-    'hero.svc.van.tag1': { zh: '7 座', en: '7 Seats', ja: '7席' },
+    'hero.svc.van.p': { zh: '寬敞的五座舒適專車，點對點直達。適合小家庭、個別預約——去獸醫、美容院、私密出行，更靈活更自在。', en: 'spacious 5-seat compact van, point-to-point direct service. Perfect for small families and individual bookings — vet visits, grooming, private outings with total flexibility.', ja: '広々とした5人乗りコンパクトバン、ポイントツーポイント直行。小さなご家族や個人予約に最適——獣医、トリミング、プライベートなお出かけに。' },
+    'hero.svc.van.tag1': { zh: '5 座', en: '5 Seats', ja: '5席' },
     'hero.svc.van.tag2': { zh: '點對點', en: 'Point-to-Point', ja: '直行' },
     'hero.svc.van.tag3': { zh: '私密出行', en: 'Private Ride', ja: 'プライベート乗車' },
     'hero.subtitle': { zh: '揀你嘅出行方式：高端寵物專車即時接送，或者加入小巴創始會員，一齊改變毛孩出行。', en: 'Choose your ride: Pet Chauffeur for instant pickup, or join Bus Founding Members to transform pet travel together.', ja: '移動手段を選んで：ペット専用車で即時送迎、またはバス創設会員になってペットの移動を変えましょう。' },
@@ -120,9 +120,9 @@
     'hero.van.h1.line1': { zh: '寵物優先，', en: 'Pet First,', ja: 'ペットファースト、' },
     'hero.van.h1.line2': { zh: '毛孩專屬專車', en: 'VIP Ride for Your Pet', ja: 'ペット専用VIP送迎' },
     'hero.van.desc': {
-      zh: '你試過攔的士俾司機拒載毛孩未？我哋都試過——所以 PawGo 高端寵物專車誕生咗。7 座專車，點對點直達你指定嘅目的地，配備寵物安全帶、專用籠具、GPS 即時追蹤。無論係大型犬、多寵物家庭、定係定期去獸醫覆診——我哋唔會拒載，只會準時到。想熱鬧拼車？我哋仲有 <a href="bus.html" style="color:#FFD166;text-decoration:underline;">寵物友善小巴</a>。',
-      en: 'Ever been rejected by a taxi because of your pet? So have we — that\'s why PawGo Pet Chauffeur was born. 7-seat dedicated vehicle, point-to-point direct to your destination, equipped with pet seatbelts, crates, and real-time GPS tracking. Large dogs, multi-pet families, regular vet visits — we never say no, we just show up on time. Prefer a fun group ride? We also have <a href="bus.html" style="color:#FFD166;text-decoration:underline;">Pet-Friendly Minibus</a>.',
-      ja: 'ペットのせいでタクシーに乗車拒否されたことはありますか？私たちもです——だからPawGoペット専用車が生まれました。7人乗り専用車、指定の目的地まで直行、ペット用シートベルト、ケージ、GPSリアルタイム追跡を完備。大型犬、複数ペット家庭、定期的な獣医通院——私たちは決して拒否しません、時間通りにお迎えに参ります。賑やかなグループ乗車がお好みですか？<a href="bus.html" style="color:#FFD166;text-decoration:underline;">ペット対応ミニバス</a>もあります。'
+      zh: '你試過攔的士俾司機拒載毛孩未？我哋都試過——所以 PawGo 高端寵物專車誕生咗。寬敞的五座舒適專車，點對點直達你指定嘅目的地，配備寵物安全帶、專用籠具、GPS 即時追蹤。無論係大型犬、多寵物家庭、定係定期去獸醫覆診——我哋唔會拒載，只會準時到。想熱鬧拼車？我哋仲有 <a href="bus.html" style="color:#FFD166;text-decoration:underline;">寵物友善小巴</a>。',
+      en: 'Ever been rejected by a taxi because of your pet? So have we — that\'s why PawGo Pet Chauffeur was born. spacious 5-seat dedicated vehicle, point-to-point direct to your destination, equipped with pet seatbelts, crates, and real-time GPS tracking. Large dogs, multi-pet families, regular vet visits — we never say no, we just show up on time. Prefer a fun group ride? We also have <a href="bus.html" style="color:#FFD166;text-decoration:underline;">Pet-Friendly Minibus</a>.',
+      ja: 'ペットのせいでタクシーに乗車拒否されたことはありますか？私たちもです——だからPawGoペット専用車が生まれました。広々とした5人乗り専用車、指定の目的地まで直行、ペット用シートベルト、ケージ、GPSリアルタイム追跡を完備。大型犬、複数ペット家庭、定期的な獣医通院——私たちは決して拒否しません、時間通りにお迎えに参ります。賑やかなグループ乗車がお好みですか？<a href="bus.html" style="color:#FFD166;text-decoration:underline;">ペット対応ミニバス</a>もあります。'
     },
     'hero.van.btn.primary': { zh: '🚐 了解寵物專車服務', en: '🚐 Explore Pet Taxi Service', ja: '🚐 ペットタクシーを見る' },
     'hero.van.stat1.h4': { zh: '寵物專車', en: 'Pet-Only Vehicle', ja: 'ペット専用車' },
@@ -141,7 +141,7 @@
     'split.bus.btn': { zh: '🐾 成為創始會員 →', en: '🐾 Become a Founding Member →', ja: '🐾 創設会員になる →' },
     'split.van.badge': { zh: '寵物專車', en: 'Pet Taxi', ja: 'ペットタクシー' },
     'split.van.h2': { zh: '高端寵物專車接送', en: 'Pet Chauffeur Service', ja: 'ペット専用車' },
-    'split.van.desc': { zh: '的士拒載毛孩？我哋唔會。7 座寵物專車，點對點直達，配備安全帶、籠具、GPS。大型犬、多寵物家庭、獸醫覆診——全部歡迎。', en: 'Taxi rejected your pet? We never do. 7-seat pet taxi, point-to-point direct, equipped with seatbelts, crates, GPS. Large dogs, multi-pet families, vet visits — all welcome.', ja: 'タクシーにペットを拒否された？私たちはしません。7人乗りペットタクシー、直行、シートベルト・ケージ・GPS完備。大型犬、複数ペット、獣医通院——すべて歓迎。' },
+    'split.van.desc': { zh: '的士拒載毛孩？我哋唔會。寬敞的五座舒適寵物專車，點對點直達，配備安全帶、籠具、GPS。大型犬、多寵物家庭、獸醫覆診——全部歡迎。', en: 'Taxi rejected your pet? We never do. spacious 5-seat pet taxi, point-to-point direct, equipped with seatbelts, crates, GPS. Large dogs, multi-pet families, vet visits — all welcome.', ja: 'タクシーにペットを拒否された？私たちはしません。広々とした5人乗りペットタクシー、直行、シートベルト・ケージ・GPS完備。大型犬、複数ペット、獣医通院——すべて歓迎。' },
     'split.van.btn': { zh: '🚐 了解寵物專車 →', en: '🚐 Explore Pet Taxi →', ja: '🚐 ペットタクシーを見る →' },
 
     // ═══ VISION BAND ═══
@@ -239,8 +239,8 @@
     },
     'services.van.h3': { zh: '高端寵物專車 · 寵物優先接送', en: 'Pet Chauffeur · Pet-First Transport', ja: 'ペット専用車 · ペット優先送迎' },
     'services.van.p': {
-      zh: '7 座寵物專車，點對點直達你指定嘅目的地。的士成日拒載毛孩？我哋唔會——無論係大型犬、多寵物家庭，定係需要定期去獸醫覆診嘅毛孩，全部歡迎。車廂配備寵物專用安全帶、加固籠具、即時 GPS 定位追蹤。司機全部受過寵物護理訓練，持有寵物急救證書，全程照顧毛孩狀態。<br><br><strong>最適合：</strong>帶毛孩睇獸醫（唔使再擔心攔唔到的士）、去寵物美容院、多寵物家庭出行、年長或特殊需要毛孩。',
-      en: '7-seat pet-exclusive vehicle, point-to-point direct to your destination. Taxis keep rejecting your pet? We never do — large dogs, multi-pet families, regular vet visits — all welcome. Equipped with pet-specific seatbelts, reinforced crates, and real-time GPS tracking. All drivers are trained in pet care and hold pet first-aid certifications.<br><br><strong>Perfect for:</strong> Vet visits (no more taxi anxiety), grooming trips, multi-pet families, elderly or special-needs pets.',
+      zh: '寬敞的五座舒適寵物專車，點對點直達你指定嘅目的地。的士成日拒載毛孩？我哋唔會——無論係大型犬、多寵物家庭，定係需要定期去獸醫覆診嘅毛孩，全部歡迎。車廂配備寵物專用安全帶、加固籠具、即時 GPS 定位追蹤。司機全部受過寵物護理訓練，持有寵物急救證書，全程照顧毛孩狀態。<br><br><strong>最適合：</strong>帶毛孩睇獸醫（唔使再擔心攔唔到的士）、去寵物美容院、多寵物家庭出行、年長或特殊需要毛孩。',
+      en: 'spacious 5-seat pet-exclusive vehicle, point-to-point direct to your destination. Taxis keep rejecting your pet? We never do — large dogs, multi-pet families, regular vet visits — all welcome. Equipped with pet-specific seatbelts, reinforced crates, and real-time GPS tracking. All drivers are trained in pet care and hold pet first-aid certifications.<br><br><strong>Perfect for:</strong> Vet visits (no more taxi anxiety), grooming trips, multi-pet families, elderly or special-needs pets.',
       ja: '7人乗りペット専用車、指定の目的地まで直行。タクシーにペットを拒否され続けていませんか？私たちはしません——大型犬、複数ペット家庭、定期的な獣医通院——すべて歓迎。ペット用シートベルト、強化ケージ、GPSリアルタイム追跡を完備。全ドライバーがペットケア訓練を受け、ペット応急救護資格を保有しています。<br><br><strong>最適な用途：</strong>獣医通院（タクシー拒否の心配なし）、トリミング、複数ペット家庭、高齢や特別なケアが必要なペット。'
     },
     'services.safety.h3': { zh: '所有車型，寵物安全第一', en: 'All Vehicles — Pet Safety First', ja: '全車両 — ペット安全第一' },
@@ -274,7 +274,7 @@
     'compare.bus.li6': { zh: '沿途停靠多個屋苑站點', en: 'Multiple estate stops along the route', ja: 'ルート沿いの複数マンションに停車' },
     'compare.van.h3': { zh: '高端寵物專車', en: 'Pet Chauffeur', ja: 'ペット専用車' },
     'compare.van.ideal': { zh: '適合寵物專車出行', en: 'Ideal for Pet-Only Trips', ja: 'ペット専用移動に最適' },
-    'compare.van.li1': { zh: '7 座寵物專車，的士拒載我哋唔會', en: '7-seat pet taxi, we never reject like taxis do', ja: '7人乗りペットタクシー、タクシーのような拒否はなし' },
+    'compare.van.li1': { zh: '寬敞的五座舒適寵物專車，的士拒載我哋唔會', en: 'spacious 5-seat pet taxi, we never reject like taxis do', ja: '広々とした5人乗りペットタクシー、タクシーのような拒否はなし' },
     'compare.van.li2': { zh: '點對點直達，唔兜路', en: 'Point-to-point direct, no detours', ja: 'ポイントツーポイント直行、寄り道なし' },
     'compare.van.li3': { zh: '配備寵物安全帶、籠具、GPS 追蹤', en: 'Pet seatbelts, crates, GPS tracking', ja: 'ペット用シートベルト、ケージ、GPS追跡' },
     'compare.van.li4': { zh: '特別適合睇獸醫、美容院、大型犬', en: 'Perfect for vet, grooming trips, large dogs', ja: '獣医、トリミング、大型犬に最適' },
@@ -476,9 +476,9 @@
     'news.van.h3': { zh: '高端寵物專車現已上線', en: 'Pet Chauffeur Service Now Live', ja: 'ペット専用車サービス開始' },
     'news.van.badge': { zh: '✅ 即時可用', en: '✅ Available Now', ja: '✅ 即時利用可能' },
     'news.van.p': {
-      zh: '7 座寵物專車接送服務已率先開放預約，覆蓋全港主要區域。的士拒載？我哋唔會。配備安全帶+籠具+GPS，專業司機全程照顧。WhatsApp 客服一對一安排行程。',
-      en: '7-seat pet taxi service is now open for booking, covering major HK areas. Taxis reject? We never do. Equipped with seatbelts+crates+GPS, pro drivers for full care. WhatsApp support for one-on-one trip planning.',
-      ja: '7人乗りペットタクシーサービスの予約受付を開始、香港の主要エリアをカバー。タクシー拒否？私たちはしません。シートベルト+ケージ+GPS完備、プロドライバーがケア。WhatsAppサポートで一対一の旅程手配。'
+      zh: '寬敞的五座舒適寵物專車接送服務已率先開放預約，覆蓋全港主要區域。的士拒載？我哋唔會。配備安全帶+籠具+GPS，專業司機全程照顧。WhatsApp 客服一對一安排行程。',
+      en: 'spacious 5-seat pet taxi service is now open for booking, covering major HK areas. Taxis reject? We never do. Equipped with seatbelts+crates+GPS, pro drivers for full care. WhatsApp support for one-on-one trip planning.',
+      ja: '広々とした5人乗りペットタクシーサービスの予約受付を開始、香港の主要エリアをカバー。タクシー拒否？私たちはしません。シートベルト+ケージ+GPS完備、プロドライバーがケア。WhatsAppサポートで一対一の旅程手配。'
     },
     'news.app.h3': { zh: 'App 開發進度', en: 'App Development Progress', ja: 'アプリ開発進捗' },
     'news.app.badge': { zh: '🔄 MVP 開發中', en: '🔄 MVP in Development', ja: '🔄 MVP開発中' },
